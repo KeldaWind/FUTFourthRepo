@@ -820,10 +820,9 @@ MonoBehaviour:
     loseGoldText: {fileID: 2018920743677188725}
     starsAndGoldPanel: {fileID: 3322260813024222690}
     openLootButton: {fileID: 4547416236202886640}
-    firstPanelStarsImages:
-    - {fileID: 2760500692524495101}
-    - {fileID: 2354698513031026902}
-    - {fileID: 1767892922997739432}
+    firstPanelPassedStar: {fileID: 2760500692524495101}
+    firstPanelTimeLimitStar: {fileID: 2354698513031026902}
+    firstPanelDamageLimitStar: {fileID: 1767892922997739432}
     timeLimitScoreEndText: {fileID: 1417137867634218383}
     timeLimitScoreEndStar: {fileID: 786119483795152249}
     damageLimitScoreEndText: {fileID: 129272918387520551}
@@ -4237,6 +4236,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6287693183016629495, guid: 933d45bfefda6294996a703fe9e722dc,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1608354007, guid: 933d45bfefda6294996a703fe9e722dc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4244,11 +4248,6 @@ PrefabInstance:
     - target: {fileID: 88204426, guid: 933d45bfefda6294996a703fe9e722dc, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287693183016629495, guid: 933d45bfefda6294996a703fe9e722dc,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1608354009, guid: 933d45bfefda6294996a703fe9e722dc, type: 3}
       propertyPath: playOnAwake

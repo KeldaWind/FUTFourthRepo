@@ -121,7 +121,7 @@ public class MapDocksInterface : MonoBehaviour
     [SerializeField] Text playerGoldText;
     public void UpdatePlayerGoldText()
     {
-        playerGoldText.text = IntersceneManager.intersceneManager.GetPlayerDatas.GetPlayerGoldAmount + " G";
+        playerGoldText.text = IntersceneManager.intersceneManager.GetPlayerDatas.GetPlayerGoldAmount.ToString() /*+ " G"*/;
     }
 
     #region V1

@@ -6675,6 +6675,9 @@ MonoBehaviour:
           - {fileID: 11400000, guid: 2152032454c603143ae6cd2607df4580, type: 2}
           - {fileID: 11400000, guid: cecb4eb4faad77c4cad3ecc39b243358, type: 2}
           - {fileID: 11400000, guid: 478ee9b6d9c60ec4a93164e587644092, type: 2}
+          - {fileID: 11400000, guid: c07987a884dec564f808d7f6bffcbb35, type: 2}
+          - {fileID: 11400000, guid: 0eaa9ec592c0b9b4f9b123aaa904bcab, type: 2}
+          - {fileID: 11400000, guid: 915a76bbe7fa6574fa9940bb9e17d2bf, type: 2}
           minNumberOfEquipments: 3
           maxNumberOfEquipments: 6
           soldEquipments: []
@@ -7253,7 +7256,7 @@ MonoBehaviour:
   outroCinematic: {fileID: 0}
   dropManager:
     minimumNumberOfDroppedEquipments: 1
-    maximumNumberOfDroppedEquipments: 3
+    maximumNumberOfDroppedEquipments: 1
     oneStarLevel2EquipmentsProbabilities:
       allItems:
       - item: 1
@@ -18591,12 +18594,12 @@ PrefabInstance:
     - target: {fileID: 8067840716951442810, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -171.8
+      value: -162
       objectReference: {fileID: 0}
     - target: {fileID: 8067840716951442810, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -46
+      value: -73
       objectReference: {fileID: 0}
     - target: {fileID: 8067840718363816655, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -19263,6 +19266,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616923091603728766, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887254183111530683, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055082178157775420, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8067840717820326151, guid: af42accc1c0f30e45aa4da44f704f453, type: 3}

@@ -166,13 +166,18 @@ public class EquipmentsInformationsInterface : MonoBehaviour
     [SerializeField] GameButton equipButton;
     [SerializeField] GameButton upgradeButton;
     [SerializeField] Text upgradeValueText;
+    [SerializeField] Text nonUpgradeText;
+    [SerializeField] Image upgradeValueImage;
     [SerializeField] GameButton sellButton;
     [SerializeField] Text sellValueText;
     [SerializeField] GameButton buyButton;
     [SerializeField] Text buyValueText;
+    [SerializeField] Image buyValueImage;
     [SerializeField] GameButton throwButton;
     [SerializeField] Color canColor;
+    [SerializeField] Color canImageColor;
     [SerializeField] Color cantColor;
+    [SerializeField] Color cantImageColor;
 
     public void OpenPlayerInventoryEquipmentActions(bool upgradable, float upgradeValue, float sellValue)
     {
@@ -185,21 +190,30 @@ public class EquipmentsInformationsInterface : MonoBehaviour
         if (!upgradable)
         {
             upgradeButton.SetButtonInteractable(false);
-            upgradeValueText.text = "Max Level";
-            upgradeValueText.color = cantColor;
+            upgradeValueText.gameObject.SetActive(false);
+            upgradeValueImage.gameObject.SetActive(false);
+            nonUpgradeText.gameObject.SetActive(true);
+            //upgradeValueText.text = "Max Level";
+            nonUpgradeText.color = cantColor;
         }
         else
         {
+            upgradeValueText.gameObject.SetActive(true);
+            upgradeValueImage.gameObject.SetActive(true);
+            nonUpgradeText.gameObject.SetActive(false);
+
             upgradeValueText.text = upgradeValue.ToString();
             if (playerGoldAmount >= upgradeValue)
             {
                 upgradeButton.SetButtonInteractable(true);
                 upgradeValueText.color = canColor;
+                upgradeValueImage.color = canImageColor;
             }
             else
             {
                 upgradeButton.SetButtonInteractable(false);
                 upgradeValueText.color = cantColor;
+                upgradeValueImage.color = cantImageColor;
             }
         }
 
@@ -217,21 +231,30 @@ public class EquipmentsInformationsInterface : MonoBehaviour
         if (!upgradable)
         {
             upgradeButton.SetButtonInteractable(false);
-            upgradeValueText.text = "Max Level";
-            upgradeValueText.color = cantColor;
+            upgradeValueText.gameObject.SetActive(false);
+            upgradeValueImage.gameObject.SetActive(false);
+            nonUpgradeText.gameObject.SetActive(true);
+            //upgradeValueText.text = "Max Level";
+            nonUpgradeText.color = cantColor;
         }
         else
         {
+            upgradeValueText.gameObject.SetActive(true);
+            upgradeValueImage.gameObject.SetActive(true);
+            nonUpgradeText.gameObject.SetActive(false);
+
             upgradeValueText.text = upgradeValue.ToString();
             if (playerGoldAmount >= upgradeValue)
             {
                 upgradeButton.SetButtonInteractable(true);
                 upgradeValueText.color = canColor;
+                upgradeValueImage.color = canImageColor;
             }
             else
             {
                 upgradeButton.SetButtonInteractable(false);
                 upgradeValueText.color = cantColor;
+                upgradeValueImage.color = cantImageColor;
             }
         }
     }
@@ -250,11 +273,13 @@ public class EquipmentsInformationsInterface : MonoBehaviour
         {
             buyButton.SetButtonInteractable(true);
             buyValueText.color = canColor;
+            buyValueImage.color = canImageColor;
         }
         else
         {
             buyButton.SetButtonInteractable(false);
             buyValueText.color = cantColor;
+            buyValueImage.color = cantImageColor;
         }
     }
 

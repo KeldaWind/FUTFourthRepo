@@ -93,7 +93,6 @@ public class IconPreview : Preview
 
     public void EndIcon()
     {
-        Debug.Log("end");
         gameObject.SetActive(false);
         GameManager.gameManager.PoolManager.ReturnPreview(this);
         shipToFollow = null;

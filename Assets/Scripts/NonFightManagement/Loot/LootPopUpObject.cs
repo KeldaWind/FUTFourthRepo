@@ -17,6 +17,7 @@ public class LootPopUpObject : MonoBehaviour
     [SerializeField] SpriteRenderer equipmentSpriteRenderer;
     [SerializeField] Color equipmentSpriteNormalColor;
     [SerializeField] Text goldText;
+    [SerializeField] Image goldImage;
     [SerializeField] Color goldTextNormalColor;
 
     [Header("Feedback Balancing")]
@@ -31,10 +32,12 @@ public class LootPopUpObject : MonoBehaviour
         gameObject.SetActive(true);
 
         goldText.enabled = true;
-        goldText.text = goldAmount + " G";
+        goldText.text = goldAmount.ToString() /*+ " G"*/;
         goldText.color = goldTextNormalColor;
 
         equipmentSpriteRenderer.enabled = false;
+        goldImage.enabled = true;
+        goldImage.color = Color.white;
 
         remainingTime = floatingTime;
         startPosition = position;
@@ -46,6 +49,7 @@ public class LootPopUpObject : MonoBehaviour
         gameObject.SetActive(true);
 
         goldText.enabled = false;
+        goldImage.enabled = false;
 
         equipmentSpriteRenderer.enabled = true;
         /*equipmentSpriteRenderer.sprite = equipmentSprite;*/
@@ -83,6 +87,8 @@ public class LootPopUpObject : MonoBehaviour
             {
                 Color textColor = new Color(goldText.color.r, goldText.color.g, goldText.color.b, Mathf.Lerp(goldText.color.a, 0, 0.2f));
                 goldText.color = textColor;
+                Color imageColorColor = new Color(1, 1, 1, Mathf.Lerp(goldText.color.a, 0, 0.2f));
+                goldImage.color = textColor;
                 if (textColor.a < 0.01f)
                     Desactivate();
             }

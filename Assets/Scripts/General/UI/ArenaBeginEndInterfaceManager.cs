@@ -210,7 +210,10 @@ public class ArenaBeginEndInterfaceManager
     [SerializeField] GameObject starsAndGoldPanel;
     [SerializeField] GameButton openLootButton;
     #region Score
-    [SerializeField] Image[] firstPanelStarsImages;
+    //[SerializeField] Image[] firstPanelStarsImages;
+    [SerializeField] Image firstPanelPassedStar;
+    [SerializeField] Image firstPanelTimeLimitStar;
+    [SerializeField] Image firstPanelDamageLimitStar;
     [SerializeField] Text timeLimitScoreEndText;
     [SerializeField] Image timeLimitScoreEndStar;
     [SerializeField] Text damageLimitScoreEndText;
@@ -255,18 +258,32 @@ public class ArenaBeginEndInterfaceManager
             timeLimitScoreEndText.text = timeLimitScoreText.text;
             damageLimitScoreEndText.text = damageLimitScoreText.text;
 
+            firstPanelPassedStar.gameObject.SetActive(true);
             if (/*scoreManager.HasTimeStar*/scoreManager.HasNoObstacleHitStar)
             {
+                firstPanelTimeLimitStar.gameObject.SetActive(true);
                 timeLimitScoreEndStar.gameObject.SetActive(true);
                 starsNumber++;
             }
+            else
+            {
+                firstPanelTimeLimitStar.gameObject.SetActive(false);
+                timeLimitScoreEndStar.gameObject.SetActive(false);
+            }
+
             if (scoreManager.HasDamagesStar)
             {
+                firstPanelDamageLimitStar.gameObject.SetActive(true);
                 damageLimitScoreEndStar.gameObject.SetActive(true);
                 starsNumber++;
             }
+            else
+            {
+                firstPanelDamageLimitStar.gameObject.SetActive(false);
+                damageLimitScoreEndStar.gameObject.SetActive(false);
+            }
 
-            for (int i = 0; i < starsNumber; i++)
+            /*for (int i = 0; i < starsNumber; i++)
             {
                 firstPanelStarsImages[i].gameObject.SetActive(true);
             }
@@ -274,7 +291,7 @@ public class ArenaBeginEndInterfaceManager
             for (int i = starsNumber; i < firstPanelStarsImages.Length; i++)
             {
                 firstPanelStarsImages[i].gameObject.SetActive(false);
-            }
+            }*/
             #endregion
 
             #region Global Loot
@@ -517,7 +534,7 @@ public class ArenaBeginEndInterfaceManager
         for (int i = 0; i < starsNumber; i++)
             afterLootFinishedStars[i].gameObject.SetActive(true);
 
-        for (int i = starsNumber; i < firstPanelStarsImages.Length; i++)
+        for (int i = starsNumber; i < afterLootFinishedStars.Length; i++)
             afterLootFinishedStars[i].gameObject.SetActive(false);
 
         afterLootFinishedGoldAmount.text = playerLootManager.GetAllLootedGold.ToString();

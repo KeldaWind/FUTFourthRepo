@@ -118,7 +118,7 @@ public class EnemyShip : Ship
         base.FixedUpdate();
 
         if (PreparingAttack)
-            attackPreparationWarningAnim.transform.rotation = Quaternion.identity;
+            attackPreparationWarningAnim.transform.rotation = Quaternion.Euler(new Vector3(30, 0, 0));
     }
     #endregion
     bool externalySetedUp;
