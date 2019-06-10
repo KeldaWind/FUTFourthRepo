@@ -86,6 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1371400120385071171}
+  - component: {fileID: 2401355965451586286}
   m_Layer: 0
   m_Name: BoatPlayer
   m_TagString: Untagged
@@ -113,6 +114,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2401355965451586286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949099199753956306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4386b2a15464d8c49be65e43dea62dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontCanon: {fileID: 1944993899880653139}
+  sideCanons:
+  - {fileID: 6654367277043788735}
+  - {fileID: 6371444703330593230}
 --- !u!1 &3427474864467072581
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +445,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371400120385071171}
     m_Modifications:
+    - target: {fileID: 1041580055833654528, guid: b985abd5c3ad60241890619e35453a5a,
+        type: 3}
+      propertyPath: m_Name
+      value: BarilsBoat
+      objectReference: {fileID: 0}
     - target: {fileID: 4673620564193833433, guid: b985abd5c3ad60241890619e35453a5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -497,11 +519,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1041580055833654528, guid: b985abd5c3ad60241890619e35453a5a,
-        type: 3}
-      propertyPath: m_Name
-      value: BarilsBoat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b985abd5c3ad60241890619e35453a5a, type: 3}

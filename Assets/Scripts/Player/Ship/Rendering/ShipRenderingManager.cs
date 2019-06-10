@@ -30,6 +30,10 @@ public class ShipRenderingManager
 
         rotationPerDamagesTakenCurve.preWrapMode = WrapMode.PingPong;
         rotationPerDamagesTakenCurve.postWrapMode = WrapMode.PingPong;
+
+        ecumeDevantDBaseSpeed = ecumeDevantD.emissionRate;
+        ecumeDevantGBaseSpeed = ecumeDevantG.emissionRate;
+        ecumeArriereBaseSpeed = ecumeArriere.emissionRate;
     }
 
     [Header("VariablesPierre")]
@@ -44,8 +48,11 @@ public class ShipRenderingManager
     [SerializeField] ParticleSystem ecumeGauche;
     [Header("ParticulesVitesse")]
     [SerializeField] ParticleSystem ecumeDevantD;
+    float ecumeDevantDBaseSpeed;
     [SerializeField] ParticleSystem ecumeDevantG;
+    float ecumeDevantGBaseSpeed;
     [SerializeField] ParticleSystem ecumeArriere;
+    float ecumeArriereBaseSpeed;
     [SerializeField] AnimationCurve evolutionParticleNumber;
 
     /// <summary>
@@ -60,15 +67,24 @@ public class ShipRenderingManager
             rendererParent.localRotation = Quaternion.Euler(normalRendererRotation + new Vector3(0, rotY, 0));
     }
 
-    public void UpdateRendering(float currentRotation, float currentSpeed, bool stopped)
+    public void UpdateRendering(float currentRotation, float currentSpeedCoeff, bool stopped)
     {
         if(currentMaxRotationPerDamage != 0)
             UpdateDamageRotation();
 
         Tangage(currentRotation);
-        ParticleSpeedUpdate(currentSpeed);
+        ParticleSpeedUpdate(currentSpeedCoeff);
 
         lifeFeedbacksManager.UpdateLifeFeedbacksManagement();
+
+        if (stopped)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 
     void Tangage(float currentShipRotation)
@@ -111,14 +127,14 @@ public class ShipRenderingManager
             }
         }
     }
-    void ParticleSpeedUpdate(float currentShipSpeed)
+    void ParticleSpeedUpdate(float currentShipSpeedCoeff)
     {
         if (ecumeDevantD != null)
-            ecumeDevantD.emissionRate = evolutionParticleNumber.Evaluate(currentShipSpeed);
+            ecumeDevantD.emissionRate = evolutionParticleNumber.Evaluate(currentShipSpeedCoeff) * ecumeDevantDBaseSpeed;
         if (ecumeDevantG != null)
-            ecumeDevantG.emissionRate = evolutionParticleNumber.Evaluate(currentShipSpeed);
+            ecumeDevantG.emissionRate = evolutionParticleNumber.Evaluate(currentShipSpeedCoeff) * ecumeDevantGBaseSpeed;
         if (ecumeArriere != null)
-            ecumeArriere.emissionRate = evolutionParticleNumber.Evaluate(currentShipSpeed);
+            ecumeArriere.emissionRate = evolutionParticleNumber.Evaluate(currentShipSpeedCoeff) * ecumeArriereBaseSpeed;
     }
 
     public void HideShip()
@@ -174,8 +190,8 @@ public class ShipRenderingManager
 
     #region Hull
     [Header("Hull")]
-    [SerializeField] GameObject currentHullObject;
-    public void InstantiateHullRenderer(GameObject hullPrefab)
+    [SerializeField] ShipHullRenderer currentHullObject;
+    public void InstantiateHullRenderer(ShipHullRenderer hullPrefab, WeaponInformationType canonType)
     {
         if (currentHullObject != null)
             ClearLastHullRenderer();
@@ -184,11 +200,13 @@ public class ShipRenderingManager
         currentHullObject.transform.localPosition = Vector3.zero;
         currentHullObject.transform.localRotation = Quaternion.identity;
         currentHullObject.name = "Currently Equiped Hull";
+
+        hullPrefab.CheckObjectsToShow(canonType);
     }
 
     public void ClearLastHullRenderer()
     {
-        Object.Destroy(currentHullObject);
+        Object.Destroy(currentHullObject.gameObject);
         currentHullObject = null;
     }
     #endregion
