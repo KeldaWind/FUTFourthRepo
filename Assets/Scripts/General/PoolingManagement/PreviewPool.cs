@@ -19,5 +19,5 @@ public class PreviewPool : Pool<Preview>
 
 public enum PreviewPoolTag
 {
-    Line, Circle, Arrow, Sphere, Anchor
+    Line, Circle, Arrow, Sphere, Anchor, Boost
 }

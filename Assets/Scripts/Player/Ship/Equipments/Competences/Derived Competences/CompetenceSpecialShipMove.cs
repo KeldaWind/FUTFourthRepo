@@ -24,28 +24,32 @@ public class CompetenceSpecialShipMove : Competence
     {
         GameManager.gameManager.SlwMoManager.StartAimSlowMo(EquipmentType.Hull);
 
-        if (specialShipMoveParameters.ShipIsAnchored)
+        /*if (specialShipMoveParameters.ShipIsAnchored)
         {
             spawnedPreview = GameManager.gameManager.PoolManager.GetPreview(PreviewPoolTag.Anchor, PoolInteractionType.GetFromPool);
-            AnchorPreview anchorPreview = spawnedPreview as AnchorPreview;
-            if (anchorPreview != null)
+            IconPreview iconPreview = spawnedPreview as IconPreview;
+            if (iconPreview != null)
             {
-                anchorPreview.ShowPreparePreview(relatedShip.transform);
+                iconPreview.ShowPreparePreview(relatedShip.transform);
             }
         }
         else if (specialShipMoveParameters.ShipBoost)
         {
 
-        }
+        }*/
+        spawnedPreview = GameManager.gameManager.PoolManager.GetPreview(specialShipMoveParameters.ShipIsAnchored ? PreviewPoolTag.Anchor : PreviewPoolTag.Boost, PoolInteractionType.GetFromPool);
+        IconPreview iconPreview = spawnedPreview as IconPreview;
+        if (iconPreview != null)
+            iconPreview.ShowPreparePreview(relatedShip.transform);
     }
 
     public override void EndShowPreview()
     {
         GameManager.gameManager.SlwMoManager.StopAimSlowMo();
 
-        if (specialShipMoveParameters.ShipIsAnchored)
+        /*if (specialShipMoveParameters.ShipIsAnchored)
         {
-            AnchorPreview anchorPreview = spawnedPreview as AnchorPreview;
+            IconPreview anchorPreview = spawnedPreview as IconPreview;
             if (anchorPreview != null)
             {
                 anchorPreview.StartLaunchedPreview(Vector3.zero, new List<Vector3>(), specialShipMoveParameters.GetDuration);
@@ -54,7 +58,10 @@ public class CompetenceSpecialShipMove : Competence
         else if (specialShipMoveParameters.ShipBoost)
         {
 
-        }
+        }*/
+        IconPreview iconPreview = spawnedPreview as IconPreview;
+        if (iconPreview != null)
+            iconPreview.StartLaunchedPreview(Vector3.zero, new List<Vector3>(), specialShipMoveParameters.GetDuration);
     }
     #endregion
 }

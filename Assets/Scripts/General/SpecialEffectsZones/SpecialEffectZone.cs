@@ -13,9 +13,9 @@ public class SpecialEffectZone : MonoBehaviour
 
     [Header("Feedback References")]
     [SerializeField] Renderer zoneRenderer;
-    [SerializeField] Color zoneColor;
-    Color clearZoneColor;
-    float appearingCoeff = 0.3f;
+    [SerializeField] protected Color zoneColor;
+    protected Color clearZoneColor;
+    protected float appearingCoeff = 0.1f;
     #endregion
 
     #region Management
