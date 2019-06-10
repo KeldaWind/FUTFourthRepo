@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   competenceName: Enemy Ramming
   competenceImage: {fileID: 21300000, guid: f4c43f301ff23f544a2b6fc5db28a553, type: 3}
-  competenceCooldown: 3
+  competenceCooldown: 5
   rammingParameters:
     preparationDuration: 0
     preparationTargetSpeed: 10
@@ -25,19 +25,21 @@ MonoBehaviour:
     attackAcceleration: 400
     maniabilityWhileAttacking: 0.1
     damagesParameters:
-      damagesAmount: 6
+      damagesAmount: 0
       recoveringTime: 0.3
       recoveringType: 0
     inflictedKnockbackParameters:
       knockbackForce: 120
       knockbackDuration: 0.1
       knockbackAttenuationCoeff: 0.5
+      ignoresProtection: 0
       redirectionCoeff: 1
       redirectionTime: 0.3
     sustainedKnockbackParametersOnImpact:
       knockbackForce: 25
       knockbackDuration: 0.08
       knockbackAttenuationCoeff: 0.95
+      ignoresProtection: 0
       redirectionCoeff: 0
       redirectionTime: 0.1
     screenshakeParameters:
