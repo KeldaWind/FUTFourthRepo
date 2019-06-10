@@ -130,6 +130,13 @@ public class ShipMovements
             return currentSpeed;
         }
     }
+    public float GetCurrentSpeedCoeffFromZeroToMax
+    {
+        get
+        {
+            return currentSpeed/maxSpeed;
+        }
+    }
 
     /// <summary>
     /// Actualisation de la vitesse actuelle du bateau en fonction de sa vitesse cible
