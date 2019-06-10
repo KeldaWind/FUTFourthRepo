@@ -1,0 +1,18 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DestroyOnCollision : MonoBehaviour
+{
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "cible")
+        {
+            Debug.Log("HIT");
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        else if (other.tag == "obstacle")
+            Destroy(gameObject);
+    }
+}

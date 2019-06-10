@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cffadbf7ba68454d8fb3675f25e4b96, type: 3}
+  m_Name: FrontGatlingAmlMax
+  m_EditorClassIdentifier: 
+  equipmentSaveIndex: 212
+  equipmentType: 1
+  equipmentInformations:
+    equipmentName: FrontGatling
+    equipmentDescription: 'Our old and beloved gatling, somehow it shoot a lot, i
+      mean a LOT of times. '
+    equipmentIcon: {fileID: 21300000, guid: 8f836659efa0d7241a97e89fa62a46ba, type: 3}
+    weaponType: 0
+    weaponShotType: 2
+    weaponEffect: 0
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: 50f5db171e3db6448a3b388d8681fe2b,
+    type: 2}
+  equipmentDirection: 0
+  relatedPassives: []
+  relatedEquipmentObjectsPrefabs:
+  - {fileID: 5575059665341918943, guid: e41ebf4ce5790f444aeecf4fa264e15a, type: 3}
+  equipmentQuality: 2
+  priceToBuy: 4000
+  priceToUpgrade: 0
+  sellingPrice: 2200
+  upgradedEquipment: {fileID: 0}

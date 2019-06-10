@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
+  m_Name: EnemyDropTest
+  m_EditorClassIdentifier: 
+  goldLootProbability: 50
+  equipmentLootProbability: 30
+  nullLootProbability: 20
+  goldLootSystem:
+    allItems:
+    - item: 200
+      weight: 30
+    - item: 300
+      weight: 40
+    - item: 500
+      weight: 20
+    - item: 800
+      weight: 10
+  goldLootRandomAmplitude: 100
+  hullEquipmentProbability: 25
+  weaponEquipmentProbability: 75
+  hullLootSystem:
+    allItems:
+    - item: {fileID: 11400000, guid: d307ae42322655947b8c4b00255d4713, type: 2}
+      weight: 35
+    - item: {fileID: 11400000, guid: 2ef6f5bffe5d2664f94106899ea28e71, type: 2}
+      weight: 50
+    - item: {fileID: 11400000, guid: 3c6c22424832ef741a7e49ad67263b67, type: 2}
+      weight: 15
+  weaponLootSystem:
+    allItems:
+    - item: {fileID: 11400000, guid: e55b12005389e604996b36caf23c3c2d, type: 2}
+      weight: 35
+    - item: {fileID: 11400000, guid: cdd1cc9d1824db94fa1e9a536bfdb084, type: 2}
+      weight: 15
+    - item: {fileID: 11400000, guid: 050cc3fefeea6894bbe1bef652f17328, type: 2}
+      weight: 15

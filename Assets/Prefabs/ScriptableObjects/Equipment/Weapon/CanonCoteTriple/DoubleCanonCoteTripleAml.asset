@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cffadbf7ba68454d8fb3675f25e4b96, type: 3}
+  m_Name: DoubleCanonCoteTripleAml
+  m_EditorClassIdentifier: 
+  equipmentSaveIndex: 205
+  equipmentType: 1
+  equipmentInformations:
+    equipmentName: TripleRepetitiveSideCanon
+    equipmentDescription: Triple side shoot is pretty great, now double that. Pretty
+      good huh?
+    equipmentIcon: {fileID: 21300000, guid: d00e8a7ca37426842bb100eaa5817fdc, type: 3}
+    weaponType: 1
+    weaponShotType: 2
+    weaponEffect: 0
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: 8f74f4d638859cc4abca54885d6e5fb0,
+    type: 2}
+  equipmentDirection: 2
+  relatedPassives: []
+  relatedEquipmentObjectsPrefabs:
+  - {fileID: 2467901440266190533, guid: 6e4a965348db5e147a8c167b85516ea6, type: 3}
+  equipmentQuality: 1
+  priceToBuy: 3000
+  priceToUpgrade: 2000
+  sellingPrice: 1400
+  upgradedEquipment: {fileID: 0}

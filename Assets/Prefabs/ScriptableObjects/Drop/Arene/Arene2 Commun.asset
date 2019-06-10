@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
+  m_Name: Arene2 Commun
+  m_EditorClassIdentifier: 
+  goldLootProbability: 60
+  equipmentLootProbability: 25
+  nullLootProbability: 15
+  goldLootSystem:
+    allItems:
+    - item: 350
+      weight: 53
+    - item: 450
+      weight: 32
+    - item: 280
+      weight: 15
+  goldLootRandomAmplitude: 30
+  hullEquipmentProbability: 20
+  weaponEquipmentProbability: 80
+  hullLootSystem:
+    allItems:
+    - item: {fileID: 11400000, guid: 64d7e9f4ee1a4664d82bd29449424453, type: 2}
+      weight: 100
+  weaponLootSystem:
+    allItems:
+    - item: {fileID: 11400000, guid: 0eaa9ec592c0b9b4f9b123aaa904bcab, type: 2}
+      weight: 50
+    - item: {fileID: 11400000, guid: f2233512af991254dab9f9e8be082204, type: 2}
+      weight: 25
+    - item: {fileID: 11400000, guid: 4a9b523178c536249b3b47649c553a20, type: 2}
+      weight: 15
+    - item: {fileID: 11400000, guid: 6656dc98e3c600649a5204cfe44b99d8, type: 2}
+      weight: 10

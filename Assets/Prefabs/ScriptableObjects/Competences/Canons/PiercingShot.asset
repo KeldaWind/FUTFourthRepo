@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e97c8b071f62a4ea71732664388f76, type: 3}
+  m_Name: PiercingShot
+  m_EditorClassIdentifier: 
+  competenceName: PiercingShot
+  competenceImage: {fileID: 0}
+  competenceCooldown: 6
+  shootParameters:
+    shootSalvos:
+    - projectileType: 0
+      numberOfShotProjectiles: 1
+      projectileParameters:
+        speedType: 30
+        shootType: 0
+        projectileSpeed:
+          m_Mode: 0
+          m_CurveMultiplier: 0
+          m_CurveMin:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_CurveMax:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_ConstantMin: 0
+          m_ConstantMax: 60
+        projectileSize: 2
+        projectileLifeTime: 1.5
+        shooterVelocityInfluenceCoeff: 0
+        damagesParameters:
+          damagesAmount: 3
+          recoveringTime: 0.2
+          recoveringType: 0
+      imprecisionParameter: 0
+      numberOfDirections: 1
+      angleBetweenDirections: 0
+    waitTimeBeforeTwoSalvo: 0
+    projectileTag: 0
+    catapultMinDistance: 0
+    catapultMaxDistance: 0
+  aiming: 0
+  lockDirectionAfterShoot: 0
+  speedModifier:
+    modificationSpeedCoeff: 0
+    modificationDuration: 0
+    modificationFadeInCoeff: 0
+    modificationFadeOutCoeff: 0
+  piercingParameters:
+    numberOfPiercing: 3
+  skeweringParameters:
+    skeweringOn: 0
+    damagesOnImpact:
+      damagesAmount: 0
+      recoveringTime: 0
+      recoveringType: 0
+    stunOnObstacleDuration: 0
+    stunOnOtherShipDuration: 0

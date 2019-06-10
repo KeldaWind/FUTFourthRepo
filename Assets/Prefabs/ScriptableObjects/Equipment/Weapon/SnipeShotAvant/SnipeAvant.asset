@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cffadbf7ba68454d8fb3675f25e4b96, type: 3}
+  m_Name: SnipeAvant
+  m_EditorClassIdentifier: 
+  equipmentSaveIndex: 216
+  equipmentType: 1
+  equipmentInformations:
+    equipmentName: Snipe
+    equipmentDescription: 
+    equipmentIcon: {fileID: 21300000, guid: 513987778acd5504fa4ccc210b331b09, type: 3}
+    weaponType: 0
+    weaponShotType: 0
+    weaponEffect: 3
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: 558174901c0cecd4abf53f4096ef4c43,
+    type: 2}
+  equipmentDirection: 1
+  relatedPassives: []
+  relatedEquipmentObjectsPrefabs:
+  - {fileID: 5575059665341918943, guid: e41ebf4ce5790f444aeecf4fa264e15a, type: 3}
+  equipmentQuality: 0
+  priceToBuy: 900
+  priceToUpgrade: 1100
+  sellingPrice: 470
+  upgradedEquipment: {fileID: 11400000, guid: 6ac51e0f3451608458abdfeb7c12ed97, type: 2}

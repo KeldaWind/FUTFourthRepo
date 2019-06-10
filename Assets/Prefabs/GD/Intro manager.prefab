@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7908589164959827098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7908589164959827092}
+  - component: {fileID: 7908589164959827093}
+  m_Layer: 0
+  m_Name: Intro manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7908589164959827092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908589164959827098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 183.64456, y: 6.5704765, z: -1072.408}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7908589164959827093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908589164959827098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfacePlayer: {fileID: 0}
+  playerCam: {fileID: 0}
+  textTypingSpeed: 0.05
+  textZone: {fileID: 0}
+  allParts:
+  - cam: {fileID: 0}
+    isATextCamera: 0
+    messageToType: {fileID: 0}
+    waitTimeAfterType: 0
+    timeBeforeNextCam: 0
+  - cam: {fileID: 0}
+    isATextCamera: 0
+    messageToType: {fileID: 0}
+    waitTimeAfterType: 0
+    timeBeforeNextCam: 0
+  - cam: {fileID: 0}
+    isATextCamera: 0
+    messageToType: {fileID: 0}
+    waitTimeAfterType: 0
+    timeBeforeNextCam: 0
+  - cam: {fileID: 0}
+    isATextCamera: 0
+    messageToType: {fileID: 0}
+    waitTimeAfterType: 0
+    timeBeforeNextCam: 0
+  - cam: {fileID: 0}
+    isATextCamera: 0
+    messageToType: {fileID: 0}
+    waitTimeAfterType: 0
+    timeBeforeNextCam: 0
+  - cam: {fileID: 0}
+    isATextCamera: 0
+    messageToType: {fileID: 0}
+    waitTimeAfterType: 0
+    timeBeforeNextCam: 0

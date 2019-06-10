@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cffadbf7ba68454d8fb3675f25e4b96, type: 3}
+  m_Name: PinShotAml
+  m_EditorClassIdentifier: 
+  equipmentSaveIndex: 207
+  equipmentType: 1
+  equipmentInformations:
+    equipmentName: PinShot
+    equipmentDescription: 'The farrer they are the better i feel. And if they are
+      blocked on something
+
+      I FEEL GREAT'
+    equipmentIcon: {fileID: 21300000, guid: 6d10223706afad7429e1bc3d5449799c, type: 3}
+    weaponType: 1
+    weaponShotType: 0
+    weaponEffect: 4
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: d3333a20b2228ab4daa22500342e7c8b,
+    type: 2}
+  equipmentDirection: 1
+  relatedPassives: []
+  relatedEquipmentObjectsPrefabs:
+  - {fileID: 2467901440266190533, guid: fe38053d48fe1d34fa838226e7ae89bf, type: 3}
+  equipmentQuality: 1
+  priceToBuy: 3200
+  priceToUpgrade: 2500
+  sellingPrice: 2000
+  upgradedEquipment: {fileID: 11400000, guid: 7aa2941a70a8b3c4f8ba1764fcb74278, type: 2}

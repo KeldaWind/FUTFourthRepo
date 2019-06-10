@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93b396190b96c94da0aaa448853b424, type: 3}
+  m_Name: BiremeHull
+  m_EditorClassIdentifier: 
+  equipmentSaveIndex: 104
+  equipmentType: 0
+  equipmentInformations:
+    equipmentName: "Bir\xE8me"
+    equipmentDescription: Un bateau rapide, mais moins maniable.
+    equipmentIcon: {fileID: 21300000, guid: 396b780bda81b29408e5b9ea4d177b29, type: 3}
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: f0d464cf4e375144ea534e63e7f4a46e,
+    type: 2}
+  equipmentDirection: 0
+  relatedPassives: []
+  relatedEquipmentObjectsPrefabs: []
+  equipmentQuality: 0
+  priceToBuy: 1200
+  priceToUpgrade: 1700
+  sellingPrice: 500
+  upgradedEquipment: {fileID: 11400000, guid: d4463191049947943948863471c5771e, type: 2}
+  movementParameters:
+    minSpeed: 20
+    maxSpeed: 24
+    acceleration: 6
+    desceleration: 3
+    speedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.29829282
+        outSlope: 0.29829282
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.073666185
+      - serializedVersion: 3
+        time: 0.6728353
+        value: 0.2734821
+        inSlope: 1.5802525
+        outSlope: 1.5802525
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.04104718
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2.2385914
+        outSlope: 2.2385914
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.077078834
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    maxRotationSpeed: 75
+    maniability: 360
+    rotationSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.536263
+        outSlope: 0.536263
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.08844151
+      - serializedVersion: 3
+        time: 0.4817725
+        value: 0.6497042
+        inSlope: 1.6098489
+        outSlope: 1.6098489
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.067053914
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  maximumHullLife: 8
+  maximumHullArmor: 2

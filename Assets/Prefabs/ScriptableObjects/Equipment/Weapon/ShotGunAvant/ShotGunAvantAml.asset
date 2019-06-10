@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cffadbf7ba68454d8fb3675f25e4b96, type: 3}
+  m_Name: ShotGunAvantAml
+  m_EditorClassIdentifier: 
+  equipmentSaveIndex: 221
+  equipmentType: 1
+  equipmentInformations:
+    equipmentName: SHOTGun
+    equipmentDescription: An island blocking the way? Try with this.
+    equipmentIcon: {fileID: 0}
+    weaponType: 0
+    weaponShotType: 1
+    weaponEffect: 0
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: 410c9c9c4ba947046978b0a9acd5a8a1,
+    type: 2}
+  equipmentDirection: 1
+  relatedPassives: []
+  relatedEquipmentObjectsPrefabs:
+  - {fileID: 5575059665341918943, guid: e41ebf4ce5790f444aeecf4fa264e15a, type: 3}
+  equipmentQuality: 1
+  priceToBuy: 2100
+  priceToUpgrade: 1700
+  sellingPrice: 1150
+  upgradedEquipment: {fileID: 11400000, guid: cdd7dd2859e81c747b44ac4c1058c34f, type: 2}

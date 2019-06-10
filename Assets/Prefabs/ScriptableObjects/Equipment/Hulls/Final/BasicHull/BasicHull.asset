@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93b396190b96c94da0aaa448853b424, type: 3}
+  m_Name: BasicHull
+  m_EditorClassIdentifier: 
+  equipmentSaveIndex: 107
+  equipmentType: 0
+  equipmentInformations:
+    equipmentName: QuackHull
+    equipmentDescription: The hull of your old ship, a bit histerical but you feel
+      well on it
+    equipmentIcon: {fileID: 21300000, guid: 0898dcfd35c3db2408208de6547c7a4a, type: 3}
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: db1e01d6a46ec52408f843c9d8cc87b4,
+    type: 2}
+  equipmentDirection: 0
+  relatedPassives: []
+  relatedEquipmentObjectsPrefabs: []
+  equipmentQuality: 0
+  priceToBuy: 1500
+  priceToUpgrade: 1600
+  sellingPrice: 0
+  upgradedEquipment: {fileID: 11400000, guid: d7368eaba52e7be45a72e2af90ad79e5, type: 2}
+  movementParameters:
+    minSpeed: 17
+    maxSpeed: 21.5
+    acceleration: 7.4
+    desceleration: 18.2
+    speedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1.6745073
+        outSlope: 1.6745073
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.17422304
+      - serializedVersion: 3
+        time: 0.1796797
+        value: 0.5845708
+        inSlope: 0.9433865
+        outSlope: 0.9433865
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.04104718
+        outWeight: 0.04703179
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.017973198
+        outSlope: 0.017973198
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.08883856
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    maxRotationSpeed: 90
+    maniability: 350
+    rotationSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  maximumHullLife: 5
+  maximumHullArmor: 5
+  hullPrefab: {fileID: 2949099199753956306, guid: 0fbd49a903fac7c4bb6c7687aaefe92e,
+    type: 3}
+  hullHitboxDimensions: {x: 8, y: 5, z: 13}

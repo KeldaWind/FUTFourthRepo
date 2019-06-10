@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e97c8b071f62a4ea71732664388f76, type: 3}
+  m_Name: CatapultSlowingShot
+  m_EditorClassIdentifier: 
+  competenceName: Double Shot
+  competenceImage: {fileID: 21300000, guid: e5d72aafd60eb6b409a5267646e75528, type: 3}
+  competenceCooldown: 1.5
+  shootParameters:
+    shootSalvos:
+    - projectileType: 1
+      numberOfShotProjectiles: 1
+      projectileParameters:
+        speedType: 30
+        shootType: 0
+        projectileSpeed:
+          m_Mode: 0
+          m_CurveMultiplier: 0
+          m_CurveMin:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_CurveMax:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_ConstantMin: 0
+          m_ConstantMax: 90
+        projectileSize: 8
+        projectileLifeTime: 1.2
+        shooterVelocityInfluenceCoeff: 0
+        damagesParameters:
+          damagesAmount: 3
+          recoveringTime: 0.2
+          recoveringType: 0
+      imprecisionParameter: 0
+      numberOfDirections: 1
+      angleBetweenDirections: 0
+    waitTimeBeforeTwoSalvo: 0.5
+    projectileTag: 0
+    catapultMinDistance: 30
+    catapultMaxDistance: 120
+  aiming: 0
+  lockDirectionAfterShoot: 0
+  speedModifier:
+    modificationSpeedCoeff: 0.2
+    modificationDuration: 3
+    modificationFadeInCoeff: 0.1
+    modificationFadeOutCoeff: 0.1
+  piercingParameters:
+    numberOfPiercing: 0
+  skeweringParameters:
+    skeweringOn: 0
+    damagesOnImpact:
+      damagesAmount: 0
+      recoveringTime: 0
+      recoveringType: 0
+    stunOnObstacleDuration: 0
+    stunOnOtherShipDuration: 0
+  explosionParameters:
+    explosionAttackParameters:
+      damagesParameters:
+        damagesAmount: 0
+        recoveringTime: 0
+        recoveringType: 0
+      knockbackParameters:
+        knockbackForce: 0
+        knockbackDuration: 0
+        knockbackAttenuationCoeff: 0
+        redirectionCoeff: 0
+        redirectionTime: 0
+    explosionMaxSize: 0
+    explosionExpandTime: 0
+    explosionPersistanceTime: 0
+    explosionCurrentExpandTime: 0
+    explosionCurrentPersistanceTime: 0
