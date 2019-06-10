@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnchorPreview : Preview
+public class IconPreview : Preview
 {
-    [SerializeField] Animator anchorAnimator;
-    [SerializeField] AudioSource anchorSoundSource;
-    [SerializeField] Sound anchorStartSound;
-    [SerializeField] Sound anchorEndSound;
+    [SerializeField] Animator iconAnimator;
+    [SerializeField] AudioSource iconSoundSource;
+    [SerializeField] Sound iconStartSound;
+    [SerializeField] Sound iconEndSound;
     Transform shipToFollow;
     bool previewing;
     bool active;
     float duration;
+    float minimumTimeBeforeReturn = 1;
+    float remainingTimeBeforeReturn;
 
     private void Update()
     {
@@ -20,7 +22,16 @@ public class AnchorPreview : Preview
         else if (active)
             UpdateLaunchedPreview();
         else if (ReadyToBeReturned)
-            EndAnchor();
+            EndIcon();
+        else
+        {
+            transform.position = shipToFollow.position;
+
+            if (remainingTimeBeforeReturn > 0)
+                remainingTimeBeforeReturn -= Time.deltaTime;
+            else if (remainingTimeBeforeReturn < 0)
+                remainingTimeBeforeReturn = 0;
+        }
     }
 
     public void ShowPreparePreview(Transform transformToFollow)
@@ -37,12 +48,23 @@ public class AnchorPreview : Preview
 
     public override void StartLaunchedPreview(Vector3 startPos, List<Vector3> aimPos, float parameter)
     {
-        previewing = false;
-        anchorAnimator.SetTrigger("started");
-        active = true;
-        duration = parameter;
+        if (GetPreviewType == PreviewPoolTag.Anchor)
+        {
+            previewing = false;
+            iconAnimator.SetTrigger("started");
+            active = true;
+            duration = parameter;
 
-        anchorSoundSource.PlaySound(anchorStartSound);
+            iconSoundSource.PlaySound(iconStartSound);
+        }
+        else if (GetPreviewType == PreviewPoolTag.Boost)
+        {
+            previewing = false;
+            iconAnimator.SetTrigger("started");
+
+            iconSoundSource.PlaySound(iconStartSound);
+            remainingTimeBeforeReturn = minimumTimeBeforeReturn;
+        }
     }
 
     public override void UpdateLaunchedPreview()
@@ -57,24 +79,21 @@ public class AnchorPreview : Preview
 
     public override void EndLaunchedPreview()
     {
-        /*active = false;
-        anchorAnimator.SetTrigger("ended");
-        duration = 0;*/
-        anchorSoundSource.PlaySound(anchorEndSound);
+        iconSoundSource.PlaySound(iconEndSound);
         active = false;
-        //EndAnchor();
     }
 
     public bool ReadyToBeReturned
     {
         get
         {
-            return !anchorSoundSource.isPlaying;
+            return !iconSoundSource.isPlaying && remainingTimeBeforeReturn == 0;
         }
     }
 
-    public void EndAnchor()
+    public void EndIcon()
     {
+        Debug.Log("end");
         gameObject.SetActive(false);
         GameManager.gameManager.PoolManager.ReturnPreview(this);
         shipToFollow = null;
