@@ -17,5 +17,5 @@ public class ProjectilePool : Pool<Projectile>
 
 public enum ProjectilePoolTag
 {
-    Canon, Catapult, CanonPersiting, CatapultPersisting, Null
+    Canon, Catapult, Mine, TonneauSlow,TonneauExplosion, Piercing, skewering, slowCanon, Null
 }
