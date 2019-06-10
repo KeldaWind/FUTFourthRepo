@@ -82,7 +82,7 @@ public class EquipmentsManager
                 relatedShip.LfManager.SetUpArmorAndLife(hullEquip.GetShipMaximumLife, Mathf.Clamp(IntersceneManager.intersceneManager.GetPlayerDatas.GetPlayerCurrentArmorValue, 0, hullEquip.GetShipMaximumArmor), hullEquip.GetShipMaximumArmor);
 
                 if(hullEquip.GetHullPrefab != null)
-                    relatedShip.ShipRenderManager.InstantiateHullRenderer(hullEquip.GetHullPrefab);
+                    relatedShip.ShipRenderManager.InstantiateHullRenderer(hullEquip.GetHullPrefab, (equipments.GetMainWeaponEquipment != null ? equipments.GetMainWeaponEquipment.GetEquipmentInformations.GetWeaponType : WeaponInformationType.MultiCanons));
                 if (hullEquip.GetHullHitboxDimensions != Vector3.zero)
                     relatedShip.SetShipBoxColliderDimensions(hullEquip.GetHullHitboxDimensions);
             }

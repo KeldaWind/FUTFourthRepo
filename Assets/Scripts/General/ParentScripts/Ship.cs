@@ -126,7 +126,7 @@ public class Ship : MonoBehaviour
         shipBody.velocity = velocity;
         UpdateShipRotation();
 
-        shipRenderingManager.UpdateRendering(shipMovements.rotationEnCours(), shipMovements.GetCurrentSpeed, shipMovements.Stopped);
+        shipRenderingManager.UpdateRendering(shipMovements.rotationEnCours(), shipMovements.GetCurrentSpeedCoeffFromZeroToMax, shipMovements.Stopped);
     }
 
     public virtual void Update()

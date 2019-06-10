@@ -301,6 +301,7 @@ public class EquipmentsInformationsInterface : MonoBehaviour
             weaponType == WeaponInformationType.Catapult ? "Catapult" :
             weaponType == WeaponInformationType.FrontCanons ? "Front Canon" :
             weaponType == WeaponInformationType.SideCanons ? "Side Canon" :
+            weaponType == WeaponInformationType.MultiCanons ? "Multi Canon" :
             "";
 
         weaponShotTypeText.text = shotType == WeaponInformationShotType.SingleShot ? "Single Shot" : shotType.ToString();
@@ -313,7 +314,7 @@ public class EquipmentsInformationsInterface : MonoBehaviour
 
 public enum WeaponInformationType
 {
-    FrontCanons, SideCanons, Catapult
+    FrontCanons, SideCanons, Catapult, MultiCanons
 }
 
 public enum WeaponInformationShotType

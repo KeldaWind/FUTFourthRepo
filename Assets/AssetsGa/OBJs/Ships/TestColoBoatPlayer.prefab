@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3714660845460213277
 Transform:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &814541041172666538
 Transform:
   m_ObjectHideFlags: 0
@@ -321,6 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4342823025919726709}
+  - component: {fileID: 1516929994565444681}
   m_Layer: 0
   m_Name: TestColoBoatPlayer
   m_TagString: Untagged
@@ -348,6 +349,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1516929994565444681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848473663929237608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4386b2a15464d8c49be65e43dea62dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontCanon: {fileID: 4905239049551763869}
+  sideCanons:
+  - {fileID: 7088372514987284511}
+  - {fileID: 2859767904109599426}
 --- !u!1 &8988107413436061293
 GameObject:
   m_ObjectHideFlags: 0

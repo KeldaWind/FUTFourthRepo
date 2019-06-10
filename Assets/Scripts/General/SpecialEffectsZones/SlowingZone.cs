@@ -10,11 +10,17 @@ public class SlowingZone : SpecialEffectZone
     [Header("Slowing Zone Parameters")]
     [SerializeField] float zoneHeight;
 
+    [Header("Slowing Zone Rendering")]
+    [SerializeField] SpriteRenderer slowingZoneSprite;
+    [SerializeField] ParticleSystem slowingZonePS;
+    float zoneSize;
+
     public override void SetUpZone(float duration, float size, object specialParameter)
     {
         base.SetUpZone(duration, size, specialParameter);
 
-        transform.localScale = new Vector3(size, zoneHeight, size);
+        transform.localScale = Vector3.zero;
+        //transform.localScale = new Vector3(size, size, size);
         currentlyAffectedShips = new List<Ship>();
 
         if ((specialParameter as SlowingZoneParameters) != null)
@@ -23,6 +29,36 @@ public class SlowingZone : SpecialEffectZone
         Vector3 truePosition = transform.position;
         truePosition.y = GameManager.gameManager.GetSeaLevel;
         transform.position = truePosition;
+
+        slowingZonePS.Play();
+
+        zoneSize = size;
+    }
+
+    public override void UpdateZone()
+    {
+        base.UpdateZone();
+
+        if (zoneRemainingDuration > 0)
+        {
+            slowingZoneSprite.color = Color.Lerp(slowingZoneSprite.color, zoneColor, appearingCoeff);
+            transform.localScale = Vector3.Lerp(transform.localScale , Vector3.one * zoneSize, appearingCoeff);
+        }
+        else if(zoneRemainingDuration == 0)
+        {
+            slowingZoneSprite.color = Color.Lerp(slowingZoneSprite.color, clearZoneColor, appearingCoeff);
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, appearingCoeff);
+            if (ReadyToBeTurnedOff)
+                SetOff();
+        }
+    }
+
+    public override bool ReadyToBeTurnedOff
+    {
+        get
+        {
+            return slowingZoneSprite.color.a < 0.01 && !slowingZonePS.isPlaying;
+        }
     }
 
     #region Trigger
@@ -57,6 +93,7 @@ public class SlowingZone : SpecialEffectZone
         {
             ship.ShipMvt.GetOutSlowingZone(this);
         }
+        slowingZonePS.Stop();
     }
 }
 

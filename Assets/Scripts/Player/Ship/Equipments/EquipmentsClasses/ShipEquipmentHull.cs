@@ -37,8 +37,8 @@ public class ShipEquipmentHull : ShipEquipment
     }
 
     [Header("Rendering and Hitbox")]
-    [SerializeField] GameObject hullPrefab;
-    public GameObject GetHullPrefab { get { return hullPrefab; } }
+    [SerializeField] ShipHullRenderer hullPrefab;
+    public ShipHullRenderer GetHullPrefab { get { return hullPrefab; } }
 
     [SerializeField] Vector3 hullHitboxDimensions;
     public Vector3 GetHullHitboxDimensions { get { return hullHitboxDimensions; } }
