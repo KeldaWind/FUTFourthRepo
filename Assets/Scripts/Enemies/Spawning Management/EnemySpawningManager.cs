@@ -7,6 +7,7 @@ public class EnemySpawningManager : MonoBehaviour
     public void SetUp()
     {
         GameManager.gameManager.PoolManager.GenerateEnemyShipsPoolDisctionary(GetAllUsedEnemiesTags);
+        GameManager.gameManager.ShowDebugText("Enemy Spawning Manager seted up");
 
         wavesWaitingToBeLaunched = new List<EnemyWave>();
         wavesToRemoveFromWait = new List<EnemyWave>();
@@ -215,6 +216,8 @@ public class EnemyWave
 
     public List<IDamageReceiver> SpawnEnemies()
     {
+        GameManager.gameManager.ShowDebugText(waveName + " started (before enemy spawn)");
+
         spawned = true;
 
         List<EnemySpawnPoint> availableCommonSpawnPoints = new List<EnemySpawnPoint>(commonEnemiesSpawnPoints);
@@ -331,6 +334,7 @@ public class EnemyWave
                 GameManager.gameManager.CinematicMng.SetShipsToStart(allSpawnedEnemies);
         }
 
+        GameManager.gameManager.ShowDebugText(waveName + " started (after enemy spawn)");
         return spawnedEnemies;
     }
 

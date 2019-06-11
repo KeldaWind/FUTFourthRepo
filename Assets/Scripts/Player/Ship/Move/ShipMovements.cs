@@ -246,6 +246,13 @@ public class ShipMovements
             return Mathf.Abs(currentRotationSpeed / maxRotationSpeed);
         }
     }
+    public float GetCurrentRotationSignedCoeff
+    {
+        get
+        {
+            return (currentRotationSpeed / maxRotationSpeed);
+        }
+    }
     #endregion
 
     #region Global
@@ -492,6 +499,8 @@ public class ShipMovements
         ShipSpeedModifier newModifier = new ShipSpeedModifier(shipSpeedModifier);
         newModifier.StartModificationParameters();
         currentShipSpeedModifiers.Add(newModifier);
+
+        relatedShip.PlaySlowingFeedback();
     }
 
     public void StartNewSpeedModifier(ShipSpeedModifier shipSpeedModifier, SlowingZone zone)
@@ -500,10 +509,14 @@ public class ShipMovements
         newModifier.StartModificationParameters();
         newModifier.SetRelatedZone(zone);
         currentZonesSpeedModifiers.Add(newModifier);
+
+        relatedShip.PlaySlowingFeedback();
     }
 
     public float UpdateSpeedModifiersAndGetSpeedModificationValue()
     {
+        bool beingSlowed = currentShipSpeedModifiers.Count > 0 || currentZonesSpeedModifiers.Count > 0;
+
         float modificationCoeff = 1;
 
         float totalCoeff = 0;
@@ -546,6 +559,9 @@ public class ShipMovements
             return 1;
         else 
             return totalCoeff/(float)counter;*/
+
+        if (beingSlowed && currentShipSpeedModifiers.Count == 0 && currentZonesSpeedModifiers.Count == 0)
+            relatedShip.StopSlowingFeedback();
 
         return modificationCoeff;
     }
