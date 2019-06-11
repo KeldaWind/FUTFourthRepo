@@ -25,6 +25,8 @@ public class EnemyLootCrate : MonoBehaviour
     [SerializeField] float rotationSpeed;
     float rotationCounter;
     [SerializeField] ParticleSystem shinyParticles;
+    [SerializeField] AudioSource lootCrateAudioSource;
+    [SerializeField] Sound lootSound;
 
     public void SetBoxLoot(int gold, ShipEquipment equipment)
     {
@@ -101,6 +103,8 @@ public class EnemyLootCrate : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, rotY, 0));
 
         shinyParticles.Stop();
+
+        lootCrateAudioSource.PlaySound(lootSound);
     }
 
     public float GetLootingProgressionCoeff { get { return 1 - remainingLootingDuration / lootingDuration; } }
