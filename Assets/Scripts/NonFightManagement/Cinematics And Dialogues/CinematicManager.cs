@@ -195,6 +195,9 @@ public class CinematicManager
 
     public void UpdateCinematicPart()
     {
+        if (showingNotSkippable)
+            UpdateShowNotSkippable();
+
         if (comingBackToPlayer)
         {
             if (mainCameraBrain.ActiveBlend != null)
@@ -221,9 +224,6 @@ public class CinematicManager
         }
         else
             UpdateDialogue();
-
-        if (showingNotSkippable)
-            UpdateShowNotSkippable();
     }
 
     bool cinematicPartHasCamMove;
