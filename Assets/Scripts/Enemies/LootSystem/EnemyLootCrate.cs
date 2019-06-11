@@ -146,13 +146,30 @@ public class EnemyLootCrate : MonoBehaviour
             lootPopUpObject.SetUp(transform.position, lootedEquipment.GetEquipmentInformations.GetEquipmentIcon);
         }
 
-        if (lootedGold != 0)
+        if (ArenaManager.arenaManager != null)
         {
-            lootingPlayer.PlayerLootManager.AddLootedGold(lootedGold);
-            lootPopUpObject.SetUp(transform.position, lootedGold);
+            if (lootedGold != 0)
+            {
+                lootingPlayer.PlayerLootManager.AddLootedGold(lootedGold);
+                lootPopUpObject.SetUp(transform.position, lootedGold);
+            }
+
+            ArenaManager.arenaManager.DropManager.RemoveDropCrate(this);
+        }
+        else
+        {
+            if (IntersceneManager.intersceneManager != null)
+            {
+                IntersceneManager.intersceneManager.GetPlayerDatas.EarnMoney(lootedGold);
+
+                PlayerEquipmentsDatas data = PlayerDataSaver.LoadPlayerEquipmentsDatas();
+                data.SetPlayerGoldAmount(IntersceneManager.intersceneManager.GetPlayerDatas.GetPlayerGoldAmount);
+                PlayerDataSaver.SavePlayerEquipmentsDatas(data);
+
+                lootPopUpObject.SetUp(transform.position, lootedGold);
+            }
         }
 
-        ArenaManager.arenaManager.DropManager.RemoveDropCrate(this);
         gameObject.SetActive(false);
         GameManager.gameManager.PoolManager.ReturnLootCrate(this);
     }

@@ -82,11 +82,11 @@ MonoBehaviour:
         knockbackDuration: 0.5
         knockbackAttenuationCoeff: 0.1
         ignoresProtection: 1
-        redirectionCoeff: 0
-        redirectionTime: 0
+        redirectionCoeff: 0.9
+        redirectionTime: 0.25
     explosionMaxSize: 30
-    explosionExpandTime: 0.75
-    explosionPersistanceTime: 0.5
+    explosionExpandTime: 0.2
+    explosionPersistanceTime: 0.1
     explosionCurrentExpandTime: 0
     explosionCurrentPersistanceTime: 0
   smokeZoneParameters:

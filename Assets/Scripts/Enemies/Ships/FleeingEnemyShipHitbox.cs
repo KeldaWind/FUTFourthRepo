@@ -11,7 +11,6 @@ public class FleeingEnemyShipHitbox : ShipHitbox
     {
         if (damageSource.GetDamageTag == AttackTag.Player)
         {
-            Debug.Log("nan mais nique ta mère là");
             if (!GameManager.gameManager.CinematicMng.CinematicProcessing)
             {
                 IntroControler dialogue = dialoguesToLaunchOnFleeingEnemyHitByShot[Random.Range(0, dialoguesToLaunchOnFleeingEnemyHitByShot.Length)];

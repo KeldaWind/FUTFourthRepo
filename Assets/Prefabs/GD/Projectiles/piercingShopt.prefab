@@ -185,7 +185,7 @@ Transform:
   m_GameObject: {fileID: 4599580084353135927}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 2, z: 4}
   m_Children: []
   m_Father: {fileID: 749842506813406921}
   m_RootOrder: 3
@@ -422,9 +422,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6911880857562730016}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.7
+  m_Radius: 0.5
   m_Height: 2.27
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
@@ -531,6 +531,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4544225476390469721}
     m_Modifications:
+    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
+        type: 3}
+      propertyPath: m_Name
+      value: PS_explosion_cartoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5786617100906214081, guid: 3bfe757d46e55db408820bde10233e3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -565,16 +575,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
-        type: 3}
-      propertyPath: m_Name
-      value: PS_explosion_cartoon
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5786617102143422903, guid: 3bfe757d46e55db408820bde10233e3c,
         type: 3}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 749842506813406923}
   - component: {fileID: 749842506813406922}
   m_Layer: 10
-  m_Name: BaseProjectilePersisting
+  m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &749842506813406923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
   projectilePoolTag: 2
   projectileBody: {fileID: 749842506813406923}
   projectileSizeParent: {fileID: 749842506813406921}
-  shootPreviewType: 3
-  projectileRenderer: {fileID: 0}
+  shootPreviewType: 0
+  projectileRenderer: {fileID: 2422496494180006199}
   explosionParticles: {fileID: 5454688872136911012}
   onLifeTimeEndedParticles: {fileID: 7611551808820055703}
   rotationSpeed: 0
@@ -337,7 +337,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.6
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &6912593837303968058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: 4999200829297511275, guid: 2a34cbda108572e4483337e0c2aea135,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4999200829297511275, guid: 2a34cbda108572e4483337e0c2aea135,
         type: 3}
@@ -513,11 +513,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4999200829297511275, guid: 2a34cbda108572e4483337e0c2aea135,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999200829297511275, guid: 2a34cbda108572e4483337e0c2aea135,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999200829297511275, guid: 2a34cbda108572e4483337e0c2aea135,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a34cbda108572e4483337e0c2aea135, type: 3}
 --- !u!4 &553250994910449636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4999200829297511275, guid: 2a34cbda108572e4483337e0c2aea135,
+    type: 3}
+  m_PrefabInstance: {fileID: 4813556851106448527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &2422496494180006199 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7157169554368724408, guid: 2a34cbda108572e4483337e0c2aea135,
     type: 3}
   m_PrefabInstance: {fileID: 4813556851106448527}
   m_PrefabAsset: {fileID: 0}

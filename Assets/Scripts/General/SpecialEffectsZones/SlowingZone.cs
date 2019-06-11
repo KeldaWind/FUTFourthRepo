@@ -33,6 +33,8 @@ public class SlowingZone : SpecialEffectZone
         slowingZonePS.Play();
 
         zoneSize = size;
+
+        transform.rotation = Quaternion.Euler(new Vector3(0, Random.Range(-180f, 180f), 0));
     }
 
     public override void UpdateZone()

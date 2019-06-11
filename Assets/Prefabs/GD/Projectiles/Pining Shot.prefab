@@ -82,7 +82,7 @@ MonoBehaviour:
   projectileBody: {fileID: 749842506813406923}
   projectileSizeParent: {fileID: 749842506813406921}
   shootPreviewType: 0
-  projectileRenderer: {fileID: 0}
+  projectileRenderer: {fileID: 141047283560852331}
   explosionParticles: {fileID: 5454688872136911012}
   onLifeTimeEndedParticles: {fileID: 7611551808820055703}
   rotationSpeed: 0
@@ -466,12 +466,12 @@ PrefabInstance:
     - target: {fileID: 2853556542545051256, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 2853556542545051256, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.37
       objectReference: {fileID: 0}
     - target: {fileID: 2853556542545051256, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
         type: 3}
@@ -516,17 +516,17 @@ PrefabInstance:
     - target: {fileID: 2853556542545051256, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2853556542545051256, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2853556542545051256, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4104508581476195384, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
         type: 3}
@@ -556,6 +556,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2443742705568717881}
   m_PrefabAsset: {fileID: 0}
+--- !u!199 &141047283560852331 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 2313991261696931666, guid: 3b30e39ab27d5c44e82448dbb280b7e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443742705568717881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7281423697431638804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -563,6 +569,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4544225476390469721}
     m_Modifications:
+    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
+        type: 3}
+      propertyPath: m_Name
+      value: PS_explosion_cartoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5786617100906214081, guid: 3bfe757d46e55db408820bde10233e3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -597,16 +613,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
-        type: 3}
-      propertyPath: m_Name
-      value: PS_explosion_cartoon
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5786617102143422903, guid: 3bfe757d46e55db408820bde10233e3c,
         type: 3}
