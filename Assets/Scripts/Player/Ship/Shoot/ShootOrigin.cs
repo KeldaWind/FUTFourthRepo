@@ -327,7 +327,15 @@ public class ShootOrigin : MonoBehaviour
         }
         #endregion
 
-        if(currentShootParameters.GetCurrentSalvoIndex > 1)
+        #region Feedback
+        if (shootParticleSystem != null)
+            shootParticleSystem.Play();
+
+        if (shootAudioSource != null)
+            shootAudioSource.PlaySound(currentShootParameters.GetShootSound);
+        #endregion
+
+        if (currentShootParameters.GetCurrentSalvoIndex > 1)
             ContinueLaunchedPreview(salvo);
     }
     #endregion
@@ -503,5 +511,11 @@ public class ShootOrigin : MonoBehaviour
     {
         projectileSpecialParameters = projSpecialParameters;
     }
+    #endregion
+
+    #region Feedbacks
+    [Header("Feedbacks")]
+    [SerializeField] ParticleSystem shootParticleSystem;
+    [SerializeField] AudioSource shootAudioSource;
     #endregion
 }
