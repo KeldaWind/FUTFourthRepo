@@ -34,7 +34,7 @@ public class MapDocksInterface : MonoBehaviour
             playerInventoryButton.gameObject.SetActive(true);
             sellerInventoryButton.gameObject.SetActive(true);
             sellerRebuyInventoryButton.gameObject.SetActive(true);
-            repairButton.gameObject.SetActive(true);
+            //repairButton.gameObject.SetActive(true);
             openInventoryButton.gameObject.SetActive(false);
         }
         else
@@ -42,7 +42,7 @@ public class MapDocksInterface : MonoBehaviour
             playerInventoryButton.gameObject.SetActive(false);
             sellerInventoryButton.gameObject.SetActive(false);
             sellerRebuyInventoryButton.gameObject.SetActive(false);
-            repairButton.gameObject.SetActive(false);
+            //repairButton.gameObject.SetActive(false);
             openInventoryButton.gameObject.SetActive(true);
         }
     }

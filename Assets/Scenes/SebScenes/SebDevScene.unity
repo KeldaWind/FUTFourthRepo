@@ -7231,7 +7231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &488649250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18549,27 +18549,27 @@ PrefabInstance:
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8660254
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 39.3
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -60
+      value: 69.5
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18634,7 +18634,7 @@ PrefabInstance:
     - target: {fileID: 3598126807019236253, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: field of view
-      value: 55
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236253, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18879,12 +18879,12 @@ PrefabInstance:
     - target: {fileID: 8067840716951442810, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -162
+      value: -125
       objectReference: {fileID: 0}
     - target: {fileID: 8067840716951442810, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -73
+      value: -127
       objectReference: {fileID: 0}
     - target: {fileID: 8067840718363816655, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18996,11 +18996,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616923091603728766, guid: af42accc1c0f30e45aa4da44f704f453,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5122862330809075089, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -22954,6 +22949,16 @@ PrefabInstance:
     - target: {fileID: 5580375953704226603, guid: c966b7dd0dfbbc043b4ec420a13190f8,
         type: 3}
       propertyPath: tutorialAllSteps.Array.data[1].needToClearSpawnedWaveToValidate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580375953704226603, guid: c966b7dd0dfbbc043b4ec420a13190f8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580375953166184050, guid: c966b7dd0dfbbc043b4ec420a13190f8,
+        type: 3}
+      propertyPath: isNotSkippable
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
