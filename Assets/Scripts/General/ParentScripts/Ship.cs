@@ -126,7 +126,7 @@ public class Ship : MonoBehaviour
         shipBody.velocity = velocity;
         UpdateShipRotation();
 
-        shipRenderingManager.UpdateRendering(shipMovements.rotationEnCours(), shipMovements.GetCurrentSpeedCoeffFromZeroToMax, shipMovements.Stopped);
+        shipRenderingManager.UpdateRendering(shipMovements.GetCurrentRotationSignedCoeff, shipMovements.GetCurrentSpeedCoeffFromZeroToMax, shipMovements.Stopped);
     }
 
     public virtual void Update()
@@ -146,7 +146,7 @@ public class Ship : MonoBehaviour
         if (blind && remainingBlindingDuration != 0)
             UpdateBlinding();
     }
-    
+
     public void SetPositionAndRotation(Transform posAndRot)
     {
         transform.position = posAndRot.position;
@@ -170,6 +170,8 @@ public class Ship : MonoBehaviour
     public void StartDamageShipAnim(int damages, DamageSourceRelativePosition damageSourceRelativePosition)
     {
         shipRenderingManager.StartDamageAnimation(damages, damageSourceRelativePosition);
+
+        shipFeedbacks.PlayDamageFeedback();
     }
     #endregion
 
@@ -188,6 +190,8 @@ public class Ship : MonoBehaviour
         shipMovements.Reset();
         knockbackManager.Reset();
         #endregion
+
+        shipFeedbacks.PlayDeathFeedback();
     }
 
     #region Stun Management
@@ -205,6 +209,8 @@ public class Ship : MonoBehaviour
     {
         remainingStunDuration = stunDuration;
         shipMovements.StopShip();
+
+        shipFeedbacks.PlayStunFeedback();
     }
 
     public void UpdateStun()
@@ -219,6 +225,8 @@ public class Ship : MonoBehaviour
     {
         remainingStunDuration = 0;
         shipMovements.StartShip();
+
+        shipFeedbacks.StopStunFeedback();
     }
     #endregion
 
@@ -342,4 +350,17 @@ public class Ship : MonoBehaviour
         remainingBlindingDuration = 0;
     }
     #endregion
+
+    [Header("Feedbacks")]
+    [SerializeField] protected ShipFeedbacks shipFeedbacks;
+
+    public void PlaySlowingFeedback()
+    {
+        shipFeedbacks.PlaySlowingFeedback();
+    }
+
+    public void StopSlowingFeedback()
+    {
+        shipFeedbacks.StopSlowingFeedback();
+    }
 }

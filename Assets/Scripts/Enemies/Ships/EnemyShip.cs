@@ -1080,11 +1080,12 @@ public class EnemyShip : Ship
     #region Pooling 
     public bool CheckIfReadyToBeReturnedToPool()
     {
-        return alreadyDead;
+        return alreadyDead && shipFeedbacks.ReadyToBeReturnedToPool;
     }
 
     public void ReturnToPool()
     {
+        Debug.Log("return");
         gameObject.SetActive(false);
         GameManager.gameManager.PoolManager.ReturnEnemyShip(this);
     }

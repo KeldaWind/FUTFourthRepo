@@ -111,7 +111,6 @@ public class EnemyDropParameters : ScriptableObject
         #region Remove Dropped Equipment from possibilities
         if(lootedEquipment != null)
         {
-            Debug.Log("objet looté : " + lootedEquipment);
             if (lootedEquipmentType == EquipmentType.Hull)
                 hullLootSystem.RemoveEquipmentFromSystem(lootedEquipment);
             else if (lootedEquipmentType == EquipmentType.Canon)

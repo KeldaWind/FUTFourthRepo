@@ -30,8 +30,11 @@ public class Obstacle : MonoBehaviour, IDamageSource, ICollisionSource
                     PlayerShip playerShip = hitShipHitbox.GetRelatedShip as PlayerShip;
                     if (playerShip != null)
                     {
-                        ArenaManager.arenaManager.ScoreMng.SetPlayerHasHitObstacle();
-                        playerHitObstacleOnce = true;
+                        if (ArenaManager.arenaManager != null)
+                        {
+                            ArenaManager.arenaManager.ScoreMng.SetPlayerHasHitObstacle();
+                            playerHitObstacleOnce = true;
+                        }
                     }
                 }
 
