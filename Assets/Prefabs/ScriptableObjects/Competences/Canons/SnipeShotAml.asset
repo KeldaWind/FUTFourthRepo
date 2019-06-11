@@ -17,7 +17,7 @@ MonoBehaviour:
   competenceCooldown: 3
   shootParameters:
     shootSalvos:
-    - projectileType: 0
+    - projectileType: 5
       numberOfShotProjectiles: 1
       projectileParameters:
         speedType: 30
@@ -47,6 +47,7 @@ MonoBehaviour:
           recoveringTime: 0.2
           recoveringType: 0
       imprecisionParameter: 0
+      projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
     waitTimeBeforeTwoSalvo: 0.5

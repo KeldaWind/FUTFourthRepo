@@ -209,6 +209,7 @@ public class ArenaBeginEndInterfaceManager
     [Header("End Interface : Score and Global Loot")]
     [SerializeField] GameObject starsAndGoldPanel;
     [SerializeField] GameButton openLootButton;
+    [SerializeField] GameButton firstPanelContinueButton;
     #region Score
     //[SerializeField] Image[] firstPanelStarsImages;
     [SerializeField] Image firstPanelPassedStar;
@@ -237,6 +238,8 @@ public class ArenaBeginEndInterfaceManager
 
         openTutorialLootButton.Interaction = CloseStarsAndGoldPanel;
         openTutorialLootButton.Interaction += OpenLootingPanelFirstTime;
+
+        firstPanelContinueButton.Interaction = GameManager.gameManager.StartBackingToMap;
     }
 
     public void OpenStarsAndGlobalLootPanel(bool isTutorial)
@@ -299,6 +302,17 @@ public class ArenaBeginEndInterfaceManager
 
             firstPanelGoldAmountText.text = playerLootManager.GetAllLootedGold.ToString();
             firstPanelEquipmentsAmountText.text = "x " + playerLootManager.GetAllLootedEquipments.Count;
+
+            if (playerLootManager.GetAllLootedEquipments.Count == 0)
+            {
+                openLootButton.gameObject.SetActive(false);
+                firstPanelContinueButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                openLootButton.gameObject.SetActive(true);
+                firstPanelContinueButton.gameObject.SetActive(false);
+            }
             #endregion
         }
     }

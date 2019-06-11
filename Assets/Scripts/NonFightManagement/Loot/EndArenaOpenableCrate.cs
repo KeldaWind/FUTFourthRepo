@@ -15,6 +15,13 @@ public class EndArenaOpenableCrate : MonoBehaviour
     [SerializeField] MeshRenderer crateRenderer;
     [SerializeField] Animator crateAnimator;
     [SerializeField] SpriteRenderer lootedEquipmentImage;
+    [SerializeField] Text lootedEquipmentText;
+    [SerializeField] AudioSource crateAudioSource;
+    [SerializeField] Sound appearingSound;
+    [SerializeField] Sound highlightSound;
+    [SerializeField] Sound level1OpeningSound;
+    [SerializeField] Sound level2OpeningSound;
+    [SerializeField] Sound level3OpeningSound;
     bool openable;
 
     float remainingTimeBeforeAppear;
@@ -56,6 +63,9 @@ public class EndArenaOpenableCrate : MonoBehaviour
             remainingTimeBeforeAppear = waitTimeBeforeAppear;
         else
             Appear();
+
+        lootedEquipmentText.text = containedEquipment.GetEquipmentInformations.GetEquipmentName;
+        lootedEquipmentText.enabled = false;
     }
 
     public void Appear()
@@ -68,6 +78,7 @@ public class EndArenaOpenableCrate : MonoBehaviour
     {
         highlighted = true;
         crateAnimator.SetBool("highlight", highlighted);
+        crateAudioSource.PlaySound(highlightSound);
     }
 
     public void EndCrateHighlight()
@@ -101,7 +112,20 @@ public class EndArenaOpenableCrate : MonoBehaviour
             remainingTimeBeforeAppear = 0;
             Appear();
         }
-        /*if (highlighted)
-            transform.localPosition = basePos + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));*/
+    }
+
+    public void PlayAppearingSound()
+    {
+        crateAudioSource.PlaySound(appearingSound);
+    }
+
+    public void PlayOpeningSound()
+    {
+        if (containedEquipment.GetEquipmentQuality == EquipmentQuality.Common)
+            crateAudioSource.PlaySound(level1OpeningSound);
+        else if (containedEquipment.GetEquipmentQuality == EquipmentQuality.Rare)
+            crateAudioSource.PlaySound(level2OpeningSound);
+        else if (containedEquipment.GetEquipmentQuality == EquipmentQuality.Legendary)
+            crateAudioSource.PlaySound(level3OpeningSound);
     }
 }

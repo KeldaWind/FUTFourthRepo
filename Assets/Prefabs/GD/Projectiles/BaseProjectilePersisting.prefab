@@ -81,7 +81,7 @@ MonoBehaviour:
   projectilePoolTag: 2
   projectileBody: {fileID: 749842506813406923}
   projectileSizeParent: {fileID: 749842506813406921}
-  shootPreviewType: 0
+  shootPreviewType: 3
   projectileRenderer: {fileID: 0}
   explosionParticles: {fileID: 5454688872136911012}
   onLifeTimeEndedParticles: {fileID: 7611551808820055703}
@@ -528,6 +528,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4544225476390469721}
     m_Modifications:
+    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
+        type: 3}
+      propertyPath: m_Name
+      value: PS_explosion_cartoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5786617100906214081, guid: 3bfe757d46e55db408820bde10233e3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -582,16 +592,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
-        type: 3}
-      propertyPath: m_Name
-      value: PS_explosion_cartoon
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786617100906214082, guid: 3bfe757d46e55db408820bde10233e3c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5786617102143422903, guid: 3bfe757d46e55db408820bde10233e3c,
         type: 3}
