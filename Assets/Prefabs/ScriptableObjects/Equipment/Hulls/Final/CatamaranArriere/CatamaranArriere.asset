@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f93b396190b96c94da0aaa448853b424, type: 3}
-  m_Name: Catamaran 1
+  m_Name: CatamaranArriere
   m_EditorClassIdentifier: 
-  equipmentSaveIndex: 111
+  equipmentSaveIndex: 110
   equipmentType: 0
   equipmentInformations:
-    equipmentName: The Intouchable
+    equipmentName: The Escapable
     equipmentDescription: 'Just like in old time. My first boat, swift and maniable.
 
       Kinda fragile but definitively the most evasive hull avaible.
@@ -25,21 +25,21 @@ MonoBehaviour:
     weaponType: 0
     weaponShotType: 0
     weaponEffect: 0
-  equipmentPrimaryCompetence: {fileID: 11400000, guid: 62fc67026d5ee0f4c8d95b4390adc12e,
+  equipmentPrimaryCompetence: {fileID: 11400000, guid: e4d7899f1920907408408027f17d66fd,
     type: 2}
   equipmentDirection: 0
   relatedPassives: []
   relatedEquipmentObjectsPrefabs: []
-  equipmentQuality: 1
-  priceToBuy: 3400
-  priceToUpgrade: 2300
-  sellingPrice: 1100
-  upgradedEquipment: {fileID: 11400000, guid: d65a187218b82c04eb94922c7f8f4d46, type: 2}
+  equipmentQuality: 0
+  priceToBuy: 1200
+  priceToUpgrade: 1700
+  sellingPrice: 670
+  upgradedEquipment: {fileID: 11400000, guid: d553f14dafe1a054885d255394aa71b9, type: 2}
   movementParameters:
     minSpeed: 22
     maxSpeed: 26
     acceleration: 7.4
-    desceleration: 20
+    desceleration: 18.2
     speedCurve:
       serializedVersion: 2
       m_Curve:
@@ -99,7 +99,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  maximumHullLife: 9
+  maximumHullLife: 7
   maximumHullArmor: 0
-  hullPrefab: {fileID: 0}
+  hullPrefab: {fileID: 5681032509408089935, guid: 380701a03f39002468e5bdfcc111bdf2,
+    type: 3}
   hullHitboxDimensions: {x: 9, y: 10, z: 13}

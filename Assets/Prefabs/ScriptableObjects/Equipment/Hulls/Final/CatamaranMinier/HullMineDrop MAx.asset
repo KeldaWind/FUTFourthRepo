@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e97c8b071f62a4ea71732664388f76, type: 3}
-  m_Name: SlowingDownShootAlmMax
+  m_Name: HullMineDrop MAx
   m_EditorClassIdentifier: 
-  competenceName: Double Shot
-  competenceImage: {fileID: 21300000, guid: e5d72aafd60eb6b409a5267646e75528, type: 3}
-  competenceCooldown: 3
+  competenceName: HullMineDrop
+  competenceImage: {fileID: 0}
+  competenceCooldown: 5
   shootParameters:
     shootSalvos:
-    - projectileType: 7
+    - projectileType: 2
       numberOfShotProjectiles: 1
       projectileParameters:
-        speedType: 30
+        speedType: 0
         shootType: 0
         projectileSpeed:
           m_Mode: 0
@@ -38,22 +38,22 @@ MonoBehaviour:
             m_PostInfinity: 0
             m_RotationOrder: 0
           m_ConstantMin: 0
-          m_ConstantMax: 60
-        projectileSize: 2
-        projectileLifeTime: 1
+          m_ConstantMax: 10
+        projectileSize: 5
+        projectileLifeTime: 0.25
         shooterVelocityInfluenceCoeff: 0
         damagesParameters:
-          damagesAmount: 4
-          recoveringTime: 0.2
+          damagesAmount: 0
+          recoveringTime: 0
           recoveringType: 0
       imprecisionParameter: 0
       projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
-    - projectileType: 0
+    - projectileType: 2
       numberOfShotProjectiles: 1
       projectileParameters:
-        speedType: 30
+        speedType: 0
         shootType: 0
         projectileSpeed:
           m_Mode: 0
@@ -71,19 +71,52 @@ MonoBehaviour:
             m_PostInfinity: 0
             m_RotationOrder: 0
           m_ConstantMin: 0
-          m_ConstantMax: 60
-        projectileSize: 2
-        projectileLifeTime: 1
+          m_ConstantMax: 10
+        projectileSize: 5
+        projectileLifeTime: 0.25
         shooterVelocityInfluenceCoeff: 0
         damagesParameters:
-          damagesAmount: 4
-          recoveringTime: 0.2
+          damagesAmount: 0
+          recoveringTime: 0
           recoveringType: 0
       imprecisionParameter: 0
       projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
-    waitTimeBeforeTwoSalvo: 0.5
+    - projectileType: 2
+      numberOfShotProjectiles: 1
+      projectileParameters:
+        speedType: 0
+        shootType: 0
+        projectileSpeed:
+          m_Mode: 0
+          m_CurveMultiplier: 0
+          m_CurveMin:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_CurveMax:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_ConstantMin: 0
+          m_ConstantMax: 10
+        projectileSize: 5
+        projectileLifeTime: 0.25
+        shooterVelocityInfluenceCoeff: 0
+        damagesParameters:
+          damagesAmount: 0
+          recoveringTime: 0
+          recoveringType: 0
+      imprecisionParameter: 0
+      projectilesSpacing: 0
+      numberOfDirections: 1
+      angleBetweenDirections: 0
+    waitTimeBeforeTwoSalvo: 0.75
     projectileTag: 0
     catapultMinDistance: 0
     catapultMaxDistance: 0
@@ -91,9 +124,9 @@ MonoBehaviour:
   lockDirectionAfterShoot: 0
   speedModifier:
     modificationSpeedCoeff: 0
-    modificationDuration: 3
-    modificationFadeInCoeff: 0.1
-    modificationFadeOutCoeff: 0.1
+    modificationDuration: 0
+    modificationFadeInCoeff: 0
+    modificationFadeOutCoeff: 0
   piercingParameters:
     numberOfPiercing: 0
   skeweringParameters:
@@ -107,19 +140,19 @@ MonoBehaviour:
   explosionParameters:
     explosionAttackParameters:
       damagesParameters:
-        damagesAmount: 0
-        recoveringTime: 0
+        damagesAmount: 4
+        recoveringTime: 0.2
         recoveringType: 0
       knockbackParameters:
-        knockbackForce: 0
-        knockbackDuration: 0
-        knockbackAttenuationCoeff: 0
+        knockbackForce: 25
+        knockbackDuration: 0.3
+        knockbackAttenuationCoeff: 0.3
         ignoresProtection: 0
-        redirectionCoeff: 0
-        redirectionTime: 0
-    explosionMaxSize: 0
-    explosionExpandTime: 0
-    explosionPersistanceTime: 0
+        redirectionCoeff: 0.75
+        redirectionTime: 0.2
+    explosionMaxSize: 30
+    explosionExpandTime: 0.2
+    explosionPersistanceTime: 0.1
     explosionCurrentExpandTime: 0
     explosionCurrentPersistanceTime: 0
   smokeZoneParameters:

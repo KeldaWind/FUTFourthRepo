@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e97c8b071f62a4ea71732664388f76, type: 3}
-  m_Name: HullMineDrop
+  m_Name: HullMineDrop aml
   m_EditorClassIdentifier: 
   competenceName: HullMineDrop
   competenceImage: {fileID: 0}
-  competenceCooldown: 5
+  competenceCooldown: 7
   shootParameters:
     shootSalvos:
     - projectileType: 2
-      numberOfShotProjectiles: 1
+      numberOfShotProjectiles: 2
       projectileParameters:
         speedType: 0
         shootType: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
       projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
-    waitTimeBeforeTwoSalvo: 0.75
+    waitTimeBeforeTwoSalvo: 1
     projectileTag: 0
     catapultMinDistance: 0
     catapultMaxDistance: 0
@@ -140,8 +140,8 @@ MonoBehaviour:
   explosionParameters:
     explosionAttackParameters:
       damagesParameters:
-        damagesAmount: 2
-        recoveringTime: 0.3
+        damagesAmount: 4
+        recoveringTime: 0.2
         recoveringType: 0
       knockbackParameters:
         knockbackForce: 25
