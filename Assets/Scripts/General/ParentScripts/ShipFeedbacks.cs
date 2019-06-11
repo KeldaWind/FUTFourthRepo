@@ -13,8 +13,9 @@ public class ShipFeedbacks : MonoBehaviour
     }
 
     [Header("Feedbacks")]
-    [SerializeField] protected AudioSource shipAudioSource;
-    [SerializeField] protected ParticleSystem damagesParticles;
+    [SerializeField] AudioSource shipAudioSource;
+    [SerializeField] ParticleSystem damagesParticles;
+    [SerializeField] ScreenshakeParameters damageScreenshake;
     public void PlayDamageFeedback()
     {
         if (deathParticles != null)
@@ -23,9 +24,12 @@ public class ShipFeedbacks : MonoBehaviour
 
         if (damagesParticles != null)
             damagesParticles.Play();
+
+        if (damageScreenshake.Force != 0 && damageScreenshake.Duration != 0)
+            GameManager.gameManager.ScrshkManager.StartScreenshake(damageScreenshake);
     }
 
-    [SerializeField] protected ParticleSystem deathParticles;
+    [SerializeField] ParticleSystem deathParticles;
     [SerializeField] Sound deathSound;
     public void PlayDeathFeedback()
     {
@@ -42,7 +46,7 @@ public class ShipFeedbacks : MonoBehaviour
             shipAudioSource.PlaySound(deathSound);
     }
 
-    [SerializeField] protected ParticleSystem stunParticles;
+    [SerializeField] ParticleSystem stunParticles;
     public void PlayStunFeedback()
     {
         if (stunParticles != null)
@@ -55,7 +59,7 @@ public class ShipFeedbacks : MonoBehaviour
             stunParticles.Stop();
     }
 
-    [SerializeField] protected ParticleSystem slowParticles;
+    [SerializeField] ParticleSystem slowParticles;
 
     public void PlaySlowingFeedback()
     {

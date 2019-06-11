@@ -171,7 +171,8 @@ public class Ship : MonoBehaviour
     {
         shipRenderingManager.StartDamageAnimation(damages, damageSourceRelativePosition);
 
-        shipFeedbacks.PlayDamageFeedback();
+        if(shipFeedbacks != null)
+            shipFeedbacks.PlayDamageFeedback();
     }
     #endregion
 
@@ -191,7 +192,8 @@ public class Ship : MonoBehaviour
         knockbackManager.Reset();
         #endregion
 
-        shipFeedbacks.PlayDeathFeedback();
+        if (shipFeedbacks != null)
+            shipFeedbacks.PlayDeathFeedback();
     }
 
     #region Stun Management
@@ -210,7 +212,8 @@ public class Ship : MonoBehaviour
         remainingStunDuration = stunDuration;
         shipMovements.StopShip();
 
-        shipFeedbacks.PlayStunFeedback();
+        if (shipFeedbacks != null)
+            shipFeedbacks.PlayStunFeedback();
     }
 
     public void UpdateStun()
@@ -226,7 +229,8 @@ public class Ship : MonoBehaviour
         remainingStunDuration = 0;
         shipMovements.StartShip();
 
-        shipFeedbacks.StopStunFeedback();
+        if (shipFeedbacks != null)
+            shipFeedbacks.StopStunFeedback();
     }
     #endregion
 
@@ -356,11 +360,13 @@ public class Ship : MonoBehaviour
 
     public void PlaySlowingFeedback()
     {
-        shipFeedbacks.PlaySlowingFeedback();
+        if (shipFeedbacks != null)
+            shipFeedbacks.PlaySlowingFeedback();
     }
 
     public void StopSlowingFeedback()
     {
-        shipFeedbacks.StopSlowingFeedback();
+        if (shipFeedbacks != null)
+            shipFeedbacks.StopSlowingFeedback();
     }
 }

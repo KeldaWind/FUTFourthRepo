@@ -9990,6 +9990,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipAudioSource: {fileID: 7940567221952978611}
   damagesParticles: {fileID: 1344182345437263291}
+  damageScreenshake:
+    force: 3
+    duration: 0.3
+    attenuationCoeff: 0.1
+    type: 6
   deathParticles: {fileID: 0}
   deathSound:
     clip: {fileID: 0}
@@ -15861,32 +15866,32 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4891878903149100598, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
+    - target: {fileID: 4891878903152851601, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
         type: 3}
       propertyPath: simulationSpeed
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4891878903149100598, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
+    - target: {fileID: 4891878903152851601, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
         type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4891878903149100598, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
+    - target: {fileID: 4891878903152851601, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
         type: 3}
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4891878903152851601, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
+    - target: {fileID: 4891878903149100598, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
         type: 3}
       propertyPath: simulationSpeed
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4891878903152851601, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
+    - target: {fileID: 4891878903149100598, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
         type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4891878903152851601, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
+    - target: {fileID: 4891878903149100598, guid: c4b3c9f877b446a4b8f08eb3d5ff80ae,
         type: 3}
       propertyPath: looping
       value: 0
