@@ -427,7 +427,6 @@ public class EnemyShip : Ship
             case (EnemyType.Flanker):
                 if (AttackAngleIsAcceptable && !PreparingAttack)
                 {
-                    Debug.Log("début d'attaque par hors routine");
                     StartAttackPreparation();
                     outOfRoutineModificationCoeff = 0;
                 }

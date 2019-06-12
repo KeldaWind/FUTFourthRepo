@@ -175,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2614110158413110985
 Transform:
   m_ObjectHideFlags: 0
@@ -570,11 +570,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 749842506813406921}
     m_Modifications:
-    - target: {fileID: 5358019904311589861, guid: 98fd685da9f2cad43b9182a41ec425d1,
-        type: 3}
-      propertyPath: m_Name
-      value: Projectile_avec_trail_Jaune
-      objectReference: {fileID: 0}
     - target: {fileID: 5358019904311224261, guid: 98fd685da9f2cad43b9182a41ec425d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -629,6 +624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358019904311589861, guid: 98fd685da9f2cad43b9182a41ec425d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Projectile_avec_trail_Jaune
       objectReference: {fileID: 0}
     - target: {fileID: 2005194320819329189, guid: 98fd685da9f2cad43b9182a41ec425d1,
         type: 3}
