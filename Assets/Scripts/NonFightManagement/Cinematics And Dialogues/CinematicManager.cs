@@ -394,6 +394,18 @@ public class CinematicManager
                 waitingToGetControlBackToPlayer = true;
             }
         }
+        else
+        {
+            ShipMovements playerMovements = GameManager.gameManager.Player.ShipMvt;
+
+            if (stoppedPlayer)
+            {
+                playerMovements.StartShip();
+                stoppedPlayer = false;
+            }
+
+            playerInterface.ShowPlayerInterface();
+        }
     }
     #endregion
 

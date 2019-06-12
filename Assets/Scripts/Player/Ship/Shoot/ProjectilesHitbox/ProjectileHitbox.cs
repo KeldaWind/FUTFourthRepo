@@ -65,10 +65,24 @@ public class ProjectileHitbox : MonoBehaviour, IDamageSource
         damageReceiver.ReceiveDamage(this, damagesParameters, relatedProjectile.GetProjectileSpecialParameters);
 
         if (relatedProjectile.GetProjectileSpecialParameters.GetPiercingParameters.GetNumberOfPiercing > 0)
+        {
             relatedProjectile.GetProjectileSpecialParameters.GetPiercingParameters.DecreamentPiercing();
+
+            FeedbackObject woodProjection = GameManager.gameManager.PoolManager.GetFeedbackObject(FeedbackObjectPoolTag.WoodDestruction, PoolInteractionType.GetFromPool);
+            if (woodProjection != null)
+            {
+                woodProjection.transform.position = transform.position;
+                woodProjection.StartFeedback(2, 0.2f);
+            }
+        }
         else if (relatedProjectile.GetProjectileSpecialParameters.GetSkeweringParameters.Skewering)
         {
-
+            FeedbackObject woodProjection = GameManager.gameManager.PoolManager.GetFeedbackObject(FeedbackObjectPoolTag.WoodDestruction, PoolInteractionType.GetFromPool);
+            if (woodProjection != null)
+            {
+                woodProjection.transform.position = transform.position;
+                woodProjection.StartFeedback(2, 0.2f);
+            }
         }
         else
             relatedProjectile.ExplodeOnContact();

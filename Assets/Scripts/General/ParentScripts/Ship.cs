@@ -288,8 +288,11 @@ public class Ship : MonoBehaviour
 
     public void DestroySkeweringProjectile()
     {
-        skeweringProjectile.ExplodeOnContact();
-        skeweringProjectile = null;
+        if (skeweringProjectile != null)
+        {
+            skeweringProjectile.ExplodeOnContact();
+            skeweringProjectile = null;
+        }
     }
     #endregion
 
