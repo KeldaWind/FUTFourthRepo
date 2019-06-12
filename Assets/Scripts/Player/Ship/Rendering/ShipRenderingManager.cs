@@ -33,7 +33,12 @@ public class ShipRenderingManager
         rotationPerDamagesTakenCurve.preWrapMode = WrapMode.PingPong;
         rotationPerDamagesTakenCurve.postWrapMode = WrapMode.PingPong;
 
-        if(ecumeDevantD != null)
+        if (ecumeDroite != null)
+            ecumeDroiteBaseSpeed = ecumeDroite.emissionRate;
+        if (ecumeGauche != null)
+            ecumeGaucheBaseSpeed = ecumeGauche.emissionRate;
+
+        if (ecumeDevantD != null)
             ecumeDevantDBaseSpeed = ecumeDevantD.emissionRate;
         if (ecumeDevantG != null)
             ecumeDevantGBaseSpeed = ecumeDevantG.emissionRate;
@@ -53,7 +58,9 @@ public class ShipRenderingManager
 
     [Header("ParticuleBato")]
     [SerializeField] ParticleSystem ecumeDroite;
+    float ecumeDroiteBaseSpeed;
     [SerializeField] ParticleSystem ecumeGauche;
+    float ecumeGaucheBaseSpeed;
     [Header("ParticulesVitesse")]
     [SerializeField] ParticleSystem ecumeDevantD;
     float ecumeDevantDBaseSpeed;
@@ -115,25 +122,36 @@ public class ShipRenderingManager
         }
         #endregion
 
-        if (/*currentShipRotationCoeff*/ currentTangageCoeff > 0)
+        if (ecumeDroite != null && ecumeGauche != null)
         {
-            if (ecumeDroite != null)
+            if (currentTangageCoeff > 0)
             {
-                if (/*currentShipRotationCoeff*/currentTangageCoeff > 0.5)
-                    ecumeDroite.Play();
-                else
-                    ecumeDroite.Stop();
-            }
-
-        }
-        else if(/*currentShipRotationCoeff*/currentTangageCoeff < 0)
-        {
-            if (ecumeGauche != null)
-            {
-                if (/*currentShipRotationCoeff*/currentTangageCoeff < -0.5)
-                    ecumeGauche.Play();
-                else
+                if (ecumeGauche.isPlaying)
                     ecumeGauche.Stop();
+
+                if (currentTangageCoeff > 0.5 && !ecumeDroite.isPlaying)
+                    ecumeDroite.Play();
+                else if(currentTangageCoeff < 0.5 && ecumeDroite.isPlaying)
+                    ecumeDroite.Stop();
+
+            }
+            else if (currentTangageCoeff < 0)
+            {
+                if (ecumeDroite.isPlaying)
+                    ecumeDroite.Stop();
+
+                if (currentTangageCoeff < -0.5 && !ecumeGauche.isPlaying)
+                    ecumeGauche.Play();
+                else if (currentTangageCoeff > -0.5 && ecumeGauche.isPlaying)
+                    ecumeGauche.Stop();
+            }
+            else
+            {
+                if (ecumeGauche.isPlaying)
+                    ecumeGauche.Stop();
+
+                if (ecumeDroite.isPlaying)
+                    ecumeDroite.Stop();
             }
         }
     }
@@ -152,10 +170,14 @@ public class ShipRenderingManager
         rendererParent.gameObject.SetActive(false);
         if(shipCircle != null)
             shipCircle.gameObject.SetActive(false);
+
+        if (stopLifeFeedbacksOnDeath)
+            lifeFeedbacksManager.StopAllParticles();
     }
 
     [Header("Life Feedbacks")]
     [SerializeField] ShipLifeFeedbacksManager lifeFeedbacksManager;
+    [SerializeField] bool stopLifeFeedbacksOnDeath;
 
     [Header("Damages Feedback")]
     [SerializeField] float rotationForcePerTakenDamage = 10;
@@ -237,7 +259,6 @@ public class ShipLifeFeedbacksManager
         lifeManager.OnLifeChange += UpdateLifeAmount;
 
         currentStepIndex = 0;
-        ApplyNewFeedbackStep(baseFeedbackState);
 
         if (smokeParticleSystem != null)
         {
@@ -250,6 +271,8 @@ public class ShipLifeFeedbacksManager
             fireParticlesMainModule = fireParticleSystem.main;
             fireParticlesEmissionModule = fireParticleSystem.emission;
         }
+
+        ApplyNewFeedbackStepInstant(baseFeedbackState);
     }
 
     public void UpdateLifeAmount(IDamageReceiver shipReceiver)
@@ -275,6 +298,38 @@ public class ShipLifeFeedbacksManager
     {
         //smokeParticlesMainModule.startColor = step.smokeColor;
         currentFeedbackStep = step;
+
+        if (currentFeedbackStep.smokeEmissionSpeed > 0 && smokeParticleSystem != null)
+            if (!smokeParticleSystem.gameObject.activeInHierarchy)
+                smokeParticleSystem.gameObject.SetActive(true);
+
+        if (currentFeedbackStep.fireEmissionSpeed > 0 && fireParticleSystem != null)
+            if (!fireParticleSystem.gameObject.activeInHierarchy)
+                fireParticleSystem.gameObject.SetActive(true);
+    }
+    public void ApplyNewFeedbackStepInstant(ShipLifeFeedbacksStep step)
+    {
+        //smokeParticlesMainModule.startColor = step.smokeColor;
+        currentFeedbackStep = step;
+
+        if (smokeParticleSystem != null)
+        {
+            smokeParticlesMainModule.startColor = currentFeedbackStep.smokeColor;
+            smokeParticlesMainModule.startSize = currentFeedbackStep.smokeSize;
+            smokeParticlesEmissionModule.rateOverTime = currentFeedbackStep.smokeEmissionSpeed;
+
+            if(currentFeedbackStep.smokeEmissionSpeed == 0)
+                smokeParticleSystem.gameObject.SetActive(false);
+        }
+
+        if (fireParticleSystem != null)
+        {
+            fireParticlesMainModule.startSize = currentFeedbackStep.fireSize;
+            fireParticlesEmissionModule.rateOverTime = currentFeedbackStep.fireEmissionSpeed;
+
+            if (currentFeedbackStep.fireEmissionSpeed == 0)
+                fireParticleSystem.gameObject.SetActive(false);
+        }
     }
 
     ShipLifeFeedbacksStep currentFeedbackStep;
@@ -284,8 +339,19 @@ public class ShipLifeFeedbacksManager
         if (currentFeedbackStep.stepLifePercentage == 0)
             return;
 
+        /*if (currentStepIndex > 0 && smokeParticleSystem != null)
+        {
+            Debug.Log("target smokeSize : " + currentFeedbackStep.smokeSize);
+            Debug.Log("smokeSize : " + smokeParticlesMainModule.startSize.constant);
+            Debug.Log("target smokeEmissionSpeed : " + currentFeedbackStep.smokeEmissionSpeed);
+            Debug.Log("smokeEmissionSpeed : " + smokeParticlesEmissionModule.rateOverTime.constant);
+        }*/
+
         if (smokeParticleSystem != null)
         {
+            /*if (currentFeedbackStep.smokeEmissionSpeed > 0 && !smokeParticleSystem.isPlaying)
+                smokeParticleSystem.Play();*/
+
             smokeParticlesMainModule.startColor = Color.Lerp(smokeParticlesMainModule.startColor.color, currentFeedbackStep.smokeColor, transitionSpeedCoeff);
             smokeParticlesMainModule.startSize = Mathf.Lerp(smokeParticlesMainModule.startSize.constant, currentFeedbackStep.smokeSize, transitionSpeedCoeff);
             smokeParticlesEmissionModule.rateOverTime = Mathf.Lerp(smokeParticlesEmissionModule.rateOverTime.constant, currentFeedbackStep.smokeEmissionSpeed, transitionSpeedCoeff);
@@ -312,6 +378,11 @@ public class ShipLifeFeedbacksManager
     [SerializeField] ParticleSystem fireParticleSystem;
     ParticleSystem.MainModule fireParticlesMainModule;
     ParticleSystem.EmissionModule fireParticlesEmissionModule;
+
+    public void StopAllParticles()
+    {
+        ApplyNewFeedbackStepInstant(baseFeedbackState);
+    }
 }
 
 [System.Serializable]

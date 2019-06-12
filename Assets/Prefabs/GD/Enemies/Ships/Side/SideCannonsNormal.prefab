@@ -593,18 +593,18 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0
@@ -650,9 +650,10 @@ MonoBehaviour:
       transitionSpeedCoeff: 0.01
       smokeParticleSystem: {fileID: 68316742263585811}
       fireParticleSystem: {fileID: 3962904010096256584}
-    rotationForcePerTakenDamage: 20
+    stopLifeFeedbacksOnDeath: 1
+    rotationForcePerTakenDamage: 10
     maxRotationFromDamages: 30
-    rotationFromDamageDesceleration: 30
+    rotationFromDamageDesceleration: 15
     rotationFromDamageSpeed: 3
     rotationPerDamagesTakenCurve:
       serializedVersion: 2
@@ -1112,85 +1113,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1297547181640616101}
     m_Modifications:
-    - target: {fileID: 7964996929163665733, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802179022110665491, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802179022110665491, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802179022110665491, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802179022110665491, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802179022110665491, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802469150430109751, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802469150430109751, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802469150430109751, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6378503372658948894, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6378503372658948894, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6378503372658948894, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 167109291110228590, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 167109291110228590, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 167109291110228590, guid: 804b528446b7c354a9f7ee919532505a,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7975109637366478420, guid: 804b528446b7c354a9f7ee919532505a,
         type: 3}
       propertyPath: m_Name
       value: EnemyShipsFeedbackPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378503372658948894, guid: 804b528446b7c354a9f7ee919532505a,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6184791261137079953, guid: 804b528446b7c354a9f7ee919532505a,
         type: 3}
@@ -1245,6 +1176,21 @@ PrefabInstance:
     - target: {fileID: 6184791261137079953, guid: 804b528446b7c354a9f7ee919532505a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802469150430109751, guid: 804b528446b7c354a9f7ee919532505a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802469150430109751, guid: 804b528446b7c354a9f7ee919532505a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802469150430109751, guid: 804b528446b7c354a9f7ee919532505a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

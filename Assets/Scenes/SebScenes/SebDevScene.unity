@@ -6673,7 +6673,7 @@ MonoBehaviour:
         shopParameters:
           allBuyableEquipments:
           - {fileID: 11400000, guid: 2152032454c603143ae6cd2607df4580, type: 2}
-          - {fileID: 11400000, guid: cecb4eb4faad77c4cad3ecc39b243358, type: 2}
+          - {fileID: 11400000, guid: 0222804fc395afd49ad2140f204dc45f, type: 2}
           - {fileID: 11400000, guid: f5c009c629ae60943b2080c423f9e3dd, type: 2}
           - {fileID: 11400000, guid: 08d6eac5c373bea45b9dce0549f8f92f, type: 2}
           - {fileID: 11400000, guid: f2233512af991254dab9f9e8be082204, type: 2}
@@ -17423,7 +17423,7 @@ Transform:
   m_GameObject: {fileID: 791988163}
   m_LocalRotation: {x: -0, y: 0.03553912, z: -0, w: 0.9993683}
   m_LocalPosition: {x: -44.70001, y: 3, z: 65}
-  m_LocalScale: {x: 18.85328, y: 10, z: 157.99803}
+  m_LocalScale: {x: 18.85328, y: 10, z: 229.68173}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
@@ -18549,27 +18549,27 @@ PrefabInstance:
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8660254
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 39.3
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -60
+      value: 69.5
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18589,7 +18589,7 @@ PrefabInstance:
     - target: {fileID: 3598126807019236253, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: field of view
-      value: 55
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1247149024664613448, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18984,6 +18984,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[0].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[1].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[2].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[4].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[3].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[5].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[6].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[7].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[8].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[9].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[10].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[11].initialPoolSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
       propertyPath: poolingManager.enemyShipsPool.Array.data[12].initialPoolSize
       value: 2
       objectReference: {fileID: 0}
@@ -19369,6 +19429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 1
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 148299350}
   - {fileID: 994769890}
@@ -19888,7 +19949,7 @@ MonoBehaviour:
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 0
+      - item: 1
         weight: 1
     commonEnemiesHighlightingType: 0
     rareEnemies:
@@ -19913,7 +19974,7 @@ MonoBehaviour:
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 0
+      - item: 1
         weight: 1
     commonEnemiesHighlightingType: 0
     rareEnemies:
@@ -19925,7 +19986,7 @@ MonoBehaviour:
     spawningConditions:
       spawnOnStart: 0
       spawnExternaly: 0
-      minTimeSinceFightBeginning: 0
+      minTimeSinceFightBeginning: 1
       minKillsSinceFightBeginning: 2
       objectsToDestroy: []
       zonesToGoTo: []
@@ -19938,7 +19999,7 @@ MonoBehaviour:
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 0
+      - item: 1
         weight: 1
     commonEnemiesHighlightingType: 0
     rareEnemies:
@@ -19950,7 +20011,7 @@ MonoBehaviour:
     spawningConditions:
       spawnOnStart: 0
       spawnExternaly: 0
-      minTimeSinceFightBeginning: 0
+      minTimeSinceFightBeginning: 1
       minKillsSinceFightBeginning: 4
       objectsToDestroy: []
       zonesToGoTo: []
@@ -20230,7 +20291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1345756950
 Transform:
   m_ObjectHideFlags: 0
@@ -20444,11 +20505,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1297547181640616091, guid: b9eb3f88e73433c47853e925834f2bf7,
-        type: 3}
-      propertyPath: targetPositionObjectDebugger
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1297547181640616101, guid: b9eb3f88e73433c47853e925834f2bf7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20503,6 +20559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297547181640616091, guid: b9eb3f88e73433c47853e925834f2bf7,
+        type: 3}
+      propertyPath: targetPositionObjectDebugger
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9eb3f88e73433c47853e925834f2bf7, type: 3}
@@ -21527,7 +21588,7 @@ MonoBehaviour:
   playerTransformOnceStopped: {fileID: 1229122859}
   objectsToActivateOnUnlock: []
   particlesToPlayOnUnlock: []
-  arenaParameters: {fileID: 11400000, guid: fbaea5c66cefd964793428ad9e658b48, type: 2}
+  arenaParameters: {fileID: 11400000, guid: fb0927e93712938408e1509cee4d5acd, type: 2}
   nextSpecialPlaceUnlockOnPass:
   - {fileID: 372500035}
   - {fileID: 766070241}

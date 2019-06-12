@@ -18,7 +18,7 @@ MonoBehaviour:
   shootParameters:
     shootSalvos:
     - projectileType: 0
-      numberOfShotProjectiles: 4
+      numberOfShotProjectiles: 1
       projectileParameters:
         speedType: 30
         shootType: 0
@@ -47,12 +47,52 @@ MonoBehaviour:
           recoveringTime: 0.2
           recoveringType: 0
       imprecisionParameter: 0
+      projectilesSpacing: 0
+      numberOfDirections: 1
+      angleBetweenDirections: 0
+    - projectileType: 0
+      numberOfShotProjectiles: 1
+      projectileParameters:
+        speedType: 30
+        shootType: 0
+        projectileSpeed:
+          m_Mode: 0
+          m_CurveMultiplier: 0
+          m_CurveMin:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_CurveMax:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 0
+            m_PostInfinity: 0
+            m_RotationOrder: 0
+          m_ConstantMin: 0
+          m_ConstantMax: 60
+        projectileSize: 2
+        projectileLifeTime: 1.25
+        shooterVelocityInfluenceCoeff: 0
+        damagesParameters:
+          damagesAmount: 1
+          recoveringTime: 0.2
+          recoveringType: 0
+      imprecisionParameter: 0
+      projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
     waitTimeBeforeTwoSalvo: 0.4
     projectileTag: 1
     catapultMinDistance: 0
     catapultMaxDistance: 0
+    shootSound:
+      clip: {fileID: 0}
+      volume: 1
+      loop: 0
+      minPitch: 1
+      maxPitch: 1
   aiming: 0
   lockDirectionAfterShoot: 0
   speedModifier:
