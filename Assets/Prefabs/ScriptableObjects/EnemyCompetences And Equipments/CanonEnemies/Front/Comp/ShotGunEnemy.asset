@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   competenceName: ShotGun
   competenceImage: {fileID: 0}
-  competenceCooldown: 5
+  competenceCooldown: 8
   shootParameters:
     shootSalvos:
     - projectileType: 0
@@ -73,22 +73,29 @@ MonoBehaviour:
             m_PreInfinity: 2
             m_PostInfinity: 2
             m_RotationOrder: 4
-          m_ConstantMin: 80
-          m_ConstantMax: 110
+          m_ConstantMin: 60
+          m_ConstantMax: 90
         projectileSize: 2
-        projectileLifeTime: 0.7
+        projectileLifeTime: 0.5
         shooterVelocityInfluenceCoeff: 0
         damagesParameters:
           damagesAmount: 1
           recoveringTime: 0.1
           recoveringType: 0
       imprecisionParameter: 3
-      numberOfDirections: 5
+      projectilesSpacing: 0
+      numberOfDirections: 4
       angleBetweenDirections: 5
     waitTimeBeforeTwoSalvo: 0
     projectileTag: 1
     catapultMinDistance: 0
     catapultMaxDistance: 0
+    shootSound:
+      clip: {fileID: 0}
+      volume: 1
+      loop: 0
+      minPitch: 1
+      maxPitch: 1
   aiming: 0
   lockDirectionAfterShoot: 0
   speedModifier:

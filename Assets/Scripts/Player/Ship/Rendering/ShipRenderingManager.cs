@@ -152,10 +152,14 @@ public class ShipRenderingManager
         rendererParent.gameObject.SetActive(false);
         if(shipCircle != null)
             shipCircle.gameObject.SetActive(false);
+
+        if (stopLifeFeedbacksOnDeath)
+            lifeFeedbacksManager.StopAllParticles();
     }
 
     [Header("Life Feedbacks")]
     [SerializeField] ShipLifeFeedbacksManager lifeFeedbacksManager;
+    [SerializeField] bool stopLifeFeedbacksOnDeath;
 
     [Header("Damages Feedback")]
     [SerializeField] float rotationForcePerTakenDamage = 10;
@@ -237,7 +241,6 @@ public class ShipLifeFeedbacksManager
         lifeManager.OnLifeChange += UpdateLifeAmount;
 
         currentStepIndex = 0;
-        ApplyNewFeedbackStep(baseFeedbackState);
 
         if (smokeParticleSystem != null)
         {
@@ -250,6 +253,8 @@ public class ShipLifeFeedbacksManager
             fireParticlesMainModule = fireParticleSystem.main;
             fireParticlesEmissionModule = fireParticleSystem.emission;
         }
+
+        ApplyNewFeedbackStepInstant(baseFeedbackState);
     }
 
     public void UpdateLifeAmount(IDamageReceiver shipReceiver)
@@ -275,6 +280,24 @@ public class ShipLifeFeedbacksManager
     {
         //smokeParticlesMainModule.startColor = step.smokeColor;
         currentFeedbackStep = step;
+    }
+    public void ApplyNewFeedbackStepInstant(ShipLifeFeedbacksStep step)
+    {
+        //smokeParticlesMainModule.startColor = step.smokeColor;
+        currentFeedbackStep = step;
+
+        if (smokeParticleSystem != null)
+        {
+            smokeParticlesMainModule.startColor = currentFeedbackStep.smokeColor;
+            smokeParticlesMainModule.startSize = currentFeedbackStep.smokeSize;
+            smokeParticlesEmissionModule.rateOverTime = currentFeedbackStep.smokeEmissionSpeed;
+        }
+
+        if (fireParticleSystem != null)
+        {
+            fireParticlesMainModule.startSize = currentFeedbackStep.fireSize;
+            fireParticlesEmissionModule.rateOverTime = currentFeedbackStep.fireEmissionSpeed;
+        }
     }
 
     ShipLifeFeedbacksStep currentFeedbackStep;
@@ -312,6 +335,11 @@ public class ShipLifeFeedbacksManager
     [SerializeField] ParticleSystem fireParticleSystem;
     ParticleSystem.MainModule fireParticlesMainModule;
     ParticleSystem.EmissionModule fireParticlesEmissionModule;
+
+    public void StopAllParticles()
+    {
+        ApplyNewFeedbackStepInstant(baseFeedbackState);
+    }
 }
 
 [System.Serializable]
