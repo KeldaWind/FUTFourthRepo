@@ -542,7 +542,7 @@ public class EnemyWaveSpawningConditions
 
     public bool ReadyToSpawn()
     {
-        Debug.Log("check has been called");
+        //Debug.Log("check has been called");
         if (spawnExternaly)
             return false;
 

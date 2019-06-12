@@ -18,7 +18,6 @@ public class ArenaBeginEndInterfaceManager
         SetUpLootingPanel();
 
         playerLootManager = GameManager.gameManager.Player.PlayerLootManager;
-        Debug.Log(playerLootManager);
     }
 
     #region Begin Interface
