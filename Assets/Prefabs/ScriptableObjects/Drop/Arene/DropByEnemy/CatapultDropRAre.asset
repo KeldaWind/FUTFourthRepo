@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
   m_Name: CatapultDropRAre
   m_EditorClassIdentifier: 
-  goldLootProbability: 40
-  equipmentLootProbability: 55
+  goldLootProbability: 60
+  equipmentLootProbability: 35
   nullLootProbability: 5
   goldLootSystem:
     allItems:
@@ -24,12 +24,14 @@ MonoBehaviour:
     - item: 360
       weight: 20
   goldLootRandomAmplitude: 25
-  hullEquipmentProbability: 20
-  weaponEquipmentProbability: 80
+  hullEquipmentProbability: 30
+  weaponEquipmentProbability: 70
   hullLootSystem:
     allItems:
-    - item: {fileID: 11400000, guid: 12dac067f943e3b449ccfc424fe4e6b5, type: 2}
-      weight: 100
+    - item: {fileID: 11400000, guid: 49ce4c93bb714524783c0905484fba70, type: 2}
+      weight: 50
+    - item: {fileID: 11400000, guid: 08d6eac5c373bea45b9dce0549f8f92f, type: 2}
+      weight: 50
   weaponLootSystem:
     allItems:
     - item: {fileID: 11400000, guid: 18f387511e212e34ca30f3bacf392bf2, type: 2}

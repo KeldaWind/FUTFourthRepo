@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
   m_Name: CatapultDrop
   m_EditorClassIdentifier: 
-  goldLootProbability: 55
-  equipmentLootProbability: 40
+  goldLootProbability: 70
+  equipmentLootProbability: 25
   nullLootProbability: 5
   goldLootSystem:
     allItems:
@@ -22,8 +22,8 @@ MonoBehaviour:
     - item: 320
       weight: 40
   goldLootRandomAmplitude: 30
-  hullEquipmentProbability: 20
-  weaponEquipmentProbability: 80
+  hullEquipmentProbability: 30
+  weaponEquipmentProbability: 70
   hullLootSystem:
     allItems:
     - item: {fileID: 11400000, guid: 49ce4c93bb714524783c0905484fba70, type: 2}
