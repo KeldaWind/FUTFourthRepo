@@ -37,6 +37,7 @@ public class ArenaManager : MonoBehaviour
                 {
                     introCinematicProgress = ProgressionState.Ended;
                     StartGame();
+                    GameManager.gameManager.ArenaInterfaceManager.SetUp(scoreManager);
                 }
             }
         }
