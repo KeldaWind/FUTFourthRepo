@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Classe permettant de gérer les informations importantes au sein d'une arène
@@ -395,6 +396,15 @@ public class GameManager : MonoBehaviour
     public void SetUpCheats()
     {
         giveMoneyButton.Interaction = EarnLotOfMoney;
+    }
+    #endregion
+
+    #region Debug
+    [Header("Debug")]
+    [SerializeField] Text debugText;
+    public void ShowDebugText(string messageToShow)
+    {
+        debugText.text = messageToShow;
     }
     #endregion
 }

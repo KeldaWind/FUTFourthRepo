@@ -201,6 +201,14 @@ public class ShootOrigin : MonoBehaviour
         {
             UpdatePreparePreview(previewingSalvo);
         }
+
+        if (waitingTimeToRelaunchShootEffect > 0)
+            waitingTimeToRelaunchShootEffect -= Time.deltaTime;
+        else if (waitingTimeToRelaunchShootEffect < 0)
+        {
+            shootParticleSystem.Play();
+            waitingTimeToRelaunchShootEffect = 0;
+        }
     }
 
     #region Shooting
@@ -327,7 +335,28 @@ public class ShootOrigin : MonoBehaviour
         }
         #endregion
 
-        if(currentShootParameters.GetCurrentSalvoIndex > 1)
+        #region Feedback
+        if (shootParticleSystem != null)
+        {
+            //ParticleSystem.EmitParams parameters = shootParticleSystem.emission.;
+            //if (shootParticleSystem.isPlaying)
+            //{
+            //Debug.Log("ui");
+            //shootParticleSystem.Stop();
+            //shootParticleSystem.Play();
+            //shootParticleSystem.Emit(8);
+            //waitingTimeToRelaunchShootEffect = 0.05f;
+            /*}
+            else
+                shootParticleSystem.Play();*/
+            shootParticleSystem.Emit(2);
+        }
+
+        if (shootAudioSource != null)
+            shootAudioSource.PlaySound(currentShootParameters.GetShootSound);
+        #endregion
+
+        if (currentShootParameters.GetCurrentSalvoIndex > 1)
             ContinueLaunchedPreview(salvo);
     }
     #endregion
@@ -503,5 +532,12 @@ public class ShootOrigin : MonoBehaviour
     {
         projectileSpecialParameters = projSpecialParameters;
     }
+    #endregion
+
+    #region Feedbacks
+    [Header("Feedbacks")]
+    [SerializeField] ParticleSystem shootParticleSystem;
+    [SerializeField] AudioSource shootAudioSource;
+    float waitingTimeToRelaunchShootEffect;
     #endregion
 }

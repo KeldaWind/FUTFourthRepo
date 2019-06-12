@@ -27,18 +27,21 @@ public class ShipRenderingManager
 
         lifeFeedbacksManager.SetUp(lifeManager);
 
-
         rotationPerDamagesTakenCurve.preWrapMode = WrapMode.PingPong;
         rotationPerDamagesTakenCurve.postWrapMode = WrapMode.PingPong;
 
-        ecumeDevantDBaseSpeed = ecumeDevantD.emissionRate;
-        ecumeDevantGBaseSpeed = ecumeDevantG.emissionRate;
-        ecumeArriereBaseSpeed = ecumeArriere.emissionRate;
+        if(ecumeDevantD != null)
+            ecumeDevantDBaseSpeed = ecumeDevantD.emissionRate;
+        if (ecumeDevantG != null)
+            ecumeDevantGBaseSpeed = ecumeDevantG.emissionRate;
+        if (ecumeArriere != null)
+            ecumeArriereBaseSpeed = ecumeArriere.emissionRate;
     }
 
     [Header("VariablesPierre")]
     [SerializeField] Transform rotationParent;
     [SerializeField] AnimationCurve curveTangage;
+    [SerializeField] float maxTangageAngle;
     [SerializeField] TrailRenderer trailMilieu;
     [SerializeField] TrailRenderer trailGauche;
     [SerializeField] TrailRenderer trailDroite;
@@ -67,12 +70,12 @@ public class ShipRenderingManager
             rendererParent.localRotation = Quaternion.Euler(normalRendererRotation + new Vector3(0, rotY, 0));
     }
 
-    public void UpdateRendering(float currentRotation, float currentSpeedCoeff, bool stopped)
+    public void UpdateRendering(float currentRotationCoeff, float currentSpeedCoeff, bool stopped)
     {
         if(currentMaxRotationPerDamage != 0)
             UpdateDamageRotation();
 
-        Tangage(currentRotation);
+        Tangage(currentRotationCoeff);
         ParticleSpeedUpdate(currentSpeedCoeff);
 
         lifeFeedbacksManager.UpdateLifeFeedbacksManagement();
@@ -87,15 +90,17 @@ public class ShipRenderingManager
         }
     }
 
-    void Tangage(float currentShipRotation)
+    float currentTangageCoeff;
+    void Tangage(float currentShipRotationCoeff)
     {
         //float rota = curveTangage.Evaluate(currentShipRotation);
 
+        currentTangageCoeff = Mathf.Lerp(currentTangageCoeff, currentShipRotationCoeff, 0.1f);
         #region Rotation
         if (rotationParent != null)
         {
-            float movementRotation = curveTangage.Evaluate(currentShipRotation);
-            if (currentShipRotation > 0)
+            float movementRotation = curveTangage.Evaluate(/*currentShipRotationCoeff*/currentTangageCoeff) * maxTangageAngle;
+            if (/*currentShipRotationCoeff*/currentTangageCoeff > 0)
                 movementRotation = -movementRotation;
 
             float damageRotation = GetCurrentDamagesRotation;
@@ -105,22 +110,22 @@ public class ShipRenderingManager
         }
         #endregion
 
-        if (currentShipRotation > 0)
+        if (/*currentShipRotationCoeff*/ currentTangageCoeff > 0)
         {
             if (ecumeDroite != null)
             {
-                if (currentShipRotation > 20)
+                if (/*currentShipRotationCoeff*/currentTangageCoeff > 0.5)
                     ecumeDroite.Play();
                 else
                     ecumeDroite.Stop();
             }
 
         }
-        else if(currentShipRotation < 0)
+        else if(/*currentShipRotationCoeff*/currentTangageCoeff < 0)
         {
             if (ecumeGauche != null)
             {
-                if (currentShipRotation < -20)
+                if (/*currentShipRotationCoeff*/currentTangageCoeff < -0.5)
                     ecumeGauche.Play();
                 else
                     ecumeGauche.Stop();

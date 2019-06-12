@@ -7,6 +7,10 @@ public class EnemySpawningManager : MonoBehaviour
     public void SetUp()
     {
         GameManager.gameManager.PoolManager.GenerateEnemyShipsPoolDisctionary(GetAllUsedEnemiesTags);
+        /*string newString = "";
+        foreach (EnemyShipPoolTag tg in GetAllUsedEnemiesTags)
+            newString += tg + ", ";
+        GameManager.gameManager.ShowDebugText(newString);*/
 
         wavesWaitingToBeLaunched = new List<EnemyWave>();
         wavesToRemoveFromWait = new List<EnemyWave>();
@@ -215,6 +219,7 @@ public class EnemyWave
 
     public List<IDamageReceiver> SpawnEnemies()
     {
+
         spawned = true;
 
         List<EnemySpawnPoint> availableCommonSpawnPoints = new List<EnemySpawnPoint>(commonEnemiesSpawnPoints);
@@ -240,7 +245,6 @@ public class EnemyWave
                 Debug.Log("pas de spawn points disponibles : impossible de spawner l'ennemi commun");
                 break;
             }
-
             EnemySpawnPoint chosenSpawnPoint = availableCommonSpawnPoints.GetRandomMemberOfTheList();
 
             EnemyShipPoolTag enemyPoolTag = commonEnemies.GetRandomElementFromSystem();
@@ -250,7 +254,7 @@ public class EnemyWave
             spawnedEnemy.transform.rotation = chosenSpawnPoint.transform.rotation;
 
             spawnedEnemy.ExternalSetUp(chosenSpawnPoint.GetLinkedWatchingRoundParameters);
-
+            
             availableCommonSpawnPoints.Remove(chosenSpawnPoint);
 
             spawnedEnemies.Add(spawnedEnemy.GetShipDamageReceiver);
@@ -331,6 +335,7 @@ public class EnemyWave
                 GameManager.gameManager.CinematicMng.SetShipsToStart(allSpawnedEnemies);
         }
 
+        //GameManager.gameManager.ShowDebugText(waveName + " started (after enemy spawn)");
         return spawnedEnemies;
     }
 

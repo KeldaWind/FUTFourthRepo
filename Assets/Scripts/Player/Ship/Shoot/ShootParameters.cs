@@ -104,6 +104,10 @@ public struct ShootParameters
             return catapultMaxDistance;
         }
     }
+
+    [Header("Feedback")]
+    [SerializeField] Sound shootSound;
+    public Sound GetShootSound { get { return shootSound; } }
 }
 
 /// <summary>
