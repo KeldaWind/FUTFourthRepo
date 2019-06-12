@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cffadbf7ba68454d8fb3675f25e4b96, type: 3}
   m_Name: CanonBoss
   m_EditorClassIdentifier: 
-  equipmentSaveIndex: 6
+  equipmentSaveIndex: 10
   equipmentType: 1
   equipmentInformations:
     equipmentName: 
@@ -23,9 +23,10 @@ MonoBehaviour:
     weaponEffect: 0
   equipmentPrimaryCompetence: {fileID: 11400000, guid: ab93649201702b84382afa4786c94bcd,
     type: 2}
-  equipmentDirection: 0
+  equipmentDirection: 1
   relatedPassives: []
-  relatedEquipmentObjectsPrefabs: []
+  relatedEquipmentObjectsPrefabs:
+  - {fileID: 2467901440266190533, guid: b34ea14fc8a109347a737cc0e1fb1b1e, type: 3}
   equipmentQuality: 0
   priceToBuy: 0
   priceToUpgrade: 0
