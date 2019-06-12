@@ -15,6 +15,10 @@ public class SlowingZone : SpecialEffectZone
     [SerializeField] ParticleSystem slowingZonePS;
     float zoneSize;
 
+    [Header("Audio Feedback")]
+    [SerializeField] AudioSource zoneAudioSource;
+    [SerializeField] Sound zoneApparitionSound;
+
     public override void SetUpZone(float duration, float size, object specialParameter)
     {
         base.SetUpZone(duration, size, specialParameter);
@@ -35,6 +39,9 @@ public class SlowingZone : SpecialEffectZone
         zoneSize = size;
 
         transform.rotation = Quaternion.Euler(new Vector3(0, Random.Range(-180f, 180f), 0));
+
+        if (zoneAudioSource != null)
+            zoneAudioSource.PlaySound(zoneApparitionSound);
     }
 
     public override void UpdateZone()
