@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4940,8 +4940,8 @@ MonoBehaviour:
     trailMilieu: {fileID: 0}
     trailGauche: {fileID: 0}
     trailDroite: {fileID: 0}
-    ecumeDroite: {fileID: 0}
-    ecumeGauche: {fileID: 0}
+    ecumeDroite: {fileID: 1608354009}
+    ecumeGauche: {fileID: 88204429}
     ecumeDevantD: {fileID: 2944173718820881475}
     ecumeDevantG: {fileID: 6287693183016629495}
     ecumeArriere: {fileID: 4395807365270209865}
@@ -4993,6 +4993,7 @@ MonoBehaviour:
       transitionSpeedCoeff: 0.03
       smokeParticleSystem: {fileID: 3478858059289134677}
       fireParticleSystem: {fileID: 303837121795202993}
+    stopLifeFeedbacksOnDeath: 0
     rotationForcePerTakenDamage: 20
     maxRotationFromDamages: 30
     rotationFromDamageDesceleration: 30
@@ -5936,7 +5937,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
