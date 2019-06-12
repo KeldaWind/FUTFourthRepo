@@ -54,6 +54,12 @@ MonoBehaviour:
     projectileTag: 1
     catapultMinDistance: 0
     catapultMaxDistance: 0
+    shootSound:
+      clip: {fileID: 8300000, guid: 08321f32f50355046a86e61ca880a3c9, type: 3}
+      volume: 0.1
+      loop: 0
+      minPitch: 0.9
+      maxPitch: 1.2
   aiming: 0
   lockDirectionAfterShoot: 0
   speedModifier:
