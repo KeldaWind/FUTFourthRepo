@@ -40,14 +40,14 @@ public class EnemyShip : Ship
             else
             {
                 enemyDirectionType = EnemyType.Catapulter;
-                if(competenceCopy as CompetenceShoot != null)
+                if (competenceCopy as CompetenceShoot != null)
                 {
                     attackMinDistance = (competenceCopy as CompetenceShoot).shootParameters.GetCatapultMinDistance;
                     attackMaxDistance = (competenceCopy as CompetenceShoot).shootParameters.GetCatapultMaxDistance;
                 }
             }
 
-            if(competenceCopy as CompetenceShoot != null)
+            if (competenceCopy as CompetenceShoot != null)
             {
                 (competenceCopy as CompetenceShoot).SetIsNotPlayerComp();
 
@@ -58,7 +58,7 @@ public class EnemyShip : Ship
                 {
                     if (projectilePrefab as ProjectileBoulder != null)
                         projectileLifeTimeDependingOnDistance = (projectilePrefab as ProjectileBoulder).GetLifeTimeWithDistanceCurve;
-            }
+                }
             }
         }
 
@@ -1080,7 +1080,10 @@ public class EnemyShip : Ship
     #region Pooling 
     public bool CheckIfReadyToBeReturnedToPool()
     {
-        return alreadyDead && shipFeedbacks.ReadyToBeReturnedToPool;
+        if (shipFeedbacks != null)
+            return alreadyDead && shipFeedbacks.ReadyToBeReturnedToPool;
+        else
+            return alreadyDead;
     }
 
     public void ReturnToPool()

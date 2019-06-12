@@ -27,13 +27,15 @@ public class ShipRenderingManager
 
         lifeFeedbacksManager.SetUp(lifeManager);
 
-
         rotationPerDamagesTakenCurve.preWrapMode = WrapMode.PingPong;
         rotationPerDamagesTakenCurve.postWrapMode = WrapMode.PingPong;
 
-        ecumeDevantDBaseSpeed = ecumeDevantD.emissionRate;
-        ecumeDevantGBaseSpeed = ecumeDevantG.emissionRate;
-        ecumeArriereBaseSpeed = ecumeArriere.emissionRate;
+        if(ecumeDevantD != null)
+            ecumeDevantDBaseSpeed = ecumeDevantD.emissionRate;
+        if (ecumeDevantG != null)
+            ecumeDevantGBaseSpeed = ecumeDevantG.emissionRate;
+        if (ecumeArriere != null)
+            ecumeArriereBaseSpeed = ecumeArriere.emissionRate;
     }
 
     [Header("VariablesPierre")]

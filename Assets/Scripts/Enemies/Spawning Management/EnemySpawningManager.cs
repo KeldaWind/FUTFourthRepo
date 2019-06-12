@@ -219,7 +219,6 @@ public class EnemyWave
 
     public List<IDamageReceiver> SpawnEnemies()
     {
-        GameManager.gameManager.ShowDebugText(waveName + " started (before enemy spawn)");
 
         spawned = true;
 
@@ -228,7 +227,6 @@ public class EnemyWave
 
         spawnedEnemies = new List<IDamageReceiver>();
 
-        GameManager.gameManager.ShowDebugText("ennemis : may play cine");
         bool stopSpawnedEnemies = false;
         if (cinematicToPlayOnWaveStart != null)
             stopSpawnedEnemies = cinematicToPlayOnWaveStart.StopSpawnedEnemies || spawnedEnemiesAreStopped;
@@ -237,11 +235,9 @@ public class EnemyWave
 
         List<EnemyShip> allSpawnedEnemies = new List<EnemyShip>();
 
-        GameManager.gameManager.ShowDebugText("ennemis : get player");
         PlayerShip playerShip = GameManager.gameManager.Player;
 
         #region Common
-        GameManager.gameManager.ShowDebugText("ennemis : start spawn");
         for (int i = 0; i < numberOfCommonEnemies; i++)
         {
             if (availableCommonSpawnPoints.Count == 0)
@@ -249,37 +245,25 @@ public class EnemyWave
                 Debug.Log("pas de spawn points disponibles : impossible de spawner l'ennemi commun");
                 break;
             }
-            GameManager.gameManager.ShowDebugText("ennemis : chose spawn point");
             EnemySpawnPoint chosenSpawnPoint = availableCommonSpawnPoints.GetRandomMemberOfTheList();
 
-            GameManager.gameManager.ShowDebugText("ennemis : get type");
             EnemyShipPoolTag enemyPoolTag = commonEnemies.GetRandomElementFromSystem();
 
-            GameManager.gameManager.ShowDebugText("ennemis : spawn");
             EnemyShip spawnedEnemy = GameManager.gameManager.PoolManager.GetEnemyShip(enemyPoolTag, PoolInteractionType.GetFromPool);
-            GameManager.gameManager.ShowDebugText("ennemis : pos");
             spawnedEnemy.transform.position = chosenSpawnPoint.transform.position;
-            GameManager.gameManager.ShowDebugText("ennemis : rot");
             spawnedEnemy.transform.rotation = chosenSpawnPoint.transform.rotation;
 
-            GameManager.gameManager.ShowDebugText("ennemis : ext setup");
             spawnedEnemy.ExternalSetUp(chosenSpawnPoint.GetLinkedWatchingRoundParameters);
-
-            GameManager.gameManager.ShowDebugText("ennemis : remove spawn pooint");
+            
             availableCommonSpawnPoints.Remove(chosenSpawnPoint);
 
-            GameManager.gameManager.ShowDebugText("ennemis : add spawned ennemi");
             spawnedEnemies.Add(spawnedEnemy.GetShipDamageReceiver);
-            GameManager.gameManager.ShowDebugText("ennemis : on death");
             spawnedEnemy.GetShipDamageReceiver.OnDeath += new OnLifeEvent(RemoveSpawnedEnemy);
 
-            GameManager.gameManager.ShowDebugText("ennemis : drop param");
             spawnedEnemy.SetDropParameters(dropParameters.GetEnemyDropParameters(enemyPoolTag));
 
-            GameManager.gameManager.ShowDebugText("ennemis : add spawned ennemi in all");
             allSpawnedEnemies.Add(spawnedEnemy);
 
-            GameManager.gameManager.ShowDebugText("ennemis : highlight");
             if (commonEnemiesHighlightingType != HighlightingType.None)
             {
                 spawnedEnemy.StartEnemyHighlighting(playerShip, commonEnemiesHighlightingType == HighlightingType.Important);
@@ -287,11 +271,9 @@ public class EnemyWave
                 //playerShip.StartEnemyHighlighting(spawnedEnemy);
             }
 
-            GameManager.gameManager.ShowDebugText("ennemis : may instant stop");
             if (stopSpawnedEnemies)
                 spawnedEnemy.ShipMvt.InstantStopShip();
 
-            GameManager.gameManager.ShowDebugText("ennemis : may auto detect");
             if (spawnedEnemiesAutoDetectPlayer)
                 spawnedEnemy.AutoDetectPlayer();
         }
