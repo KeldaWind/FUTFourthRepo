@@ -47,12 +47,19 @@ MonoBehaviour:
           recoveringTime: 0.2
           recoveringType: 0
       imprecisionParameter: 0
+      projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
     waitTimeBeforeTwoSalvo: 0
     projectileTag: 0
     catapultMinDistance: 0
     catapultMaxDistance: 0
+    shootSound:
+      clip: {fileID: 8300000, guid: 5b986ca090ec22f4ab01bf4435c03bab, type: 3}
+      volume: 0.1
+      loop: 0
+      minPitch: 0.9
+      maxPitch: 1.2
   aiming: 0
   lockDirectionAfterShoot: 0
   speedModifier:
@@ -70,3 +77,33 @@ MonoBehaviour:
       recoveringType: 0
     stunOnObstacleDuration: 0
     stunOnOtherShipDuration: 0
+  explosionParameters:
+    explosionAttackParameters:
+      damagesParameters:
+        damagesAmount: 0
+        recoveringTime: 0
+        recoveringType: 0
+      knockbackParameters:
+        knockbackForce: 0
+        knockbackDuration: 0
+        knockbackAttenuationCoeff: 0
+        ignoresProtection: 0
+        redirectionCoeff: 0
+        redirectionTime: 0
+    explosionMaxSize: 0
+    explosionExpandTime: 0
+    explosionPersistanceTime: 0
+    explosionCurrentExpandTime: 0
+    explosionCurrentPersistanceTime: 0
+  smokeZoneParameters:
+    zoneDuration: 0
+    zoneSize: 0
+    blindingDuration: 0
+  slowingZoneParameters:
+    zoneDuration: 0
+    zoneSize: 0
+    shipSpeedModifier:
+      modificationSpeedCoeff: 0
+      modificationDuration: 0
+      modificationFadeInCoeff: 0
+      modificationFadeOutCoeff: 0

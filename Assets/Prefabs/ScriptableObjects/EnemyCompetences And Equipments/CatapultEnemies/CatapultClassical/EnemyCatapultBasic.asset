@@ -47,12 +47,19 @@ MonoBehaviour:
           recoveringTime: 0.5
           recoveringType: 0
       imprecisionParameter: 0
+      projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
     waitTimeBeforeTwoSalvo: 0
     projectileTag: 1
     catapultMinDistance: 30
     catapultMaxDistance: 60
+    shootSound:
+      clip: {fileID: 8300000, guid: 5dab0c0194fb1d54586feb40b5222a89, type: 3}
+      volume: 0.1
+      loop: 0
+      minPitch: 0.9
+      maxPitch: 12
   aiming: 0
   lockDirectionAfterShoot: 0
   speedModifier:

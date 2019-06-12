@@ -35,7 +35,10 @@ public class OutMapManager
             return;
 
         if (activeOutMapZones.Count == 0)
+        {
             PlayWarningDialogue();
+            GameManager.gameManager.Player.PlayDangerParticles();
+        }
 
         activeOutMapZones.Add(enteredZone);
 
@@ -49,7 +52,10 @@ public class OutMapManager
             activeOutMapZones.Remove(exitedZone);
 
         if (activeOutMapZones.Count == 0)
+        {
             remainingTimeBeforeNextDamages = 0;
+            GameManager.gameManager.Player.StopDangerParticles();
+        }
     }
 
     public void UpdateOutMapManagement()

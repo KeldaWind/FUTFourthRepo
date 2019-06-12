@@ -352,6 +352,12 @@ public class ShootOrigin : MonoBehaviour
             shootParticleSystem.Emit(2);
         }
 
+        if (currentShootParameters.GetProjectileTag == AttackTag.Player)
+        {
+            Vibration.Vibrate(shootVibrationDuration);
+            GameManager.gameManager.ScrshkManager.StartScreenshake(shootShakeParameters);
+        }
+
         if (shootAudioSource != null)
             shootAudioSource.PlaySound(currentShootParameters.GetShootSound);
         #endregion
@@ -539,5 +545,7 @@ public class ShootOrigin : MonoBehaviour
     [SerializeField] ParticleSystem shootParticleSystem;
     [SerializeField] AudioSource shootAudioSource;
     float waitingTimeToRelaunchShootEffect;
+    long shootVibrationDuration = 40;
+    ScreenshakeParameters shootShakeParameters = new ScreenshakeParameters(1.5f, 0.05f, 0.5f, ScreenshakeDirection.XYZ);
     #endregion
 }

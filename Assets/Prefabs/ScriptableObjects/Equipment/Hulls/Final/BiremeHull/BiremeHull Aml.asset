@@ -10,28 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f93b396190b96c94da0aaa448853b424, type: 3}
-  m_Name: ClassicHullLowLifeHighArmor
+  m_Name: BiremeHull Aml
   m_EditorClassIdentifier: 
-  equipmentSaveIndex: 9102
+  equipmentSaveIndex: 108
   equipmentType: 0
   equipmentInformations:
-    equipmentName: Glass Canon Hull
-    equipmentDescription: Few life, much armor. U'll need to repair it often !
+    equipmentName: PointyHull
+    equipmentDescription: "Well if you ask Tina about navigation she would say it
+      s easy. \nShe ain't the one reparing the boat when she impact other boat.\nI
+      fixed that, now the hull can impact anyone, not being harmed."
     equipmentIcon: {fileID: 21300000, guid: 0898dcfd35c3db2408208de6547c7a4a, type: 3}
+    weaponType: 0
+    weaponShotType: 0
+    weaponEffect: 0
   equipmentPrimaryCompetence: {fileID: 11400000, guid: f0d464cf4e375144ea534e63e7f4a46e,
     type: 2}
   equipmentDirection: 0
   relatedPassives: []
   relatedEquipmentObjectsPrefabs: []
-  equipmentQuality: 0
-  priceToBuy: 300
-  priceToUpgrade: 0
-  sellingPrice: 0
-  upgradedEquipment: {fileID: 0}
+  equipmentQuality: 1
+  priceToBuy: 3700
+  priceToUpgrade: 2300
+  sellingPrice: 1900
+  upgradedEquipment: {fileID: 11400000, guid: 3d2c7da02d91fbc42b1d3f2af4c03c5f, type: 2}
   movementParameters:
-    minSpeed: 12
-    maxSpeed: 20.4
-    acceleration: 7.2
+    minSpeed: 17
+    maxSpeed: 21.5
+    acceleration: 7.4
     desceleration: 18.2
     speedCurve:
       serializedVersion: 2
@@ -66,7 +71,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    maxRotationSpeed: 70
+    maxRotationSpeed: 90
     maniability: 350
     rotationSpeedCurve:
       serializedVersion: 2
@@ -92,5 +97,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  maximumHullLife: 10
-  maximumHullArmor: 10
+  maximumHullLife: 12
+  maximumHullArmor: 0
+  hullPrefab: {fileID: 5681032509408089935, guid: 4af877cb061b6574d8b3e19043e54ed9,
+    type: 3}
+  hullHitboxDimensions: {x: 10, y: 10, z: 17}
