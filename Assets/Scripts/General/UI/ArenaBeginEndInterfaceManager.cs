@@ -18,6 +18,7 @@ public class ArenaBeginEndInterfaceManager
         SetUpLootingPanel();
 
         playerLootManager = GameManager.gameManager.Player.PlayerLootManager;
+        Debug.Log(playerLootManager);
     }
 
     #region Begin Interface
@@ -248,7 +249,7 @@ public class ArenaBeginEndInterfaceManager
         {
             winTutorialPanel.SetActive(true);
 
-            firstPanelTutorialGoldAmountText.text = playerLootManager.GetAllLootedGold.ToString();
+            firstPanelTutorialGoldAmountText.text = playerLootManager.GetAllLootedGold.ToString();//ici
             firstPanelTutorialEquipmentsAmountText.text = "x " + playerLootManager.GetAllLootedEquipments.Count;
         }
         else
