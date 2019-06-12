@@ -7,10 +7,17 @@ public class EnemyShip : Ship
     [Header("Enemy Tag")]
     [SerializeField] EnemyShipPoolTag enemyPoolTag;
     public EnemyShipPoolTag GetEnemyPoolTag { get { return enemyPoolTag; } }
+    RigidbodyConstraints normalBodyConstrains;
 
     bool firstSetUpDone;
     public void FirstSetUp()
     {
+        if (shipBoxCollider == null)
+            shipBoxCollider = GetComponent<BoxCollider>();
+
+        /*normalBodyConstrains = shipBody.constraints;
+        Debug.Log(normalBodyConstrains);*/
+
         firstSetUpDone = true;
         if (equipment != null)
         {
@@ -183,6 +190,11 @@ public class EnemyShip : Ship
 
             CheckForObstacleOnWatchRoundWay();
         }
+
+        shipBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+
+        if (shipBoxCollider != null)
+            shipBoxCollider.enabled = true;
     }
     #endregion
 
@@ -988,6 +1000,12 @@ public class EnemyShip : Ship
 
             if (arenaManager != null)
                 arenaManager.IncreaseNumberOfKilledEnemies();
+
+            shipBody.velocity = Vector3.zero;
+            shipBody.constraints = RigidbodyConstraints.FreezeAll;
+
+            if (shipBoxCollider != null)
+                shipBoxCollider.enabled = false;
         }
 
         #region Variables reset
@@ -1088,7 +1106,6 @@ public class EnemyShip : Ship
 
     public void ReturnToPool()
     {
-        Debug.Log("return");
         gameObject.SetActive(false);
         GameManager.gameManager.PoolManager.ReturnEnemyShip(this);
     }

@@ -9,7 +9,7 @@ public class Ship : MonoBehaviour
     /// </summary>
     [Header("Common References")]
     [SerializeField] protected Rigidbody shipBody;
-    [SerializeField] BoxCollider shipBoxCollider;
+    [SerializeField] protected BoxCollider shipBoxCollider;
     public void SetShipBoxColliderDimensions(Vector3 dimensions)
     {
         shipBoxCollider.size = dimensions;
@@ -194,6 +194,8 @@ public class Ship : MonoBehaviour
 
         if (shipFeedbacks != null)
             shipFeedbacks.PlayDeathFeedback();
+
+        knockbackManager.Reset();
     }
 
     #region Stun Management

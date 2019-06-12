@@ -18549,27 +18549,27 @@ PrefabInstance:
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8660254
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
-        type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 69.5
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18589,7 +18589,7 @@ PrefabInstance:
     - target: {fileID: 3598126807019236253, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: field of view
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1247149024664613448, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18981,6 +18981,11 @@ PrefabInstance:
         type: 3}
       propertyPath: testGold
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645635168039479182, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: poolingManager.enemyShipsPool.Array.data[12].initialPoolSize
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8067840717820326150, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}

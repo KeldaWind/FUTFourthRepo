@@ -24,7 +24,7 @@ public class KnockbackManager
 
     public void Reset()
     {
-
+        currentKnockbackParameters = new KnockbackParameters();
     }
 
     KnockbackParameters currentKnockbackParameters;
