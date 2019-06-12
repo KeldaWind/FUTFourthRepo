@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   competenceName: Shoot
   competenceImage: {fileID: 21300000, guid: 76a91c26671e065499c7f5e2457269d0, type: 3}
-  competenceCooldown: 1.5
+  competenceCooldown: 4
   shootParameters:
     shootSalvos:
     - projectileType: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
           recoveringTime: 0.2
           recoveringType: 0
       imprecisionParameter: 0
+      projectilesSpacing: 0
       numberOfDirections: 1
       angleBetweenDirections: 0
     waitTimeBeforeTwoSalvo: 0.3
