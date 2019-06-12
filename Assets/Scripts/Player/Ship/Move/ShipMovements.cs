@@ -432,6 +432,9 @@ public class ShipMovements
 
         if (currentRammingParameters.IsTurnAroundCompetence)
             currentRotation += 180;
+
+        relatedShip.PlayRammingFeedback();
+        currentRammingParameters.OnRammingEnd = relatedShip.StopRammingFeedback;
     }
 
     public void InterruptRamming()

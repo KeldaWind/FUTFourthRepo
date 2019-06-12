@@ -6,6 +6,8 @@ using UnityEngine;
 public struct RammingParameters
 {
     #region General
+    public OnRammingEvent OnRammingEnd;
+
     public bool IsRamming
     {
         get
@@ -47,6 +49,8 @@ public struct RammingParameters
             else if (currentAttackDuration < 0)
             {
                 currentAttackDuration = 0;
+                if (OnRammingEnd != null)
+                    OnRammingEnd();
             }
         }
     }
@@ -55,6 +59,8 @@ public struct RammingParameters
     {
         currentPreparationDuration = 0;
         currentAttackDuration = 0;
+        if (OnRammingEnd != null)
+            OnRammingEnd();
     }
     #endregion
 
@@ -171,3 +177,5 @@ public struct RammingParameters
     public bool IsTurnAroundCompetence { get { return turnAround; } }
     #endregion
 }
+
+public delegate void OnRammingEvent();
