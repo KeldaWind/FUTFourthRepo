@@ -160,7 +160,7 @@ public class ShipMovements
             }
             else if (currentSpeed > targetSpeed)
             {
-                currentSpeed -= desceleration * Time.deltaTime * (currentSpeed > maxSpeed ? 3 : targetSpeed < minSpeed ? 1 : 1) * currentSpeedAccelerationCoeff;
+                currentSpeed -= desceleration * Time.deltaTime * (currentSpeed > maxSpeed ? 3 : targetSpeed < minSpeed ? 2 : 1) * currentSpeedAccelerationCoeff;
                 if (currentSpeed < targetSpeed)
                 {
                     currentSpeed = targetSpeed;

@@ -61,6 +61,12 @@ public class ShipFeedbacks : MonoBehaviour
 
     [SerializeField] ParticleSystem slowParticles;
 
+    public void DesactivateSlowParticles()
+    {
+        if (slowParticles != null)
+            slowParticles.gameObject.SetActive(false);
+    }
+
     public void PlaySlowingFeedback()
     {
         if (deathParticles != null)
