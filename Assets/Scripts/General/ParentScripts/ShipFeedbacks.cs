@@ -90,4 +90,22 @@ public class ShipFeedbacks : MonoBehaviour
         if (slowParticles != null)
             slowParticles.Stop();
     }
+
+    [SerializeField] ParticleSystem rammingParticleSystem;
+    public void PlayRammingParticles()
+    {
+        if (rammingParticleSystem != null)
+        {
+            if (!rammingParticleSystem.gameObject.activeInHierarchy)
+                rammingParticleSystem.gameObject.SetActive(true);
+            else
+                rammingParticleSystem.Play();
+        }
+    }
+
+    public void StopRammingParticles()
+    {
+        if (rammingParticleSystem != null)
+            rammingParticleSystem.Stop();
+    }
 }

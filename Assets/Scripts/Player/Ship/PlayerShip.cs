@@ -258,9 +258,22 @@ public class PlayerShip : Ship
 
     [Header("Other Feedbacks")]
     [SerializeField] long milisecondsDamageVibrationTime;
+    [SerializeField] ParticleSystem dangerParticles;
 
     public void PlayDamageVibrationFeedback(IDamageReceiver receiver)
     {
         Vibration.Vibrate(milisecondsDamageVibrationTime);
+    }
+
+    public void PlayDangerParticles()
+    {
+        if (dangerParticles != null)
+            dangerParticles.Play();
+    }
+
+    public void StopDangerParticles()
+    {
+        if (dangerParticles != null)
+            dangerParticles.Stop();
     }
 }

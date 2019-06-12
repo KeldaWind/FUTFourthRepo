@@ -371,4 +371,16 @@ public class Ship : MonoBehaviour
         if (shipFeedbacks != null)
             shipFeedbacks.StopSlowingFeedback();
     }
+
+    public void PlayRammingFeedback()
+    {
+        if (shipFeedbacks != null)
+            shipFeedbacks.PlayRammingParticles();
+    }
+
+    public void StopRammingFeedback()
+    {
+        if (shipFeedbacks != null)
+            shipFeedbacks.StopRammingParticles();
+    }
 }
