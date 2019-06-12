@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
+  m_Name: CanonDrop
+  m_EditorClassIdentifier: 
+  goldLootProbability: 55
+  equipmentLootProbability: 40
+  nullLootProbability: 5
+  goldLootSystem:
+    allItems:
+    - item: 240
+      weight: 60
+    - item: 320
+      weight: 40
+  goldLootRandomAmplitude: 30
+  hullEquipmentProbability: 20
+  weaponEquipmentProbability: 80
+  hullLootSystem:
+    allItems:
+    - item: {fileID: 11400000, guid: c0128e1bf0a1c424ea5c74641daa0b19, type: 2}
+      weight: 50
+    - item: {fileID: 11400000, guid: 915a76bbe7fa6574fa9940bb9e17d2bf, type: 2}
+      weight: 50
+  weaponLootSystem:
+    allItems:
+    - item: {fileID: 0}
+      weight: 0
+    - item: {fileID: 0}
+      weight: 0
+    - item: {fileID: 0}
+      weight: 0
+    - item: {fileID: 0}
+      weight: 0
