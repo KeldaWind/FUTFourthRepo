@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -2043,6 +2043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 1
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 243484639}
 --- !u!65 &137016142
@@ -2570,7 +2571,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2739,6 +2740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 1594339836}
 --- !u!65 &179414784
@@ -4221,6 +4223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 1
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 502415753}
   - {fileID: 1164208746}
@@ -5058,6 +5061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 245701426}
 --- !u!65 &272291837
@@ -9441,9 +9445,7 @@ MonoBehaviour:
     rareEnemies:
       allItems:
       - item: 12
-        weight: 80
-      - item: 13
-        weight: 20
+        weight: 100
     rareEnemiesHighlightingType: 0
     spawnersParent: {fileID: 1224088005}
     spawningConditions:
@@ -9491,6 +9493,9 @@ MonoBehaviour:
       dropParametersCopy: {fileID: 0}
     - enemyTag: 12
       dropParameters: {fileID: 11400000, guid: e12f8721e1c64d94d96bcea7cab286b5, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 2
+      dropParameters: {fileID: 11400000, guid: 9edf95e0c9d8f7b4080bbcaac9cb0506, type: 2}
       dropParametersCopy: {fileID: 0}
     - enemyTag: 2
       dropParameters: {fileID: 11400000, guid: 9edf95e0c9d8f7b4080bbcaac9cb0506, type: 2}
@@ -9559,6 +9564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 432535273}
 --- !u!65 &538668621
@@ -11096,6 +11102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 1623922810}
 --- !u!65 &659566147
@@ -12694,6 +12701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 1565693172}
 --- !u!65 &759658886
@@ -13897,6 +13905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 1
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 22093263}
 --- !u!65 &816555978
@@ -13965,6 +13974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 1
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 199237500}
   - {fileID: 615712720}
@@ -14569,6 +14579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 1210882659}
 --- !u!65 &870994727
@@ -20902,6 +20913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 1805218461}
 --- !u!65 &1103248988
@@ -22118,6 +22130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 621296736}
 --- !u!65 &1195492060
@@ -22576,6 +22589,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 132cf0c6a22eed3499a37b42b50fc3fb,
         type: 2}
+    - target: {fileID: 2665353482966525040, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af42accc1c0f30e45aa4da44f704f453, type: 3}
 --- !u!1001 &1205101571
@@ -40070,6 +40088,11 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8776361800437868943, guid: 80ddab34d69ca3b48ace9c05db40d6b2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3130921767414830602, guid: 80ddab34d69ca3b48ace9c05db40d6b2,
         type: 3}
       propertyPath: m_IsActive
@@ -40089,11 +40112,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8776361800437868943, guid: 80ddab34d69ca3b48ace9c05db40d6b2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80ddab34d69ca3b48ace9c05db40d6b2, type: 3}
@@ -42938,6 +42956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 1
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 2039826249}
   - {fileID: 490256026}
@@ -43385,6 +43404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticleType: 0
   particlesSize: 1
+  soundVolume: 0.1
   particlesPositions:
   - {fileID: 1336678644}
 --- !u!65 &2000252003

@@ -1006,6 +1006,12 @@ public class EnemyShip : Ship
 
             if (shipBoxCollider != null)
                 shipBoxCollider.enabled = false;
+
+            if (shipFeedbacks != null)
+                shipFeedbacks.DesactivateSlowParticles();
+
+            if(attackPreparationWarningAnim != null)
+                attackPreparationWarningAnim.gameObject.SetActive(false);
         }
 
         #region Variables reset

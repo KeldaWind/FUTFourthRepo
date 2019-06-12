@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -13224,8 +13224,8 @@ MonoBehaviour:
     cinematicToPlayOnWaveStart: {fileID: 0}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
-    numberOfCommonEnemies: 4
-    numberOfRareEnemies: 0
+    numberOfCommonEnemies: 2
+    numberOfRareEnemies: 1
     commonEnemies:
       allItems:
       - item: 1
@@ -13234,7 +13234,9 @@ MonoBehaviour:
         weight: 20
     commonEnemiesHighlightingType: 0
     rareEnemies:
-      allItems: []
+      allItems:
+      - item: 9
+        weight: 100
     rareEnemiesHighlightingType: 0
     spawnersParent: {fileID: 1026234271}
     spawningConditions:
@@ -13249,26 +13251,55 @@ MonoBehaviour:
     cinematicToPlayOnWaveStart: {fileID: 0}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
-    numberOfCommonEnemies: 4
-    numberOfRareEnemies: 0
+    numberOfCommonEnemies: 2
+    numberOfRareEnemies: 1
     commonEnemies:
       allItems:
-      - item: 8
+      - item: 0
         weight: 75
-      - item: 1
+      - item: 2
         weight: 25
     commonEnemiesHighlightingType: 0
     rareEnemies:
       allItems:
-      - item: 1
-        weight: 1
+      - item: 10
+        weight: 60
+      - item: 12
+        weight: 40
     rareEnemiesHighlightingType: 0
     spawnersParent: {fileID: 1224088005}
     spawningConditions:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 4
+      minKillsSinceFightBeginning: 2
+      objectsToDestroy: []
+      zonesToGoTo: []
+    waitTimeBeforeStartWaveAfterConditionsVerified: 0
+  - waveName: Wave1.5
+    cinematicToPlayOnWaveStart: {fileID: 0}
+    spawnedEnemiesAreStopped: 0
+    spawnedEnemiesAutoDetectPlayer: 0
+    numberOfCommonEnemies: 1
+    numberOfRareEnemies: 0
+    commonEnemies:
+      allItems:
+      - item: 12
+        weight: 100
+    commonEnemiesHighlightingType: 0
+    rareEnemies:
+      allItems:
+      - item: 10
+        weight: 60
+      - item: 8
+        weight: 40
+    rareEnemiesHighlightingType: 0
+    spawnersParent: {fileID: 1224088005}
+    spawningConditions:
+      spawnOnStart: 0
+      spawnExternaly: 0
+      minTimeSinceFightBeginning: 0
+      minKillsSinceFightBeginning: 3
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 0
@@ -13280,12 +13311,12 @@ MonoBehaviour:
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 8
-        weight: 30
       - item: 1
-        weight: 60
-      - item: 4
-        weight: 10
+        weight: 40
+      - item: 0
+        weight: 15
+      - item: 7
+        weight: 45
     commonEnemiesHighlightingType: 0
     rareEnemies:
       allItems:
@@ -13297,7 +13328,7 @@ MonoBehaviour:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 8
+      minKillsSinceFightBeginning: 5
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 3
@@ -13305,39 +13336,138 @@ MonoBehaviour:
     cinematicToPlayOnWaveStart: {fileID: 0}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
-    numberOfCommonEnemies: 6
-    numberOfRareEnemies: 0
+    numberOfCommonEnemies: 2
+    numberOfRareEnemies: 1
     commonEnemies:
       allItems:
-      - item: 1
-        weight: 55
-      - item: 4
-        weight: 45
+      - item: 0
+        weight: 70
+      - item: 6
+        weight: 30
     commonEnemiesHighlightingType: 0
     rareEnemies:
       allItems:
-      - item: 1
-        weight: 1
+      - item: 11
+        weight: 100
     rareEnemiesHighlightingType: 0
     spawnersParent: {fileID: 2052814503}
     spawningConditions:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 9
+      minKillsSinceFightBeginning: 8
+      objectsToDestroy: []
+      zonesToGoTo: []
+    waitTimeBeforeStartWaveAfterConditionsVerified: 2
+  - waveName: Wave4
+    cinematicToPlayOnWaveStart: {fileID: 0}
+    spawnedEnemiesAreStopped: 0
+    spawnedEnemiesAutoDetectPlayer: 0
+    numberOfCommonEnemies: 2
+    numberOfRareEnemies: 1
+    commonEnemies:
+      allItems:
+      - item: 0
+        weight: 70
+      - item: 6
+        weight: 30
+    commonEnemiesHighlightingType: 0
+    rareEnemies:
+      allItems:
+      - item: 12
+        weight: 100
+    rareEnemiesHighlightingType: 0
+    spawnersParent: {fileID: 2052814503}
+    spawningConditions:
+      spawnOnStart: 0
+      spawnExternaly: 0
+      minTimeSinceFightBeginning: 0
+      minKillsSinceFightBeginning: 10
+      objectsToDestroy: []
+      zonesToGoTo: []
+    waitTimeBeforeStartWaveAfterConditionsVerified: 2
+  - waveName: Wave5
+    cinematicToPlayOnWaveStart: {fileID: 0}
+    spawnedEnemiesAreStopped: 0
+    spawnedEnemiesAutoDetectPlayer: 0
+    numberOfCommonEnemies: 2
+    numberOfRareEnemies: 1
+    commonEnemies:
+      allItems:
+      - item: 0
+        weight: 70
+      - item: 2
+        weight: 30
+    commonEnemiesHighlightingType: 0
+    rareEnemies:
+      allItems:
+      - item: 8
+        weight: 100
+    rareEnemiesHighlightingType: 0
+    spawnersParent: {fileID: 2052814503}
+    spawningConditions:
+      spawnOnStart: 0
+      spawnExternaly: 0
+      minTimeSinceFightBeginning: 0
+      minKillsSinceFightBeginning: 13
+      objectsToDestroy: []
+      zonesToGoTo: []
+    waitTimeBeforeStartWaveAfterConditionsVerified: 2
+  - waveName: Wave6
+    cinematicToPlayOnWaveStart: {fileID: 0}
+    spawnedEnemiesAreStopped: 0
+    spawnedEnemiesAutoDetectPlayer: 0
+    numberOfCommonEnemies: 2
+    numberOfRareEnemies: 1
+    commonEnemies:
+      allItems:
+      - item: 7
+        weight: 70
+      - item: 8
+        weight: 30
+    commonEnemiesHighlightingType: 0
+    rareEnemies:
+      allItems:
+      - item: 10
+        weight: 100
+    rareEnemiesHighlightingType: 0
+    spawnersParent: {fileID: 2052814503}
+    spawningConditions:
+      spawnOnStart: 0
+      spawnExternaly: 0
+      minTimeSinceFightBeginning: 0
+      minKillsSinceFightBeginning: 13
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 2
   enemySpawingDropParameters:
     allEnemiesDropParameters:
-    - enemyTag: 8
-      dropParameters: {fileID: 11400000, guid: da7d1735d54d2864aaef83a99d062166, type: 2}
-      dropParametersCopy: {fileID: 0}
     - enemyTag: 1
-      dropParameters: {fileID: 11400000, guid: da7d1735d54d2864aaef83a99d062166, type: 2}
+      dropParameters: {fileID: 11400000, guid: cabe67c5c5553604a8c229a00ea46748, type: 2}
       dropParametersCopy: {fileID: 0}
-    - enemyTag: 4
-      dropParameters: {fileID: 11400000, guid: da7d1735d54d2864aaef83a99d062166, type: 2}
+    - enemyTag: 8
+      dropParameters: {fileID: 11400000, guid: e387630ac29916c4584d0a846b4c37c8, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 9
+      dropParameters: {fileID: 11400000, guid: e387630ac29916c4584d0a846b4c37c8, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 10
+      dropParameters: {fileID: 11400000, guid: 0cea966aa2630654586ddf199c3a786f, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 12
+      dropParameters: {fileID: 11400000, guid: 05a1134680819bd4da7dc6955c99d713, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 7
+      dropParameters: {fileID: 11400000, guid: cabe67c5c5553604a8c229a00ea46748, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 2
+      dropParameters: {fileID: 11400000, guid: cabe67c5c5553604a8c229a00ea46748, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 6
+      dropParameters: {fileID: 11400000, guid: cabe67c5c5553604a8c229a00ea46748, type: 2}
+      dropParametersCopy: {fileID: 0}
+    - enemyTag: 11
+      dropParameters: {fileID: 11400000, guid: 0cea966aa2630654586ddf199c3a786f, type: 2}
       dropParametersCopy: {fileID: 0}
 --- !u!4 &537575937
 Transform:
@@ -17762,6 +17892,23 @@ PrefabInstance:
         type: 3}
       propertyPath: allParts.Array.data[6].startSpawnedEnemies
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908589164959827093, guid: 9bb00724f115ce148a6bf7e18415a10d,
+        type: 3}
+      propertyPath: isNotSkippable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908589164959827093, guid: 9bb00724f115ce148a6bf7e18415a10d,
+        type: 3}
+      propertyPath: allParts.Array.data[6].eventToPlayOnCinematicPartStart.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908589164959827093, guid: 9bb00724f115ce148a6bf7e18415a10d,
+        type: 3}
+      propertyPath: allParts.Array.data[6].eventToPlayOnCinematicPartEnd.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb00724f115ce148a6bf7e18415a10d, type: 3}
