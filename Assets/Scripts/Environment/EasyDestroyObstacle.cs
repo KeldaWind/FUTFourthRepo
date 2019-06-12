@@ -6,6 +6,7 @@ public class EasyDestroyObstacle : MonoBehaviour, IDamageReceiver
 {
     [SerializeField] FeedbackObjectPoolTag onDestroyParticleType;
     [SerializeField] float particlesSize = 1;
+    [SerializeField] float soundVolume = 0.1f;
     [SerializeField] Transform[] particlesPositions;
 
     public AttackTag GetDamageTag { get { return AttackTag.Environment; } }
@@ -21,7 +22,7 @@ public class EasyDestroyObstacle : MonoBehaviour, IDamageReceiver
             FeedbackObject onDestroyFeedbackObject = GameManager.gameManager.PoolManager.GetFeedbackObject(onDestroyParticleType, PoolInteractionType.GetFromPool);
             onDestroyFeedbackObject.gameObject.SetActive(true);
             onDestroyFeedbackObject.transform.position = pos.position;
-            onDestroyFeedbackObject.StartFeedback(transform.localScale.x * particlesSize);
+            onDestroyFeedbackObject.StartFeedback(transform.localScale.x * particlesSize, soundVolume);
         }
         Destroy(gameObject);
     }

@@ -278,6 +278,7 @@ public class ShipHitbox : MonoBehaviour, ICollisionReceiver, IDamageReceiver, IC
 
         Vector3 hitNormal = new Vector3();
         Vector3 hitPosition = new Vector3();
+        Vector3 worldHitPosition;
         int counter = 0;
 
         foreach (ContactPoint contact in collision.contacts)
@@ -294,6 +295,7 @@ public class ShipHitbox : MonoBehaviour, ICollisionReceiver, IDamageReceiver, IC
         hitNormal = Quaternion.Euler(-collision.transform.rotation.eulerAngles) * hitNormal;
 
         hitPosition /= counter;
+        worldHitPosition = hitPosition;
         hitPosition = Quaternion.Euler(-collision.transform.rotation.eulerAngles) * (hitPosition - hitObjectCenter);
 
         float semiLenght = collision.collider.bounds.extents.z;
@@ -414,6 +416,13 @@ public class ShipHitbox : MonoBehaviour, ICollisionReceiver, IDamageReceiver, IC
         }
 
         GameManager.gameManager.ScrshkManager.StartScreenshake(relatedShip.ShipMvt.GetCurrentRammingParameters.GetScreenshakeParameters);
+
+        FeedbackObject woodProjection = GameManager.gameManager.PoolManager.GetFeedbackObject(FeedbackObjectPoolTag.WoodDestruction, PoolInteractionType.GetFromPool);
+        if(woodProjection != null)
+        {
+            woodProjection.transform.position = worldHitPosition;
+            woodProjection.StartFeedback(2, 0.2f);
+        }
     }
     #endregion
 }

@@ -12,6 +12,7 @@ public class ShipRenderingManager
     /// Parent du renderer du bateau
     /// </summary>
     [SerializeField] Transform rendererParent;
+    [SerializeField] GameObject shipCircle;
     /// <summary>
     /// Rotation normale du bateai
     /// </summary>
@@ -24,6 +25,8 @@ public class ShipRenderingManager
     {
         normalRendererRotation = rendererParent.localRotation.eulerAngles - new Vector3(0, baseRotation, 0);
         rendererParent.gameObject.SetActive(true);
+        if (shipCircle != null)
+            shipCircle.gameObject.SetActive(true);
 
         lifeFeedbacksManager.SetUp(lifeManager);
 
@@ -40,6 +43,8 @@ public class ShipRenderingManager
 
     [Header("VariablesPierre")]
     [SerializeField] Transform rotationParent;
+    [SerializeField] float normalYRotationParent;
+    [SerializeField] bool rotatesOnX;
     [SerializeField] AnimationCurve curveTangage;
     [SerializeField] float maxTangageAngle;
     [SerializeField] TrailRenderer trailMilieu;
@@ -106,7 +111,7 @@ public class ShipRenderingManager
             float damageRotation = GetCurrentDamagesRotation;
             float globalRotation = movementRotation + damageRotation;
 
-            rotationParent.localRotation = Quaternion.Euler(0, 0, globalRotation);
+            rotationParent.localRotation = Quaternion.Euler(rotatesOnX ? globalRotation : 0, normalYRotationParent, !rotatesOnX ? globalRotation : 0);
         }
         #endregion
 
@@ -145,6 +150,8 @@ public class ShipRenderingManager
     public void HideShip()
     {
         rendererParent.gameObject.SetActive(false);
+        if(shipCircle != null)
+            shipCircle.gameObject.SetActive(false);
     }
 
     [Header("Life Feedbacks")]
@@ -229,6 +236,9 @@ public class ShipLifeFeedbacksManager
 
         lifeManager.OnLifeChange += UpdateLifeAmount;
 
+        currentStepIndex = 0;
+        ApplyNewFeedbackStep(baseFeedbackState);
+
         if (smokeParticleSystem != null)
         {
             smokeParticlesMainModule = smokeParticleSystem.main;
@@ -248,11 +258,16 @@ public class ShipLifeFeedbacksManager
             return;
 
         float currentLifePercentage = shipLifeManager.GetCurrentLifePercentage;
-        
-        if(currentLifePercentage <= allShipLifeFeedbacksSteps[currentStepIndex].stepLifePercentage)
+
+        if (currentStepIndex > allShipLifeFeedbacksSteps.Length)
+            return;
+
+        while(currentLifePercentage <= allShipLifeFeedbacksSteps[currentStepIndex].stepLifePercentage)
         {
             ApplyNewFeedbackStep(allShipLifeFeedbacksSteps[currentStepIndex]);
             currentStepIndex++;
+            if (currentStepIndex >= allShipLifeFeedbacksSteps.Length)
+                break;
         }
     }
 
@@ -284,6 +299,7 @@ public class ShipLifeFeedbacksManager
     }
 
     [Header("Steps")]
+    [SerializeField] ShipLifeFeedbacksStep baseFeedbackState;
     [SerializeField] ShipLifeFeedbacksStep[] allShipLifeFeedbacksSteps;
     [SerializeField] float transitionSpeedCoeff = 0.01f;
     int currentStepIndex;

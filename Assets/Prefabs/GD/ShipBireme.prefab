@@ -4908,7 +4908,10 @@ MonoBehaviour:
   relatedShipHitbox: {fileID: 181650181813201011}
   shipRenderingManager:
     rendererParent: {fileID: 1130047009}
+    shipCircle: {fileID: 0}
     rotationParent: {fileID: 5004584525400772724}
+    normalYRotationParent: 0
+    rotatesOnX: 0
     curveTangage:
       serializedVersion: 2
       m_Curve:
@@ -4967,6 +4970,13 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     lifeFeedbacksManager:
+      baseFeedbackState:
+        stepLifePercentage: 0
+        smokeColor: {r: 1, g: 1, b: 1, a: 1}
+        smokeEmissionSpeed: 2.8
+        smokeSize: 3
+        fireEmissionSpeed: 0
+        fireSize: 0
       allShipLifeFeedbacksSteps:
       - stepLifePercentage: 0.67
         smokeColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
