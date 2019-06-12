@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
   m_Name: CanonDropRare
   m_EditorClassIdentifier: 
-  goldLootProbability: 55
-  equipmentLootProbability: 40
+  goldLootProbability: 65
+  equipmentLootProbability: 30
   nullLootProbability: 5
   goldLootSystem:
     allItems:
@@ -24,8 +24,8 @@ MonoBehaviour:
     - item: 360
       weight: 20
   goldLootRandomAmplitude: 25
-  hullEquipmentProbability: 20
-  weaponEquipmentProbability: 80
+  hullEquipmentProbability: 30
+  weaponEquipmentProbability: 70
   hullLootSystem:
     allItems:
     - item: {fileID: 11400000, guid: c0128e1bf0a1c424ea5c74641daa0b19, type: 2}

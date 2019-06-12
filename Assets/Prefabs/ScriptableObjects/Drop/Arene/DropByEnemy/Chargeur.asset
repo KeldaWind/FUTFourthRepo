@@ -12,31 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
   m_Name: Chargeur
   m_EditorClassIdentifier: 
-  goldLootProbability: 40
-  equipmentLootProbability: 55
+  goldLootProbability: 35
+  equipmentLootProbability: 60
   nullLootProbability: 5
   goldLootSystem:
     allItems:
-    - item: 200
-      weight: 50
-    - item: 280
-      weight: 30
-    - item: 360
-      weight: 20
+    - item: 350
+      weight: 100
   goldLootRandomAmplitude: 25
-  hullEquipmentProbability: 20
-  weaponEquipmentProbability: 80
+  hullEquipmentProbability: 100
+  weaponEquipmentProbability: 0
   hullLootSystem:
     allItems:
     - item: {fileID: 11400000, guid: 12dac067f943e3b449ccfc424fe4e6b5, type: 2}
-      weight: 100
-  weaponLootSystem:
-    allItems:
-    - item: {fileID: 11400000, guid: 18f387511e212e34ca30f3bacf392bf2, type: 2}
       weight: 50
-    - item: {fileID: 11400000, guid: 0eaa9ec592c0b9b4f9b123aaa904bcab, type: 2}
-      weight: 35
-    - item: {fileID: 11400000, guid: 0222804fc395afd49ad2140f204dc45f, type: 2}
-      weight: 10
-    - item: {fileID: 11400000, guid: 6f3c26695d8305d4e90e3170b25a509c, type: 2}
-      weight: 5
+    - item: {fileID: 11400000, guid: a4022b98c403d6041a6fe14e8281a3c5, type: 2}
+      weight: 50
+  weaponLootSystem:
+    allItems: []
