@@ -329,6 +329,18 @@ MonoBehaviour:
   lifeManager:
     maxLife: 2
   damageTag: 3
+  objectCollider: {fileID: 0}
+  objectRenderer: {fileID: 0}
+  objectRenderers: []
+  particlesToPlay: {fileID: 0}
+  woodProjectionPositions: []
+  targetAudioSource: {fileID: 0}
+  soundToPlayOnDestroy:
+    clip: {fileID: 0}
+    volume: 1
+    loop: 0
+    minPitch: 1
+    maxPitch: 1
   lootManager:
     dropParameters: {fileID: 0}
 --- !u!135 &80226212
@@ -6777,8 +6789,8 @@ MonoBehaviour:
         dockSpot: {fileID: 357324271}
         shopParameters:
           allBuyableEquipments:
-          - {fileID: 11400000, guid: 0222804fc395afd49ad2140f204dc45f, type: 2}
-          - {fileID: 11400000, guid: 6f3c26695d8305d4e90e3170b25a509c, type: 2}
+          - {fileID: 11400000, guid: a4022b98c403d6041a6fe14e8281a3c5, type: 2}
+          - {fileID: 11400000, guid: 915a76bbe7fa6574fa9940bb9e17d2bf, type: 2}
           - {fileID: 11400000, guid: 0eaa9ec592c0b9b4f9b123aaa904bcab, type: 2}
           - {fileID: 11400000, guid: fcd62d5a5b215d04faa55ebb1646f373, type: 2}
           - {fileID: 11400000, guid: 08d6eac5c373bea45b9dce0549f8f92f, type: 2}
@@ -20122,7 +20134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1251063679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20144,7 +20156,7 @@ MonoBehaviour:
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 0
+      - item: 12
         weight: 1
     commonEnemiesHighlightingType: 0
     rareEnemies:
@@ -23160,6 +23172,18 @@ MonoBehaviour:
   lifeManager:
     maxLife: 1
   damageTag: 1
+  objectCollider: {fileID: 0}
+  objectRenderer: {fileID: 0}
+  objectRenderers: []
+  particlesToPlay: {fileID: 0}
+  woodProjectionPositions: []
+  targetAudioSource: {fileID: 0}
+  soundToPlayOnDestroy:
+    clip: {fileID: 0}
+    volume: 1
+    loop: 0
+    minPitch: 1
+    maxPitch: 1
   lootManager:
     dropParameters: {fileID: 11400000, guid: f1de8cdeffd4f044487df01b14ceb09b, type: 2}
 --- !u!4 &5808074413593722923
