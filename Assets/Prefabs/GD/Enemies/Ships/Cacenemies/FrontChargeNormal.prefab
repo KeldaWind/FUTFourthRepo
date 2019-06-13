@@ -5703,6 +5703,16 @@ PrefabInstance:
       propertyPath: rammingParticleSystem
       value: 
       objectReference: {fileID: 9085022362364939857}
+    - target: {fileID: 7187507045883158356, guid: 804b528446b7c354a9f7ee919532505a,
+        type: 3}
+      propertyPath: rammingSound.volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187507045883158356, guid: 804b528446b7c354a9f7ee919532505a,
+        type: 3}
+      propertyPath: rammingSound.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b05c334b5c08154cb29fad3f06ae4af, type: 3}
     - target: {fileID: 735661782011660728, guid: 804b528446b7c354a9f7ee919532505a,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -5972,6 +5982,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7159106517491105106, guid: d29c83f05aa2edd448aad274dcbafbef,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7159106516208688704, guid: d29c83f05aa2edd448aad274dcbafbef,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -5987,10 +6002,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 12.6
       objectReference: {fileID: 0}
-    - target: {fileID: 7159106517491105106, guid: d29c83f05aa2edd448aad274dcbafbef,
+    - target: {fileID: 7159106517491105116, guid: d29c83f05aa2edd448aad274dcbafbef,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159106517491105116, guid: d29c83f05aa2edd448aad274dcbafbef,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7159106515809416565, guid: d29c83f05aa2edd448aad274dcbafbef,
         type: 3}
@@ -6011,16 +6031,6 @@ PrefabInstance:
         type: 3}
       propertyPath: VelocityModule.inWorldSpace
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7159106517491105116, guid: d29c83f05aa2edd448aad274dcbafbef,
-        type: 3}
-      propertyPath: scalingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7159106517491105116, guid: d29c83f05aa2edd448aad274dcbafbef,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29c83f05aa2edd448aad274dcbafbef, type: 3}

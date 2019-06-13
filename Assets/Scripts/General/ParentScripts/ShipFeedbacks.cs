@@ -97,6 +97,7 @@ public class ShipFeedbacks : MonoBehaviour
     }
 
     [SerializeField] ParticleSystem rammingParticleSystem;
+    [SerializeField] Sound rammingSound;
     public void PlayRammingParticles()
     {
         if (rammingParticleSystem != null)
@@ -106,6 +107,9 @@ public class ShipFeedbacks : MonoBehaviour
             else
                 rammingParticleSystem.Play();
         }
+
+        if (shipAudioSource != null)
+            shipAudioSource.PlaySound(rammingSound);
     }
 
     public void StopRammingParticles()

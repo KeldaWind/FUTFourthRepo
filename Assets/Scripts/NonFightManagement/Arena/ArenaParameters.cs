@@ -35,6 +35,10 @@ public class ArenaParameters : ScriptableObject
         }
     }
 
+    [Header("In Arena Parameters")]
+    [TextArea] [SerializeField] string arenaStartDescription;
+    public string GetArenaStartDescription { get { return arenaStartDescription; } }
+
     [Header("Scores Parameters")]
     [SerializeField] int maximumNumberOfDamagesToHaveStar;
     public int GetMaximumNumberOfDamagesToHaveStar { get { return maximumNumberOfDamagesToHaveStar; } }

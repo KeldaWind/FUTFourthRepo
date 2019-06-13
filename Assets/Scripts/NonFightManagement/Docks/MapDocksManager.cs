@@ -212,7 +212,6 @@ public class MapDocksManager
         }
         else
         {
-            Debug.Log("Not enough money, kid");
         }
     }
 

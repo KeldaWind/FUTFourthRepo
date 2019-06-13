@@ -64,4 +64,12 @@ public struct SpecialShipMoveParameters
             return GetSpeedBoost != 1;
         }
     }
+
+    public bool ManiabilityBoost
+    {
+        get
+        {
+            return GetManiabilityBoost != 1 && GetManiabilityBoost != 0;
+        }
+    }
 }

@@ -337,6 +337,7 @@ MonoBehaviour:
   targetAudioSource: {fileID: 0}
   soundToPlayOnDestroy:
     clip: {fileID: 0}
+    clips: []
     volume: 1
     loop: 0
     minPitch: 1
@@ -6789,12 +6790,12 @@ MonoBehaviour:
         dockSpot: {fileID: 357324271}
         shopParameters:
           allBuyableEquipments:
-          - {fileID: 11400000, guid: a4022b98c403d6041a6fe14e8281a3c5, type: 2}
-          - {fileID: 11400000, guid: 915a76bbe7fa6574fa9940bb9e17d2bf, type: 2}
+          - {fileID: 11400000, guid: 6f3c26695d8305d4e90e3170b25a509c, type: 2}
+          - {fileID: 11400000, guid: 12dac067f943e3b449ccfc424fe4e6b5, type: 2}
           - {fileID: 11400000, guid: 0eaa9ec592c0b9b4f9b123aaa904bcab, type: 2}
           - {fileID: 11400000, guid: fcd62d5a5b215d04faa55ebb1646f373, type: 2}
           - {fileID: 11400000, guid: 08d6eac5c373bea45b9dce0549f8f92f, type: 2}
-          - {fileID: 11400000, guid: f2233512af991254dab9f9e8be082204, type: 2}
+          - {fileID: 11400000, guid: c0128e1bf0a1c424ea5c74641daa0b19, type: 2}
           minNumberOfEquipments: 6
           maxNumberOfEquipments: 6
           soldEquipments: []
@@ -17361,6 +17362,75 @@ MonoBehaviour:
   particlesToPlayOnUnlock:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!1001 &775887978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2633628322802732159, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_Name
+      value: PS_eclat_shield_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -388.68787
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 412.8257
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 217.97345
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633628322802732156, guid: 080a1b8399eedd84595c7d7bc26cee74,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 080a1b8399eedd84595c7d7bc26cee74, type: 3}
 --- !u!1 &776882448
 GameObject:
   m_ObjectHideFlags: 0
@@ -23180,6 +23250,7 @@ MonoBehaviour:
   targetAudioSource: {fileID: 0}
   soundToPlayOnDestroy:
     clip: {fileID: 0}
+    clips: []
     volume: 1
     loop: 0
     minPitch: 1

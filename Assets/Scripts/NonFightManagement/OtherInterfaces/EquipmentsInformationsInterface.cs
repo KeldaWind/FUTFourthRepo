@@ -269,7 +269,12 @@ public class EquipmentsInformationsInterface : MonoBehaviour
         buyButton.gameObject.SetActive(true);
 
         buyValueText.text = buyValue.ToString();
-        if (playerGoldAmount >= buyValue)
+
+        bool playerFull = false;
+        if (MapManager.mapManager != null && IntersceneManager.intersceneManager != null)
+            playerFull = MapManager.mapManager.DocksManager.InvtrManager.GetPlayerInventoryEquipments.Count >= IntersceneManager.intersceneManager.GetPlayerDatas.GetPlayerInventoryCapacity;
+
+        if (playerGoldAmount >= buyValue && !playerFull)
         {
             buyButton.SetButtonInteractable(true);
             buyValueText.color = canColor;
@@ -280,6 +285,9 @@ public class EquipmentsInformationsInterface : MonoBehaviour
             buyButton.SetButtonInteractable(false);
             buyValueText.color = cantColor;
             buyValueImage.color = cantImageColor;
+
+            if (playerFull)
+                buyValueText.text = "Full";
         }
     }
 
