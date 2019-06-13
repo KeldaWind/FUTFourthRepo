@@ -6781,8 +6781,8 @@ MonoBehaviour:
           - {fileID: 11400000, guid: 6f3c26695d8305d4e90e3170b25a509c, type: 2}
           - {fileID: 11400000, guid: 0eaa9ec592c0b9b4f9b123aaa904bcab, type: 2}
           - {fileID: 11400000, guid: fcd62d5a5b215d04faa55ebb1646f373, type: 2}
+          - {fileID: 11400000, guid: 08d6eac5c373bea45b9dce0549f8f92f, type: 2}
           - {fileID: 11400000, guid: f2233512af991254dab9f9e8be082204, type: 2}
-          - {fileID: 11400000, guid: 0a45a41f4c9d5a84ebb00012c7a8e0f7, type: 2}
           minNumberOfEquipments: 6
           maxNumberOfEquipments: 6
           soldEquipments: []
@@ -18759,27 +18759,27 @@ PrefabInstance:
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8660254
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
-        type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 69.5
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 3598126807019236252, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -18799,7 +18799,7 @@ PrefabInstance:
     - target: {fileID: 3598126807019236253, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: field of view
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1247149024664613448, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -20204,7 +20204,7 @@ MonoBehaviour:
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 12
+      - item: 0
         weight: 1
     commonEnemiesHighlightingType: 0
     rareEnemies:
