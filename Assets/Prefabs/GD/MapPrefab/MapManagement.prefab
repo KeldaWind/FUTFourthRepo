@@ -729,11 +729,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dock 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5318009415611799909, guid: ad9c3dd7f3dec07438f006b381996065,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 2554797934226735810, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -839,16 +834,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
+    - target: {fileID: 5318009415611799909, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
-      propertyPath: m_Priority
-      value: 104
+      propertyPath: m_LocalPosition.y
+      value: 0.03
       objectReference: {fileID: 0}
-    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
-        type: 3}
-      propertyPath: m_ComponentOwner
-      value: 
-      objectReference: {fileID: 2554797932576986190}
     - target: {fileID: 7646714826526538652, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -874,6 +864,16 @@ PrefabInstance:
       propertyPath: playerTransformOnceStopped
       value: 
       objectReference: {fileID: 7646714824845357314}
+    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
+        type: 3}
+      propertyPath: m_Priority
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
+        type: 3}
+      propertyPath: m_ComponentOwner
+      value: 
+      objectReference: {fileID: 2554797932576986190}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9c3dd7f3dec07438f006b381996065, type: 3}
 --- !u!4 &2554797932544116828 stripped
@@ -1132,11 +1132,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dock 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5318009415611799909, guid: ad9c3dd7f3dec07438f006b381996065,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 2554797934226735810, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1242,16 +1237,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
+    - target: {fileID: 5318009415611799909, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
-      propertyPath: m_Priority
-      value: 110
+      propertyPath: m_LocalPosition.y
+      value: 0.4
       objectReference: {fileID: 0}
-    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
-        type: 3}
-      propertyPath: m_ComponentOwner
-      value: 
-      objectReference: {fileID: 1990251696145973728}
     - target: {fileID: 7646714826526538652, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -1282,6 +1272,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 41.721
       objectReference: {fileID: 0}
+    - target: {fileID: 2554797933135195645, guid: ad9c3dd7f3dec07438f006b381996065,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2554797934226735870, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
       propertyPath: cameraWhenOnSpot
@@ -1292,11 +1287,16 @@ PrefabInstance:
       propertyPath: playerTransformOnceStopped
       value: 
       objectReference: {fileID: 5977449811410937004}
-    - target: {fileID: 2554797933135195645, guid: ad9c3dd7f3dec07438f006b381996065,
+    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Priority
+      value: 110
       objectReference: {fileID: 0}
+    - target: {fileID: 2554797933135195643, guid: ad9c3dd7f3dec07438f006b381996065,
+        type: 3}
+      propertyPath: m_ComponentOwner
+      value: 
+      objectReference: {fileID: 1990251696145973728}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9c3dd7f3dec07438f006b381996065, type: 3}
 --- !u!114 &1990251695155753675 stripped
