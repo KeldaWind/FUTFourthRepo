@@ -20,9 +20,14 @@ public class MapProgressionManager
         IntersceneManager intersceneManager = IntersceneManager.intersceneManager;
         if (intersceneManager != null)
         {
+            bool passedTutorial = false;
+
             PlayerProgressionDatas progressionDatas = PlayerDataSaver.LoadProgressionDatas();
 
             ArenaIntersceneInformations arenaIntersceneInformations = intersceneManager.ArenaInterscInformations;
+
+            Debug.Log(arenaIntersceneInformations.GetArenaPassed);
+            
             #region Tutorial
             if (arenaIntersceneInformations.GetNeedToPassTutorial)
             {
@@ -33,6 +38,8 @@ public class MapProgressionManager
                     PlayerDataSaver.SavePlayerProgressionDatas(progressionDatas.GetAllPassedArenaDatas, true);
                 }
             }
+
+            passedTutorial = progressionDatas.GetPassedTuto;
             #endregion
 
             #region Already Unlocked
@@ -65,7 +72,10 @@ public class MapProgressionManager
             #region Just Unlocked
             ArenaParameters lastArenaParameters = arenaIntersceneInformations.GetLaunchedArenaParameters;
             if (lastArenaParameters == null)
+            {
+                arenaIntersceneInformations.SetArenaPassed(false, 0);
                 return;
+            }
 
             #region V2
             List<string> passedArenaNames = new List<string>();
@@ -100,7 +110,7 @@ public class MapProgressionManager
                                     break;
                                 }
                             }
-                            PlayerDataSaver.SavePlayerProgressionDatas(allPassedArenaDatas);
+                            PlayerDataSaver.SavePlayerProgressionDatas(allPassedArenaDatas, passedTutorial);
                             break;
                         }
                     }
@@ -117,7 +127,7 @@ public class MapProgressionManager
                 }
 
                 allPassedArenaDatas.Add(new PassedArenaData(lastArenaParameters, true, stars));
-                PlayerDataSaver.SavePlayerProgressionDatas(allPassedArenaDatas);
+                PlayerDataSaver.SavePlayerProgressionDatas(allPassedArenaDatas, passedTutorial);
             }
             #endregion
             #endregion
