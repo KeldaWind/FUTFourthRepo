@@ -17,11 +17,13 @@ public class Explosion : MonoBehaviour {
     [SerializeField] ExplosionHitbox explosionHitbox;
 
     [Header("Rendering")]
-    [SerializeField] Transform particlesParent;
+    //[SerializeField] Transform particlesParent;
     [SerializeField] ParticleSystem explosionParticleSystem;
+    [SerializeField] Vector3 normalizedParticlesSize;
 
     [Header("Sounds")]
     [SerializeField] AudioSource audioSource;
+    [SerializeField] Sound explosionSound;
 
     /// <summary>
     /// Call this function to make this explosion unefficient and invisible.
@@ -46,14 +48,17 @@ public class Explosion : MonoBehaviour {
 
         explosionHitbox.transform.localScale = Vector3.zero;
 
-        if (particlesParent != null)
-            particlesParent.localScale = currentExplosionParameters.explosionMaxSize * Vector3.one;
+        /*if (particlesParent != null)
+            particlesParent.localScale = currentExplosionParameters.explosionMaxSize * Vector3.one;*/
 
         if (explosionParticleSystem != null)
+        {
+            explosionParticleSystem.transform.localScale = normalizedParticlesSize * currentExplosionParameters.explosionMaxSize;
             explosionParticleSystem.Play();
+        }
 
         if (audioSource != null)
-            audioSource.Play();
+            audioSource.PlaySound(explosionSound);
     }
 
     public void SetAttackTag(AttackTag attackTag)
@@ -63,8 +68,18 @@ public class Explosion : MonoBehaviour {
 
     void Update()
     {
-        if(currentExplosionParameters.Expanding || currentExplosionParameters.Persisting)
+        if (currentExplosionParameters.Expanding || currentExplosionParameters.Persisting)
             UpdateExplosion();
+
+        if (waitingToReturn)
+        {
+            if (ReadyToBeReturnedToPool)
+            {
+                gameObject.SetActive(false);
+                GameManager.gameManager.PoolManager.ReturnExplosion(this);
+                waitingToReturn = false;
+            }
+        }
     }
 
     /// <summary>
@@ -80,18 +95,25 @@ public class Explosion : MonoBehaviour {
     /// </summary>
     public void EndExplosion()
     {
-        gameObject.SetActive(false);
-
-        if (explosionParticleSystem != null)
-            explosionParticleSystem.Stop();
-
-        GameManager.gameManager.PoolManager.ReturnExplosion(this);
+        //gameObject.SetActive(false);
+        explosionHitbox.gameObject.SetActive(false);
+        waitingToReturn = true;
+        //GameManager.gameManager.PoolManager.ReturnExplosion(this);
     }
 
     #region Pooling
     [Header("Pooling")]
     [SerializeField] ExplosionPoolTag explosionTag;
     public ExplosionPoolTag GetExplosionPoolTag { get { return explosionTag; } }
+
+    bool waitingToReturn;
+    public bool ReadyToBeReturnedToPool
+    {
+        get
+        {
+            return !audioSource.isPlaying && !explosionParticleSystem.IsAlive();
+        }
+    }
     #endregion 
 }
 

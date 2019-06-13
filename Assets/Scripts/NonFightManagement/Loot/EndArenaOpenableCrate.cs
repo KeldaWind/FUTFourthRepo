@@ -70,6 +70,7 @@ public class EndArenaOpenableCrate : MonoBehaviour
 
     public void Appear()
     {
+        lootedEquipmentText.enabled = false;
         crateAnimator.SetTrigger("appear");
     }
 

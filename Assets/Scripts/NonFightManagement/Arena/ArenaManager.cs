@@ -170,6 +170,13 @@ public class ArenaManager : MonoBehaviour
 
         gameManager.Player.PlayerLootManager.EarnLoot(dropManager, starNumber);
 
+        if (IsTutorialArena)
+        {
+            PlayerProgressionDatas data = PlayerDataSaver.LoadProgressionDatas();
+            data.SetPassedTutorial();
+            PlayerDataSaver.SavePlayerProgressionDatas(data);
+        }
+
         StartOutro();
     }
     #endregion

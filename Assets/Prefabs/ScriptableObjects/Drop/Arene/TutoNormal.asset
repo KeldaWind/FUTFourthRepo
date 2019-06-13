@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f42e8e2879a0d84db46ad19bc3668d1, type: 3}
   m_Name: TutoNormal
   m_EditorClassIdentifier: 
-  goldLootProbability: 60
+  goldLootProbability: 75
   equipmentLootProbability: 20
-  nullLootProbability: 20
+  nullLootProbability: 5
   goldLootSystem:
     allItems:
-    - item: 350
+    - item: 300
       weight: 60
-    - item: 450
-      weight: 40
   goldLootRandomAmplitude: 30
   hullEquipmentProbability: 20
   weaponEquipmentProbability: 80

@@ -8,6 +8,15 @@ public class DestroyableTarget : MonoBehaviour, IDamageReceiver
 
     [SerializeField] LifeManager lifeManager;
     [SerializeField] AttackTag damageTag;
+    [SerializeField] Collider objectCollider;
+
+    [Header("Feedbacks")]
+    [SerializeField] Renderer objectRenderer;
+    [SerializeField] GameObject[] objectRenderers;
+    [SerializeField] ParticleSystem particlesToPlay;
+    [SerializeField] Transform[] woodProjectionPositions;
+    [SerializeField] AudioSource targetAudioSource;
+    [SerializeField] Sound soundToPlayOnDestroy;
 
     private void Start()
     {
@@ -53,7 +62,49 @@ public class DestroyableTarget : MonoBehaviour, IDamageReceiver
                 arenaManager.DropManager.AddDropCrate(lootCrate);
         }
 
-        Destroy(gameObject);
+
+        if (objectCollider != null)
+            objectCollider.enabled = false;
+        else if (GetComponent<Collider>() != null)
+            GetComponent<Collider>().enabled = false;
+
+
+        if (particlesToPlay != null)
+            particlesToPlay.Play();
+
+        foreach(Transform tr in woodProjectionPositions)
+        {
+            FeedbackObject woodProjection = GameManager.gameManager.PoolManager.GetFeedbackObject(FeedbackObjectPoolTag.WoodDestruction, PoolInteractionType.GetFromPool);
+            if (woodProjection != null)
+            {
+                woodProjection.transform.position = tr.position;
+                woodProjection.StartFeedback(2, 0.2f);
+            }
+        }
+
+        if(particlesToPlay == null && woodProjectionPositions.Length == 0)
+        {
+            FeedbackObject woodProjection = GameManager.gameManager.PoolManager.GetFeedbackObject(FeedbackObjectPoolTag.WoodDestruction, PoolInteractionType.GetFromPool);
+            if (woodProjection != null)
+            {
+                woodProjection.transform.position = transform.position;
+                woodProjection.StartFeedback(2, 0.2f);
+            }
+        }
+
+
+        if (targetAudioSource != null)
+            targetAudioSource.PlaySound(soundToPlayOnDestroy);
+
+
+        if (objectRenderer != null)
+            objectRenderer.enabled = false;
+
+        foreach (GameObject obj in objectRenderers)
+            obj.SetActive(false);
+
+        if(objectRenderer == null && objectRenderers.Length == 0)
+            Destroy(gameObject);
     }
 
     public void ReceiveDamage(IDamageSource damageSource, DamagesParameters damagesParameters, ProjectileSpecialParameters projSpecialParameters)

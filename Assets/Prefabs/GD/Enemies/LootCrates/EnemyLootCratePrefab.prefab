@@ -107,7 +107,7 @@ MonoBehaviour:
   lootCrateAudioSource: {fileID: 4562702956367277473}
   lootSound:
     clip: {fileID: 8300000, guid: 563dfb7fac2249a43b03244c75d04657, type: 3}
-    volume: 1
+    volume: 0.3
     loop: 0
     minPitch: 1
     maxPitch: 1
@@ -358,6 +358,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845556081632750490}
     m_Modifications:
+    - target: {fileID: 1904445478270753373, guid: 7c3160136d8b10f4dae0d3d94023dfbe,
+        type: 3}
+      propertyPath: m_Name
+      value: ParticulesGold
+      objectReference: {fileID: 0}
     - target: {fileID: 533755815684845848, guid: 7c3160136d8b10f4dae0d3d94023dfbe,
         type: 3}
       propertyPath: scalingMode
@@ -367,11 +372,6 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1904445478270753373, guid: 7c3160136d8b10f4dae0d3d94023dfbe,
-        type: 3}
-      propertyPath: m_Name
-      value: ParticulesGold
       objectReference: {fileID: 0}
     - target: {fileID: 2981285738027875292, guid: 7c3160136d8b10f4dae0d3d94023dfbe,
         type: 3}
