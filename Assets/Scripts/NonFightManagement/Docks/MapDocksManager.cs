@@ -44,6 +44,8 @@ public class MapDocksManager
 
     public void OpenPlayerInventoryOnly()
     {
+        UpdateGoldText();
+
         if (!docksInterface.PlayerInventoryOpened)
         {
             docksInterface.OpenDocksPanel(false);
@@ -63,6 +65,8 @@ public class MapDocksManager
 
     public void ChangeDocksPanelMode(DocksMode docksMode)
     {
+        UpdateGoldText();
+
         playerInventoryOnly = false;
         if (currentDocksMode == docksMode)
             return;

@@ -50,7 +50,12 @@ public class ShipFeedbacks : MonoBehaviour
     public void PlayStunFeedback()
     {
         if (stunParticles != null)
-            stunParticles.Play();
+        {
+            if (!stunParticles.gameObject.activeInHierarchy)
+                stunParticles.gameObject.SetActive(true);
+            else
+                stunParticles.Play();
+        }
     }
 
     public void StopStunFeedback()

@@ -54,7 +54,10 @@ public class Obstacle : MonoBehaviour, IDamageSource, ICollisionSource
                 else
                 {
                     hitShipHitbox.ReceiveDamage(hitShipHitbox, hitShipHitbox.GetRelatedShip.GetSkeweringParameters.GetDamagesOnImpact, null);
-                    hitShipHitbox.GetRelatedShip.SetStun(hitShipHitbox.GetRelatedShip.GetSkeweringParameters.GetStunOnObstacleDuration);
+
+                    if (hitShipHitbox.GetRelatedShip.GetSkeweringParameters != null)
+                        hitShipHitbox.GetRelatedShip.SetStun(hitShipHitbox.GetRelatedShip.GetSkeweringParameters.GetStunOnObstacleDuration);
+
                     hitShipHitbox.GetRelatedShip.EndSkewering();
                 }
             }
