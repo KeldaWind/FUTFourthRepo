@@ -20,6 +20,11 @@ public class ArenaManager : MonoBehaviour
         gameManager = GameManager.gameManager;
         gameManager.HidePlayerInterface();
         SetUpProjectilesPooling();
+
+        if (IsTutorialArena)
+            gameManager.MscManager.PlayTutorialMusic();
+        else
+            gameManager.MscManager.PlayArenaMusic();
     }
 
     private void Update()
@@ -219,6 +224,7 @@ public class ArenaManager : MonoBehaviour
         outroCinematicProgress = ProgressionState.Ended;
 
         //gameManager.ArenaInterfaceManager.OpenEndPanel(ShowEndPanelType.Win);
+        gameManager.MscManager.PlayVictoryMusic();
         gameManager.ArenaInterfaceManager.OpenStarsAndGlobalLootPanel(IsTutorialArena);
 
         gameManager.HidePlayerInterface();

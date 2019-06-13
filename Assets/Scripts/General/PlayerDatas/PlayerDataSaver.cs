@@ -70,7 +70,7 @@ public static class PlayerDataSaver
     #endregion
 
     #region Progression
-    public static void SavePlayerProgressionDatas(List<PassedArenaData> passedArenaDatas)
+    /*public static void SavePlayerProgressionDatas(List<PassedArenaData> passedArenaDatas)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/playerProgression.data";
@@ -81,7 +81,7 @@ public static class PlayerDataSaver
 
         formatter.Serialize(stream, data);
         stream.Close();
-    }
+    }*/
 
     public static void SavePlayerProgressionDatas(List<PassedArenaData> passedArenaDatas, bool passedTutorial)
     {

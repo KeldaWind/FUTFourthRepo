@@ -12,7 +12,7 @@ public class IconPreview : Preview
     bool previewing;
     bool active;
     float duration;
-    float minimumTimeBeforeReturn = 1;
+    [SerializeField] float minimumTimeBeforeReturn = 1;
     float remainingTimeBeforeReturn;
 
     private void Update()
@@ -22,7 +22,9 @@ public class IconPreview : Preview
         else if (active)
             UpdateLaunchedPreview();
         else if (ReadyToBeReturned)
+        {
             EndIcon();
+        }
         else
         {
             transform.position = shipToFollow.position;
@@ -79,7 +81,8 @@ public class IconPreview : Preview
 
     public override void EndLaunchedPreview()
     {
-        iconSoundSource.PlaySound(iconEndSound);
+        if(iconEndSound.clip != null || iconEndSound.clips.Length > 0)
+            iconSoundSource.PlaySound(iconEndSound);
         active = false;
     }
 

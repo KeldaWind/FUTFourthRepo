@@ -410,6 +410,10 @@ public class ShipHitbox : MonoBehaviour, ICollisionReceiver, IDamageReceiver, IC
 
         ReceiveKnockback(this, relatedShip.ShipMvt.GetCurrentRammingParameters.GetSustainedKnockbackParametersOnImpact, -relatedShip.GetShipVelocity.normalized, relatedShip.GetShipVelocity.normalized);
 
+        #region Feedback
+        if (waitBeforeRammingFeedback)
+            return;
+
         if ((relatedShip as EnemyShip != null && collision.gameObject.GetComponent<PlayerShip>() != null)/* || (relatedShip as PlayerShip != null && collision.gameObject.GetComponent<EnemyShip>() != null)*/)
         {
             GameManager.gameManager.SlwMoManager.SetSlowMo(relatedShip.ShipMvt.GetCurrentRammingParameters.GetSlowMoParameters);
@@ -423,6 +427,16 @@ public class ShipHitbox : MonoBehaviour, ICollisionReceiver, IDamageReceiver, IC
             woodProjection.transform.position = worldHitPosition;
             woodProjection.StartFeedback(2, 0.2f);
         }
+        StartCoroutine(WaitBeforeReplayRammingFeedback());
+        #endregion
     }
     #endregion
+
+    bool waitBeforeRammingFeedback;
+    public IEnumerator WaitBeforeReplayRammingFeedback()
+    {
+        waitBeforeRammingFeedback = true;
+        yield return new WaitForSeconds(0.2f);
+        waitBeforeRammingFeedback = false;
+    }
 }
