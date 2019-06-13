@@ -205,7 +205,6 @@ public class EnemyWave
         commonEnemiesSpawnPoints = new List<EnemySpawnPoint>();
         rareEnemiesSpawnPoints = new List<EnemySpawnPoint>();
 
-        Debug.Log(waveName + " : spawner parent : " + spawnersParent);
         if (spawnersParent == null)
             return;
 
