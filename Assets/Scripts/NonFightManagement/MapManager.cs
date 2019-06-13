@@ -19,6 +19,8 @@ public class MapManager : MonoBehaviour
     private void Start()
     {
         SetUp();
+        if(ArenaManager.arenaManager == null)
+            GameManager.gameManager.MscManager.PlayMapMusic();
     }
 
     public void SetUp()
@@ -237,7 +239,7 @@ public class MapManager : MonoBehaviour
     #region Arena
     [Header("Arena")]
     [SerializeField] MapArenaManager mapArenaManager;
-    public MapArenaManager ArenaManager
+    public MapArenaManager MpArenaManager
     {
         get
         {
