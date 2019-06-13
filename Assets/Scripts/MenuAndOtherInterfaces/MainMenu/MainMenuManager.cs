@@ -348,7 +348,7 @@ public class MainMenuManager : MonoBehaviour
         if (progressionData == null)
         {
             Debug.Log("Pas de fichier de progression");
-            PlayerDataSaver.SavePlayerProgressionDatas(new List<PassedArenaData>());
+            PlayerDataSaver.SavePlayerProgressionDatas(new List<PassedArenaData>(), false);
         }
         else
         {
