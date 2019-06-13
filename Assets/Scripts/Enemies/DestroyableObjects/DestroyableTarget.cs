@@ -15,6 +15,8 @@ public class DestroyableTarget : MonoBehaviour, IDamageReceiver
     [SerializeField] GameObject[] objectRenderers;
     [SerializeField] ParticleSystem particlesToPlay;
     [SerializeField] Transform[] woodProjectionPositions;
+    [SerializeField] AudioSource targetAudioSource;
+    [SerializeField] Sound soundToPlayOnDestroy;
 
     private void Start()
     {
@@ -89,6 +91,10 @@ public class DestroyableTarget : MonoBehaviour, IDamageReceiver
                 woodProjection.StartFeedback(2, 0.2f);
             }
         }
+
+
+        if (targetAudioSource != null)
+            targetAudioSource.PlaySound(soundToPlayOnDestroy);
 
 
         if (objectRenderer != null)
