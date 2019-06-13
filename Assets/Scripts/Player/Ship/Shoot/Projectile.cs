@@ -317,6 +317,7 @@ public class Projectile : MonoBehaviour
 
         startedFall = false;
         persistingPlaced = false;
+        explodedOnContact = false;
 
         SetUpAirRotation();
     }
@@ -341,14 +342,26 @@ public class Projectile : MonoBehaviour
 
         if (!persistingPlaced)
         {
-            if (rotationSpeed != 0)
+            if (rotationSpeed != 0 && !explodedOnContact)
                 UpdateAirRotation();
         }
         else
         {
             //if(currentMaxFloatingOffset != 0)
-                UpdateFloatingMove();
+            UpdateFloatingMove();
             UpdateStreamInfluenceValue();
+        }
+
+        if (onLifeTimeEndedParticles != null)
+        {
+            if (onLifeTimeEndedParticles.isPlaying)
+                onLifeTimeEndedParticles.transform.rotation = Quaternion.identity;
+        }
+
+        if (explosionParticles != null)
+        {
+            if (explosionParticles.isPlaying)
+                explosionParticles.transform.rotation = Quaternion.identity;
         }
     }
 
@@ -434,9 +447,16 @@ public class Projectile : MonoBehaviour
             projectileBody.velocity = Vector3.zero;
             persistingPlaced = true;
             SetUpFloatingMove();
+
+            if (onLifeTimeEndedParticles != null)
+            {
+                onLifeTimeEndedParticles.Play();
+            }
         }
         else
         {
+            transform.rotation = Quaternion.identity;
+
             if (onLifeTimeEndedParticles != null)
             {
                 onLifeTimeEndedParticles.Play();
@@ -449,8 +469,10 @@ public class Projectile : MonoBehaviour
     }
     #endregion
 
+    bool explodedOnContact;
     public virtual void ExplodeOnContact()
     {
+        explodedOnContact = true;
         if (explosionParticles != null)
         {
             explosionParticles.Play();
