@@ -128,6 +128,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] LoadingScreenManager loadingScreenManager;
     public LoadingScreenManager LoadScreenManager { get { return loadingScreenManager; } }
 
+    [SerializeField] MusicManager musicManager;
+    public MusicManager MscManager { get { return musicManager; } }
+
     private void Awake()
     {
         Time.timeScale = normalTimeScale;
@@ -141,6 +144,7 @@ public class GameManager : MonoBehaviour
         cinematicManager.SetUp();
         outMapManager.SetUp();
         player.ExtrenalSetUp();
+        musicManager.SetUp();
 
         SetUpCheats();
 
@@ -287,6 +291,9 @@ public class GameManager : MonoBehaviour
 
         if (arenaInterfaceManager.WaitingToOpenAfterCrateInterface)
             arenaInterfaceManager.UpdateWaitToOpenAfterCrateInterface();
+
+        if (musicManager.Fading)
+            musicManager.UpdateMusicManagement();
     }
 
     #region Party Management

@@ -107,6 +107,8 @@ public class PlayerShip : Ship
             shipMovements.Reset();
             knockbackManager.Reset();
             #endregion
+
+            GameManager.gameManager.MscManager.PlayLoseMusic();
         }
     }
 

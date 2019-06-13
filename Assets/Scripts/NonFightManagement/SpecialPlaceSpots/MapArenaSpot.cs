@@ -35,7 +35,7 @@ public class MapArenaSpot : MapSpecialPlaceSpot
     {
         base.StartSpotInteraction(player);
 
-        MapManager.mapManager.ArenaManager.OpenArenaPanel(cameraWhenOnSpot, this);
+        MapManager.mapManager.MpArenaManager.OpenArenaPanel(cameraWhenOnSpot, this);
     }
 
     #region Progression
