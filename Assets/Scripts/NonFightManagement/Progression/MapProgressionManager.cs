@@ -24,18 +24,13 @@ public class MapProgressionManager
 
             ArenaIntersceneInformations arenaIntersceneInformations = intersceneManager.ArenaInterscInformations;
             #region Tutorial
-            GameManager.gameManager.ShowDebugText("check doit passer tuto");
             if (arenaIntersceneInformations.GetNeedToPassTutorial)
             {
-                GameManager.gameManager.ShowDebugText("doit passer tuto : check si passé");
                 if (arenaIntersceneInformations.GetArenaPassed)
                 {
-                    GameManager.gameManager.ShowDebugText("tuto passé");
-                    GameManager.gameManager.ShowDebugText("try set passé sur la save");
                     progressionDatas.SetPassedTutorial();
                     arenaIntersceneInformations.SetNeedToPassTutorial(false);
                     PlayerDataSaver.SavePlayerProgressionDatas(progressionDatas.GetAllPassedArenaDatas, true);
-                    GameManager.gameManager.ShowDebugText("set passé sur la save");
                 }
             }
             #endregion
