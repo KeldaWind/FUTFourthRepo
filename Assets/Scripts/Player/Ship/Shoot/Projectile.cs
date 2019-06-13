@@ -80,6 +80,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected Renderer projectileRenderer;
     [SerializeField] protected ParticleSystem explosionParticles;
     [SerializeField] protected ParticleSystem onLifeTimeEndedParticles;
+    [SerializeField] AudioSource projectileAudioSource;
+    [SerializeField] Sound explosionSound;
+    [SerializeField] Sound onLifeTimeEndedSound;
 
     #region Projectile Rotation
     [Header("Feedbacks : Air Projectile Rotation")]
@@ -398,7 +401,7 @@ public class Projectile : MonoBehaviour
     AnimationCurve endLifeTimeHeightCurve;
     float normalFallDuration = 0.2f;
     float thisFallDuration;
-    bool startedFall;
+    protected bool startedFall;
     float startFallHeigth;
     protected bool persistingPlaced;
 
@@ -442,25 +445,21 @@ public class Projectile : MonoBehaviour
     /// </summary>
     public virtual void OnLifeTimeEnded()
     {
+        if (onLifeTimeEndedParticles != null)
+            onLifeTimeEndedParticles.Play();
+
+        if (projectileAudioSource != null)
+            projectileAudioSource.PlaySound(onLifeTimeEndedSound);
+
         if (isPersistingProjectile)
         {
             projectileBody.velocity = Vector3.zero;
             persistingPlaced = true;
             SetUpFloatingMove();
-
-            if (onLifeTimeEndedParticles != null)
-            {
-                onLifeTimeEndedParticles.Play();
-            }
         }
         else
         {
             transform.rotation = Quaternion.identity;
-
-            if (onLifeTimeEndedParticles != null)
-            {
-                onLifeTimeEndedParticles.Play();
-            }
 
             CheckForSpecialEffectZoneGeneration();
 
@@ -469,14 +468,15 @@ public class Projectile : MonoBehaviour
     }
     #endregion
 
-    bool explodedOnContact;
+    protected bool explodedOnContact;
     public virtual void ExplodeOnContact()
     {
         explodedOnContact = true;
         if (explosionParticles != null)
-        {
             explosionParticles.Play();
-        }
+
+        if (projectileAudioSource != null)
+            projectileAudioSource.PlaySound(explosionSound);
 
         if (!projectileSpecialParameters.GetExplosionParameters.IsNull)
         {
@@ -543,7 +543,7 @@ public class Projectile : MonoBehaviour
     protected bool projectileReturned = true;
     public void CheckIfReadyToBeReturnedToPool()
     {
-        if (!onLifeTimeEndedParticles.isPlaying && !explosionParticles.isPlaying && !projectileReturned)
+        if (!onLifeTimeEndedParticles.isPlaying && !explosionParticles.isPlaying && !projectileReturned && !projectileAudioSource.isPlaying)
         {
             ReturnProjectile();
         }

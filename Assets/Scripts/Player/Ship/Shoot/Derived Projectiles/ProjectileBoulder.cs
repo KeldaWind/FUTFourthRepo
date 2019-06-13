@@ -66,8 +66,11 @@ public class ProjectileBoulder : Projectile
 
         projectileRenderer.gameObject.SetActive(true);
 
+        startedFall = false;
         projectileFunctionEnded = false;
+        persistingPlaced = false;
         projectileReturned = false;
+        explodedOnContact = false;
 
         ResetAllSpecialEffects();
         SetUpAirRotation();
