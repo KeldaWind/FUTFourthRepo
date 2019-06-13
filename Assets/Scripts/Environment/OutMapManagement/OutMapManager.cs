@@ -14,7 +14,7 @@ public class OutMapManager
     float remainingTimeBeforeNextDamages;
     [SerializeField] DamagesParameters damagesParameters;
     [SerializeField] IntroControler[] warningCinematics;
-    [SerializeField] Image dangerVignette;
+    [SerializeField] Image[] dangerVignettes;
     [SerializeField] float dangerVignetteSpeed;
     AnimationCurve vignetteCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     float vignetteCounter;
@@ -83,9 +83,12 @@ public class OutMapManager
         {
             vignetteCounter += Time.deltaTime * dangerVignetteSpeed;
 
-            Color vignetteColor = dangerVignette.color;
-            vignetteColor.a = vignetteCurve.Evaluate(vignetteCounter);
-            dangerVignette.color = vignetteColor;
+            foreach (Image dangerVignette in dangerVignettes)
+            {
+                Color vignetteColor = dangerVignette.color;
+                vignetteColor.a = vignetteCurve.Evaluate(vignetteCounter);
+                dangerVignette.color = vignetteColor;
+            }
 
             if (vignetteCounter % 2 < 0.03f)
             {
