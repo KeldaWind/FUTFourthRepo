@@ -22,6 +22,10 @@ public class MenuSlot : MonoBehaviour
     public void ActualizeObjectImage()
     {
         objectImage.sprite = GetSlotIcon();
+        if (GetSlotIcon() == null)
+            objectImage.enabled = false;
+        else
+            objectImage.enabled = true;
     }
 
     public virtual Sprite GetSlotIcon()
