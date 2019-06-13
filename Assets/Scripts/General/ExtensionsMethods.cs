@@ -78,7 +78,11 @@ public static class ExtensionsMethods
 
     public static void SetUpWithSound(this AudioSource source, Sound sound)
     {
-        source.clip = sound.clip;
+        if(sound.clips.Length == 0)
+            source.clip = sound.clip;
+        else
+            source.clip = sound.clips[Random.Range(0, sound.clips.Length)];
+
         source.volume = sound.volume;
         source.loop = sound.loop;
         source.pitch = Random.Range(sound.minPitch, sound.maxPitch);

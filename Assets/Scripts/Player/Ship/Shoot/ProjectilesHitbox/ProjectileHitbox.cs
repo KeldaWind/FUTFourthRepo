@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class ProjectileHitbox : MonoBehaviour, IDamageSource
 {
+    [SerializeField] Sound specialSound;
     /// <summary>
     /// Le projectile lié à cette hitbox
     /// </summary>
@@ -72,7 +73,7 @@ public class ProjectileHitbox : MonoBehaviour, IDamageSource
             if (woodProjection != null)
             {
                 woodProjection.transform.position = transform.position;
-                woodProjection.StartFeedback(2, 0.2f);
+                woodProjection.StartFeedback(2, 0.2f, specialSound);
             }
         }
         else if (relatedProjectile.GetProjectileSpecialParameters.GetSkeweringParameters.Skewering)
@@ -81,7 +82,7 @@ public class ProjectileHitbox : MonoBehaviour, IDamageSource
             if (woodProjection != null)
             {
                 woodProjection.transform.position = transform.position;
-                woodProjection.StartFeedback(2, 0.2f);
+                woodProjection.StartFeedback(2, 0.2f, specialSound);
             }
         }
         else

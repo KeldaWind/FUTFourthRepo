@@ -47768,10 +47768,13 @@ MonoBehaviour:
   deathParticles: {fileID: 2204043403643521527}
   deathSound:
     clip: {fileID: 0}
-    volume: 1
+    clips:
+    - {fileID: 8300000, guid: e98c4adc0a96e904fa2dc62828b425b1, type: 3}
+    - {fileID: 8300000, guid: d18facd2b93b56545b4343f6ebe5b208, type: 3}
+    volume: 0.4
     loop: 0
-    minPitch: 1
-    maxPitch: 1
+    minPitch: 0.95
+    maxPitch: 1.1
   stunParticles: {fileID: 4675618991001214237}
   slowParticles: {fileID: 2574359126069340829}
   rammingParticleSystem: {fileID: 0}

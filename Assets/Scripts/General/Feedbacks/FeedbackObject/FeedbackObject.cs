@@ -19,6 +19,14 @@ public class FeedbackObject : MonoBehaviour
         transform.localScale = Vector3.one * size;
     }
 
+    public void StartFeedback(float size, float volume, Sound otherSound)
+    {
+        gameObject.SetActive(true);
+        fx.Play();
+        soundSource.PlaySound(otherSound);
+        transform.localScale = Vector3.one * size;
+    }
+
     private void Update()
     {
         if (ReadyToBeReturnedToPool)

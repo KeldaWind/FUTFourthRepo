@@ -88,7 +88,7 @@ MonoBehaviour:
   onLifeTimeEndedParticles: {fileID: 4984509523487122479}
   projectileAudioSource: {fileID: 4430079850689311360}
   explosionSound:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: bfbb0841599df64479453d4ce438531e, type: 3}
     volume: 0.1
     loop: 0
     minPitch: 0.9
@@ -389,6 +389,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b446468a5881545842c2cf948c1c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specialSound:
+    clip: {fileID: 8300000, guid: 229743622710f3c47a156fe675239428, type: 3}
+    volume: 0.2
+    loop: 0
+    minPitch: 1
+    maxPitch: 1
 --- !u!136 &1495535521162047503
 CapsuleCollider:
   m_ObjectHideFlags: 0
