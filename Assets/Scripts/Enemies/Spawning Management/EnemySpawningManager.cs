@@ -205,6 +205,10 @@ public class EnemyWave
         commonEnemiesSpawnPoints = new List<EnemySpawnPoint>();
         rareEnemiesSpawnPoints = new List<EnemySpawnPoint>();
 
+        Debug.Log(waveName + " : spawner parent : " + spawnersParent);
+        if (spawnersParent == null)
+            return;
+
         EnemySpawnPoint[] allSpawners = spawnersParent.GetComponentsInChildren<EnemySpawnPoint>();
 
         foreach (EnemySpawnPoint spawnPoint in allSpawners)
