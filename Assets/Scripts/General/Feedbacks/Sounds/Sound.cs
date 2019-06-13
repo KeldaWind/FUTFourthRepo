@@ -6,6 +6,7 @@ using UnityEngine;
 public class Sound
 {
     public AudioClip clip;
+    public AudioClip[] clips;
     public float volume = 1;
     public bool loop;
     public float minPitch = 1;
