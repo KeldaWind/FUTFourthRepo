@@ -207,7 +207,7 @@ public class ShipMovements
     /// <param name="wheelDeltaRotation"></param>
     public void UpdateCurrentRotationSpeed(float wheelDeltaRotation)
     {
-        float targetRotationSpeed = (wheelDeltaRotation > 0 ? 1 : -1) * Mathf.Lerp(0, maxRotationSpeed, rotationSpeedCurve.Evaluate(Mathf.Abs(wheelDeltaRotation))) + GetRotationSpeedStreamModifier;
+        float targetRotationSpeed = ((wheelDeltaRotation > 0 ? 1 : -1) * Mathf.Lerp(0, maxRotationSpeed, rotationSpeedCurve.Evaluate(Mathf.Abs(wheelDeltaRotation))) * currentManiabilityAccelerationCoeff) + GetRotationSpeedStreamModifier;
 
         if (stopped)
         {
@@ -222,7 +222,7 @@ public class ShipMovements
         }
         else if (currentRotationSpeed > targetRotationSpeed)
         {
-            currentRotationSpeed -= maniability * Time.deltaTime * currentManiabilityAccelerationCoeff;
+            currentRotationSpeed -= maniability * Time.deltaTime * /*currentManiabilityAccelerationCoeff*/currentManiabilityAccelerationTargetCoeff;
             if (currentRotationSpeed < targetRotationSpeed)
                 currentRotationSpeed = targetRotationSpeed;
         }
@@ -603,6 +603,8 @@ public class ShipMovements
             currentSpecialShipMoveParameters.StartParameter();
             if (currentSpecialShipMoveParameters.ShipBoost)
                 SetGlobalAcceleration(currentSpecialShipMoveParameters.GetSpeedBoost, currentSpecialShipMoveParameters.GetManiabilityBoost, currentSpecialShipMoveParameters.GetDuration);
+            else if(currentSpecialShipMoveParameters.ManiabilityBoost)
+                SetGlobalAcceleration(1, currentSpecialShipMoveParameters.GetManiabilityBoost, currentSpecialShipMoveParameters.GetDuration);
         }
     }
 

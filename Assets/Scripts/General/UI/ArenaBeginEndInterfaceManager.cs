@@ -23,6 +23,7 @@ public class ArenaBeginEndInterfaceManager
     #region Begin Interface
     [Header("Begin Interface")]
     [SerializeField] GameObject beginPanel;
+    [SerializeField] Text instructionText;
     [SerializeField] Text timeLimitScoreText;
     [SerializeField] Text damageLimitScoreText;
 
@@ -36,6 +37,8 @@ public class ArenaBeginEndInterfaceManager
 
         if (arenaParameters != null)
         {
+            instructionText.text = arenaParameters.GetArenaStartDescription;
+
             float totalTimeInSeconds = scoreManager.GetCurrentArenaParameters.GetMaximumArenaTimeToHaveStar;
             float seconds = totalTimeInSeconds % 60;
             float minutes = (int)(totalTimeInSeconds / 60);

@@ -62,8 +62,6 @@ public class OutMapManager
     {
         if(activeOutMapZones.Count > 0)
         {
-            Debug.Log("attention : " + remainingTimeBeforeNextDamages);
-
             if (remainingTimeBeforeNextDamages > 0)
                 remainingTimeBeforeNextDamages -= Time.deltaTime;
             else if (remainingTimeBeforeNextDamages < 0)

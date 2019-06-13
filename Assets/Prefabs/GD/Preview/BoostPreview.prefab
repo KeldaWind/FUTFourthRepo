@@ -129,17 +129,20 @@ MonoBehaviour:
   iconAnimator: {fileID: 2721067343162345294}
   iconSoundSource: {fileID: 1412611772304275737}
   iconStartSound:
-    clip: {fileID: 8300000, guid: 17aa0dac46c725e4998976356457900f, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 26cc15990acd67b43961b95f08e42496, type: 3}
+    clips: []
+    volume: 0.3
     loop: 0
     minPitch: 1
     maxPitch: 1
   iconEndSound:
-    clip: {fileID: 8300000, guid: 21deca8ed6e2ed64fa51c01c61168075, type: 3}
+    clip: {fileID: 0}
+    clips: []
     volume: 1
     loop: 0
     minPitch: 1
     maxPitch: 1
+  minimumTimeBeforeReturn: 3
 --- !u!82 &1412611772304275737
 AudioSource:
   m_ObjectHideFlags: 0

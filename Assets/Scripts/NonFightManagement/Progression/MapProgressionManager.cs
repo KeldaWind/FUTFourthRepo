@@ -25,8 +25,6 @@ public class MapProgressionManager
             PlayerProgressionDatas progressionDatas = PlayerDataSaver.LoadProgressionDatas();
 
             ArenaIntersceneInformations arenaIntersceneInformations = intersceneManager.ArenaInterscInformations;
-
-            Debug.Log(arenaIntersceneInformations.GetArenaPassed);
             
             #region Tutorial
             if (arenaIntersceneInformations.GetNeedToPassTutorial)
