@@ -244,7 +244,9 @@ public class MainMenuManager : MonoBehaviour
         PlayerDataSaver.ErasePlayerDatas();
         intersceneManager.GetPlayerDatas.Reinitialize();
         intersceneManager.ArenaInterscInformations.Reinitialize();
+        intersceneManager.ArenaInterscInformations.SetNeedToPassTutorial(true);
         intersceneManager.MapInterscInformations.Reinitialize();
+        intersceneManager.MapInterscInformations.SetMapIntersceneInfos(mapSceneName, Vector3.zero);
         passedTutorial = false;
         CheckForSaveFiles();
     }
