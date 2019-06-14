@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -37,6 +38,7 @@ public class MainMenuManager : MonoBehaviour
     #region Main Panel
     [Header("Main Panel")]
     [SerializeField] GameObject menuMainPanel;
+    [SerializeField] Image gameIcon;
     [SerializeField] GameButton launchGameButton;
     [SerializeField] GameButton optionsButton;
     [SerializeField] GameButton extrasButton;
@@ -206,11 +208,13 @@ public class MainMenuManager : MonoBehaviour
     public void OpenExtrasPanel()
     {
         extrasPanel.SetActive(true);
+        gameIcon.enabled = false;
     }
 
     public void CloseExtrasPanel()
     {
         extrasPanel.SetActive(false);
+        gameIcon.enabled = true;
     }
 
     public void SetUpExtrasButtons()
