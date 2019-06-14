@@ -12565,7 +12565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNotSkippable: 0
   allParts:
-  - waitTimeOnceEnded: 2.5
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -12582,7 +12582,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 2
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -12599,7 +12599,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 2.5
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -12616,7 +12616,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 2.5
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -12633,7 +12633,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 1
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -12650,7 +12650,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 2.5
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 1430515130}
@@ -12667,7 +12667,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 1
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 1430515130}
@@ -21640,7 +21640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNotSkippable: 0
   allParts:
-  - waitTimeOnceEnded: 2
+  - waitTimeOnceEnded: 3
     movePlayerBoatWhileCinematic: 1
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -23089,6 +23089,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 8067840716951442756, guid: af42accc1c0f30e45aa4da44f704f453,
+        type: 3}
+      propertyPath: startMoving
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8067840718363816641, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_IsActive
@@ -23098,11 +23103,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8067840716951442756, guid: af42accc1c0f30e45aa4da44f704f453,
-        type: 3}
-      propertyPath: startMoving
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8067840718363816654, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -24150,7 +24150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNotSkippable: 0
   allParts:
-  - waitTimeOnceEnded: 1
+  - waitTimeOnceEnded: 2
     movePlayerBoatWhileCinematic: 1
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -24167,7 +24167,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 1
+  - waitTimeOnceEnded: 2
     movePlayerBoatWhileCinematic: 1
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -32536,7 +32536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNotSkippable: 0
   allParts:
-  - waitTimeOnceEnded: 1
+  - waitTimeOnceEnded: 2
     movePlayerBoatWhileCinematic: 1
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -32553,7 +32553,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 1
+  - waitTimeOnceEnded: 2
     movePlayerBoatWhileCinematic: 1
     dontGivePlayerControlBack: 0
     cam: {fileID: 0}
@@ -33375,75 +33375,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1583266352}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1591406481
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6119655927919192641, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_Name
-      value: FPS Displayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 149.15625
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 60.9375
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 89.40625
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4a70b502f621a954a9ff2318aa85fe8c, type: 3}
 --- !u!1001 &1594339835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40864,15 +40795,15 @@ PrefabInstance:
       propertyPath: roadWidth
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 8776361800437868943, guid: 80ddab34d69ca3b48ace9c05db40d6b2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3130921767414830602, guid: 80ddab34d69ca3b48ace9c05db40d6b2,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776361800437868943, guid: 80ddab34d69ca3b48ace9c05db40d6b2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80ddab34d69ca3b48ace9c05db40d6b2, type: 3}
