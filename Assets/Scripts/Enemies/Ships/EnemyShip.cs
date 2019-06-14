@@ -113,11 +113,11 @@ public class EnemyShip : Ship
 
         UpdateCooldown();
 
-        #region CHEATS
+        /*#region CHEATS
         if (Input.touchCount > 3)
             if (Input.touches[3].phase == TouchPhase.Began)
                 relatedShipHitbox.Die();
-        #endregion
+        #endregion*/
     }
 
     public override void FixedUpdate()

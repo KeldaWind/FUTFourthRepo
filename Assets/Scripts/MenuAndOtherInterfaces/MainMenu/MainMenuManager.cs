@@ -208,13 +208,11 @@ public class MainMenuManager : MonoBehaviour
     public void OpenExtrasPanel()
     {
         extrasPanel.SetActive(true);
-        gameIcon.enabled = false;
     }
 
     public void CloseExtrasPanel()
     {
         extrasPanel.SetActive(false);
-        gameIcon.enabled = true;
     }
 
     public void SetUpExtrasButtons()
@@ -287,11 +285,13 @@ public class MainMenuManager : MonoBehaviour
     public void OpenCreditsPanel()
     {
         creditsPanel.SetActive(true);
+        gameIcon.enabled = false;
     }
 
     public void CloseCreditsPanel()
     {
         creditsPanel.SetActive(false);
+        gameIcon.enabled = true;
     }
     #endregion
 
