@@ -357,6 +357,7 @@ public class CinematicManager
         }
         else if (playerMovements.Stopped && !stopPlayer)
         {
+            Debug.Log("ui");
             playerMovements.StartShip();
             stoppedPlayer = false;
         }

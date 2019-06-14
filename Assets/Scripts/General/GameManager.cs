@@ -421,6 +421,12 @@ public class GameManager : MonoBehaviour
     {
         debugText.text = messageToShow;
     }
+
+    [SerializeField] ShipSpeedModifier speedModifier;
+    public void ApplyBigSlowToPlayer()
+    {
+        player.ShipMvt.StartNewSpeedModifier(speedModifier);
+    }
     #endregion
 }
 
