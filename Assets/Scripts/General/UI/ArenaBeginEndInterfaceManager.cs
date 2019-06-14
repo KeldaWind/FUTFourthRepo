@@ -44,8 +44,8 @@ public class ArenaBeginEndInterfaceManager
             float minutes = (int)(totalTimeInSeconds / 60);
 
             //timeLimitScoreText.text = "Finish level in less than " + minutes + "'" + (seconds < 10 ? ("0" + seconds.ToString()) : seconds.ToString());
-            timeLimitScoreText.text = "Finish the level without hitting any obstacle";
-            damageLimitScoreText.text = "Take less than " + scoreManager.GetCurrentArenaParameters.GetMaximumNumberOfDamagesToHaveStar + " damages";
+            timeLimitScoreText.text = /*"Finish the level without hitting any obstacle"*/"No obstacle hit";
+            damageLimitScoreText.text = /*"Take*/ "Less than " + scoreManager.GetCurrentArenaParameters.GetMaximumNumberOfDamagesToHaveStar + " damages";
         }
     }
 
