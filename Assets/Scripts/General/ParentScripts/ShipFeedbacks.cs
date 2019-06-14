@@ -117,4 +117,11 @@ public class ShipFeedbacks : MonoBehaviour
         if (rammingParticleSystem != null)
             rammingParticleSystem.Stop();
     }
+
+
+    public void PlaySound(Sound sound)
+    {
+        if (shipAudioSource != null)
+            shipAudioSource.PlaySound(sound);
+    }
 }
