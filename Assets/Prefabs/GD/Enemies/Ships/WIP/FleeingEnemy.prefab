@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSkippable: 0
   allParts:
   - waitTimeOnceEnded: 0
     movePlayerBoatWhileCinematic: 0
@@ -105,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSkippable: 0
   allParts:
   - waitTimeOnceEnded: 0
     movePlayerBoatWhileCinematic: 0
@@ -711,13 +713,17 @@ MonoBehaviour:
   relatedShipHitbox: {fileID: 6797449281070187031}
   shipRenderingManager:
     rendererParent: {fileID: 1297547181006387328}
+    shipCircle: {fileID: 0}
     rotationParent: {fileID: 0}
+    normalYRotationParent: 0
+    rotatesOnX: 0
     curveTangage:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    maxTangageAngle: 0
     trailMilieu: {fileID: 0}
     trailGauche: {fileID: 0}
     trailDroite: {fileID: 0}
@@ -733,10 +739,18 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     lifeFeedbacksManager:
+      baseFeedbackState:
+        stepLifePercentage: 0
+        smokeColor: {r: 0, g: 0, b: 0, a: 0}
+        smokeEmissionSpeed: 0
+        smokeSize: 0
+        fireEmissionSpeed: 0
+        fireSize: 0
       allShipLifeFeedbacksSteps: []
       transitionSpeedCoeff: 0.01
       smokeParticleSystem: {fileID: 0}
       fireParticleSystem: {fileID: 0}
+    stopLifeFeedbacksOnDeath: 0
     rotationForcePerTakenDamage: 10
     maxRotationFromDamages: 30
     rotationFromDamageDesceleration: 15
@@ -766,6 +780,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     currentHullObject: {fileID: 0}
+  shipFeedbacks: {fileID: 0}
   enemyPoolTag: 0
   reactionTime: 0.2
   timeBeforeExitRoutine: 3
@@ -884,6 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSkippable: 0
   allParts:
   - waitTimeOnceEnded: 0
     movePlayerBoatWhileCinematic: 0
@@ -976,6 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSkippable: 0
   allParts:
   - waitTimeOnceEnded: 0
     movePlayerBoatWhileCinematic: 0
@@ -1038,6 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSkippable: 0
   allParts:
   - waitTimeOnceEnded: 0
     movePlayerBoatWhileCinematic: 0
@@ -1100,6 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSkippable: 0
   allParts:
   - waitTimeOnceEnded: 0
     movePlayerBoatWhileCinematic: 0
@@ -1230,6 +1249,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Sprite
       objectReference: {fileID: 0}
+    - target: {fileID: 5071933692946317734, guid: 04a4e90e8d7072d4c915d5b89da47e03,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.6698113
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071933692946317734, guid: 04a4e90e8d7072d4c915d5b89da47e03,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.041073352
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071933692946317734, guid: 04a4e90e8d7072d4c915d5b89da47e03,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.041073352
+      objectReference: {fileID: 0}
     - target: {fileID: 6303202367188716982, guid: 04a4e90e8d7072d4c915d5b89da47e03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1284,21 +1318,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5071933692946317734, guid: 04a4e90e8d7072d4c915d5b89da47e03,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.6698113
-      objectReference: {fileID: 0}
-    - target: {fileID: 5071933692946317734, guid: 04a4e90e8d7072d4c915d5b89da47e03,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.041073352
-      objectReference: {fileID: 0}
-    - target: {fileID: 5071933692946317734, guid: 04a4e90e8d7072d4c915d5b89da47e03,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.041073352
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04a4e90e8d7072d4c915d5b89da47e03, type: 3}
@@ -1378,7 +1397,7 @@ PrefabInstance:
     - target: {fileID: 2300206, guid: 25ee801351eb89e48a98b72b6792c009, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0adcb320f18e2ea43961e778556ecd73, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a69202ed0c4608409a18958ad84590d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ee801351eb89e48a98b72b6792c009, type: 3}
 --- !u!4 &6474675462627595515 stripped
