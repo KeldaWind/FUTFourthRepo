@@ -1157,6 +1157,11 @@ MonoBehaviour:
       poolParent: {fileID: 5205472007746704569}
       initialPoolSize: 6
       enemyPoolTag: 0
+    - objectPrefab: {fileID: 1297547181640616091, guid: 530e6b346d87f1842932b604c1c06b61,
+        type: 3}
+      poolParent: {fileID: 5205472007746704569}
+      initialPoolSize: 1
+      enemyPoolTag: 13
     lootCratePools:
     - objectPrefab: {fileID: 2462801019262072264, guid: 1046335b142ebc44b89961046a52ff52,
         type: 3}
@@ -2073,24 +2078,7 @@ MonoBehaviour:
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 8089995910592377035}
-    messageToType: {fileID: 11400000, guid: feacccd6d623b3248bccde9e5e896e16, type: 2}
-    startSpawnedEnemies: 0
-    animatorsToLaunchOnPartBeginning: []
-    eventToPlayOnCinematicPartStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    eventToPlayOnCinematicPartEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - waitTimeOnceEnded: 0
-    movePlayerBoatWhileCinematic: 0
-    dontGivePlayerControlBack: 0
-    cam: {fileID: 0}
-    messageToType: {fileID: 11400000, guid: 25eabf79dd0072f4cb75dd2a0871e293, type: 2}
+    messageToType: {fileID: 11400000, guid: fd84b942379a102448504b4d108c0d8b, type: 2}
     startSpawnedEnemies: 0
     animatorsToLaunchOnPartBeginning: []
     eventToPlayOnCinematicPartStart:
@@ -2928,22 +2916,22 @@ PrefabInstance:
     - target: {fileID: 8878821637685526261, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1378.3
+      value: -1339
       objectReference: {fileID: 0}
     - target: {fileID: 8878821637685526261, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -600
+      value: -720
       objectReference: {fileID: 0}
     - target: {fileID: 8878821637685526261, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -129.50006
+      value: -0.00006151199
       objectReference: {fileID: 0}
     - target: {fileID: 8878821637685526261, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8878821637685526261, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
@@ -2958,7 +2946,7 @@ PrefabInstance:
     - target: {fileID: 8878821637685526261, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8660254
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8878821637685526261, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
@@ -3028,7 +3016,7 @@ PrefabInstance:
     - target: {fileID: 8878821637685526260, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
       propertyPath: field of view
-      value: 55
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5991788192028046956, guid: 037cdd95732fe71478c63384a19caa65,
         type: 3}
