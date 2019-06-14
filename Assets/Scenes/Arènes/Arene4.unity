@@ -1019,7 +1019,7 @@ MonoBehaviour:
     zonesToGoTo: []
     shipsToCatch: []
   waitTimeBeforeOutro: 1
-  outroCinematic: {fileID: 0}
+  outroCinematic: {fileID: 62215243}
   dropManager:
     minimumNumberOfDroppedEquipments: 1
     maximumNumberOfDroppedEquipments: 3
@@ -1070,8 +1070,105 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &62215241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62215242}
+  - component: {fileID: 62215243}
+  m_Layer: 0
+  m_Name: Outro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &62215242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62215241}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &62215243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62215241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: f59e7ae0e4877d9469d11341489d47dc, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 62e5c29c75b4de544bf23a0067d8acce, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 3feb17e166d849e40b36c9cf7992a077, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &71449769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1727,7 @@ Transform:
   - {fileID: 957923887}
   - {fileID: 1910170360}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95850876
 GameObject:
@@ -2539,7 +2636,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 419319240}
+  - {fileID: 1140426609}
+  - {fileID: 1811997319}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3549,7 +3649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &231296626
 Transform:
   m_ObjectHideFlags: 0
@@ -3564,7 +3664,7 @@ Transform:
   - {fileID: 1730240923}
   - {fileID: 1430515129}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &233523574
 GameObject:
@@ -3596,6 +3696,69 @@ Transform:
   m_Father: {fileID: 1931633008}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &241988426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241988427}
+  - component: {fileID: 241988428}
+  m_Layer: 0
+  m_Name: WAve4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &241988427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241988426}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &241988428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241988426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 5cc8e5bc7e0552149acacff57542f852, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &242561409
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,7 +4389,7 @@ Transform:
   - {fileID: 821461083}
   - {fileID: 1307094045}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280287347
 GameObject:
@@ -5277,7 +5440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -92.63479, y: 20.81784, z: 57.87291}
+  m_FollowOffset: {x: -104.53479, y: 20.81784, z: 53.072906}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -5579,7 +5742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6de4b731438ca3439242b1726d70524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarityOfSpawnedEnemy: 0
+  rarityOfSpawnedEnemy: 1
   linkedWatchingRoundParameters:
     watchingPositions:
     - {fileID: 1440234332}
@@ -6925,7 +7088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6de4b731438ca3439242b1726d70524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarityOfSpawnedEnemy: 0
+  rarityOfSpawnedEnemy: 1
   linkedWatchingRoundParameters:
     watchingPositions:
     - {fileID: 233523575}
@@ -7136,6 +7299,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015667316}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &419319239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419319240}
+  m_Layer: 0
+  m_Name: WatchingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419319240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419319239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 127.8, y: 0, z: 197.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 158140652}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &421352171
 PrefabInstance:
@@ -7773,6 +7966,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrontChargeArmored
       objectReference: {fileID: 0}
+    - target: {fileID: 1297547181640616088, guid: 530e6b346d87f1842932b604c1c06b61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1297547181640616101, guid: 530e6b346d87f1842932b604c1c06b61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7781,12 +7979,12 @@ PrefabInstance:
     - target: {fileID: 1297547181640616101, guid: 530e6b346d87f1842932b604c1c06b61,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 1297547181640616101, guid: 530e6b346d87f1842932b604c1c06b61,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 305.9
+      value: 305.89996
       objectReference: {fileID: 0}
     - target: {fileID: 1297547181640616101, guid: 530e6b346d87f1842932b604c1c06b61,
         type: 3}
@@ -7811,7 +8009,7 @@ PrefabInstance:
     - target: {fileID: 1297547181640616101, guid: 530e6b346d87f1842932b604c1c06b61,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1297547181640616101, guid: 530e6b346d87f1842932b604c1c06b61,
         type: 3}
@@ -7828,11 +8026,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1297547181640616091, guid: 530e6b346d87f1842932b604c1c06b61,
+        type: 3}
+      propertyPath: watchingRoundParameters.watchingPositions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297547181640616091, guid: 530e6b346d87f1842932b604c1c06b61,
+        type: 3}
+      propertyPath: watchingRoundParameters.watchingPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 419319240}
+    - target: {fileID: 1297547181640616091, guid: 530e6b346d87f1842932b604c1c06b61,
+        type: 3}
+      propertyPath: watchingRoundParameters.watchingPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1140426609}
+    - target: {fileID: 1297547181640616091, guid: 530e6b346d87f1842932b604c1c06b61,
+        type: 3}
+      propertyPath: watchingRoundParameters.watchingPositions.Array.data[2]
+      value: 
+      objectReference: {fileID: 1811997319}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 530e6b346d87f1842932b604c1c06b61, type: 3}
 --- !u!1 &452186722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1297547181640616088, guid: 530e6b346d87f1842932b604c1c06b61,
+    type: 3}
+  m_PrefabInstance: {fileID: 452186721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &452186727 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1297547181640616101, guid: 530e6b346d87f1842932b604c1c06b61,
     type: 3}
   m_PrefabInstance: {fileID: 452186721}
   m_PrefabAsset: {fileID: 0}
@@ -8469,10 +8693,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 92.9152, y: 22.917831, z: -39.507084}
+  m_FollowOffset: {x: 0, y: 120, z: -60}
   m_XDamping: 1
   m_YDamping: 1
-  m_ZDamping: 1
+  m_ZDamping: 3.17
   m_PitchDamping: 0
   m_YawDamping: 0
   m_RollDamping: 0
@@ -9093,7 +9317,7 @@ PrefabInstance:
     - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6119655927919192647, guid: 4a70b502f621a954a9ff2318aa85fe8c,
         type: 3}
@@ -9174,7 +9398,7 @@ MonoBehaviour:
   allWaves:
   - waveName: AlreadySpawned
     cinematicToPlayOnWaveStart: {fileID: 0}
-    spawnedEnemiesAreStopped: 0
+    spawnedEnemiesAreStopped: 1
     spawnedEnemiesAutoDetectPlayer: 0
     numberOfCommonEnemies: 4
     numberOfRareEnemies: 0
@@ -9198,10 +9422,10 @@ MonoBehaviour:
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 0
   - waveName: Wave 1 Side
-    cinematicToPlayOnWaveStart: {fileID: 0}
+    cinematicToPlayOnWaveStart: {fileID: 731853748}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
-    numberOfCommonEnemies: 3
+    numberOfCommonEnemies: 2
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
@@ -9218,12 +9442,12 @@ MonoBehaviour:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 4
+      minKillsSinceFightBeginning: 3
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 1
   - waveName: Wave 1 Front
-    cinematicToPlayOnWaveStart: {fileID: 0}
+    cinematicToPlayOnWaveStart: {fileID: 1959221296}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
     numberOfCommonEnemies: 3
@@ -9243,12 +9467,12 @@ MonoBehaviour:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 4
+      minKillsSinceFightBeginning: 5
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 1.5
   - waveName: Wave 2 Front Charge
-    cinematicToPlayOnWaveStart: {fileID: 0}
+    cinematicToPlayOnWaveStart: {fileID: 1657051432}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
     numberOfCommonEnemies: 3
@@ -9268,40 +9492,40 @@ MonoBehaviour:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 10
+      minKillsSinceFightBeginning: 7
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 3.5
   - waveName: Wave 2 Catapult
-    cinematicToPlayOnWaveStart: {fileID: 0}
+    cinematicToPlayOnWaveStart: {fileID: 241988428}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
-    numberOfCommonEnemies: 4
-    numberOfRareEnemies: 0
+    numberOfCommonEnemies: 2
+    numberOfRareEnemies: 2
     commonEnemies:
       allItems:
       - item: 9
         weight: 70
-      - item: 10
-        weight: 30
     commonEnemiesHighlightingType: 0
     rareEnemies:
-      allItems: []
+      allItems:
+      - item: 10
+        weight: 100
     rareEnemiesHighlightingType: 0
     spawnersParent: {fileID: 2020436460}
     spawningConditions:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 10
+      minKillsSinceFightBeginning: 9
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 1
   - waveName: Wave 3
-    cinematicToPlayOnWaveStart: {fileID: 0}
+    cinematicToPlayOnWaveStart: {fileID: 1840226528}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
-    numberOfCommonEnemies: 4
+    numberOfCommonEnemies: 3
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
@@ -9318,19 +9542,19 @@ MonoBehaviour:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 17
+      minKillsSinceFightBeginning: 12
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 1
   - waveName: Wave 4
-    cinematicToPlayOnWaveStart: {fileID: 0}
+    cinematicToPlayOnWaveStart: {fileID: 888703134}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
     numberOfCommonEnemies: 4
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 13
+      - item: 12
         weight: 60
       - item: 11
         weight: 40
@@ -9343,21 +9567,21 @@ MonoBehaviour:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 19
+      minKillsSinceFightBeginning: 15
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 1
   - waveName: Wave 5
-    cinematicToPlayOnWaveStart: {fileID: 0}
+    cinematicToPlayOnWaveStart: {fileID: 1126934398}
     spawnedEnemiesAreStopped: 0
     spawnedEnemiesAutoDetectPlayer: 0
-    numberOfCommonEnemies: 4
+    numberOfCommonEnemies: 3
     numberOfRareEnemies: 0
     commonEnemies:
       allItems:
-      - item: 13
+      - item: 0
         weight: 60
-      - item: 11
+      - item: 3
         weight: 40
     commonEnemiesHighlightingType: 0
     rareEnemies:
@@ -9368,7 +9592,32 @@ MonoBehaviour:
       spawnOnStart: 0
       spawnExternaly: 0
       minTimeSinceFightBeginning: 0
-      minKillsSinceFightBeginning: 19
+      minKillsSinceFightBeginning: 18
+      objectsToDestroy: []
+      zonesToGoTo: []
+    waitTimeBeforeStartWaveAfterConditionsVerified: 1
+  - waveName: Wave 6
+    cinematicToPlayOnWaveStart: {fileID: 1610336966}
+    spawnedEnemiesAreStopped: 0
+    spawnedEnemiesAutoDetectPlayer: 0
+    numberOfCommonEnemies: 3
+    numberOfRareEnemies: 0
+    commonEnemies:
+      allItems:
+      - item: 2
+        weight: 60
+      - item: 10
+        weight: 40
+    commonEnemiesHighlightingType: 0
+    rareEnemies:
+      allItems: []
+    rareEnemiesHighlightingType: 0
+    spawnersParent: {fileID: 280287348}
+    spawningConditions:
+      spawnOnStart: 0
+      spawnExternaly: 0
+      minTimeSinceFightBeginning: 0
+      minKillsSinceFightBeginning: 20
       objectsToDestroy: []
       zonesToGoTo: []
     waitTimeBeforeStartWaveAfterConditionsVerified: 1
@@ -9426,7 +9675,7 @@ Transform:
   - {fileID: 488438054}
   - {fileID: 280287348}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &539479287
 GameObject:
@@ -13370,7 +13619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726380957
 GameObject:
@@ -13430,6 +13679,69 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &731853746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731853747}
+  - component: {fileID: 731853748}
+  m_Layer: 0
+  m_Name: WAve1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &731853747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731853746}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &731853748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731853746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 685f9857394eea149ae461042e1e50e8, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &738774206
 GameObject:
   m_ObjectHideFlags: 0
@@ -13461,12 +13773,91 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNotSkippable: 0
   allParts:
-  - waitTimeOnceEnded: 1
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: bd691b95d645de549b9aa8c36dcdf235, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 6da829f654cbcd74ebe5cf955a89a958, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - waitTimeOnceEnded: 2
     movePlayerBoatWhileCinematic: 0
     dontGivePlayerControlBack: 0
     cam: {fileID: 1730240924}
-    messageToType: {fileID: 11400000, guid: 31827aaa99212cf4ea1bb3d1c58788ca, type: 2}
+    messageToType: {fileID: 11400000, guid: f97161dbb70412c4880dd2961bec2df9, type: 2}
     startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 452186722}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 1730240924}
+    messageToType: {fileID: 11400000, guid: cd61bd32a8417b3459933e1a3f59ff3b, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 1430515130}
+    messageToType: {fileID: 11400000, guid: f2d710ff325365c439bd5679f835e8a0, type: 2}
+    startSpawnedEnemies: 1
     animatorsToLaunchOnPartBeginning: []
     eventToPlayOnCinematicPartStart:
       m_PersistentCalls:
@@ -13559,7 +13950,7 @@ Transform:
   - {fileID: 1978966932}
   - {fileID: 1730289578}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &745783377
 GameObject:
@@ -13589,7 +13980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &748027873
 PrefabInstance:
@@ -16358,6 +16749,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 884376461}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &888703132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888703133}
+  - component: {fileID: 888703134}
+  m_Layer: 0
+  m_Name: WAve6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &888703133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888703132}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888703134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888703132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: dbd5a2846f1092d46a683d8f5d3bcdd7, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &889064814
 GameObject:
   m_ObjectHideFlags: 0
@@ -24197,6 +24651,69 @@ Transform:
   m_Father: {fileID: 2026320442}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1126934396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1126934397}
+  - component: {fileID: 1126934398}
+  m_Layer: 0
+  m_Name: WAve7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1126934397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126934396}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1126934398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126934396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 9d2917b87819be749afd8d9bc444c045, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &1129829628
 GameObject:
   m_ObjectHideFlags: 0
@@ -24231,6 +24748,36 @@ Transform:
   m_Father: {fileID: 7831241661123998290}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 197.57199, z: 0}
+--- !u!1 &1140426608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140426609}
+  m_Layer: 0
+  m_Name: WatchingPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1140426609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140426608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.5, y: 0, z: 104.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 158140652}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1143487352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25800,7 +26347,7 @@ PrefabInstance:
     - target: {fileID: 8067840717059539070, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8067840717059539070, guid: af42accc1c0f30e45aa4da44f704f453,
         type: 3}
@@ -29169,7 +29716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351958876}
   m_LocalRotation: {x: -0, y: 0.3888206, z: -0, w: 0.92131346}
-  m_LocalPosition: {x: -42, y: 0, z: 129}
+  m_LocalPosition: {x: -171.2, y: 0, z: -3.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496823078}
@@ -29362,13 +29909,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377287930}
-  m_LocalRotation: {x: -0, y: 0.98894066, z: -0, w: -0.14831215}
-  m_LocalPosition: {x: 103, y: 0, z: 268}
+  m_LocalRotation: {x: -0, y: 0.998153, z: -0, w: -0.06075115}
+  m_LocalPosition: {x: -2, y: 0, z: 417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 38900023}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 197.058, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 186.96599, z: 0}
 --- !u!114 &1377287932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36083,6 +36630,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1420981030}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1421748285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1421748286}
+  - component: {fileID: 1421748287}
+  m_Layer: 0
+  m_Name: LockerCam (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1421748286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421748285}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.099976, y: 0, z: -120.7}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421748287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421748285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f569f7e2c3c1c7b42a4429762cf92de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPos: {fileID: 452186727}
 --- !u!1 &1421910368
 GameObject:
   m_ObjectHideFlags: 0
@@ -36383,14 +36974,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430515128}
-  m_LocalRotation: {x: -0.03761157, y: 0.58448285, z: -0.027137162, w: -0.81007946}
-  m_LocalPosition: {x: 17.5, y: 134, z: 1.9}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 23.9, y: 343, z: -156.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 300202898}
   m_Father: {fileID: 231296626}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 9.613001, y: 283.684, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1430515130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38092,7 +38683,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528238002
 GameObject:
@@ -39475,6 +40066,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1607619713}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1610336964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610336965}
+  - component: {fileID: 1610336966}
+  m_Layer: 0
+  m_Name: WAve8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1610336965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610336964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1610336966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610336964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 7b41bf4e0c4e10744941883485951545, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &1611324284
 GameObject:
   m_ObjectHideFlags: 0
@@ -39782,7 +40436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620135201
 PrefabInstance:
@@ -40868,6 +41522,69 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1657051430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1657051431}
+  - component: {fileID: 1657051432}
+  m_Layer: 0
+  m_Name: WAve3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1657051431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657051430}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1657051432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657051430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: a3c7fc9fe0450724584df94400521646, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &1666502461
 GameObject:
   m_ObjectHideFlags: 0
@@ -41205,13 +41922,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690679108}
-  m_LocalRotation: {x: -0, y: 0.54269576, z: -0, w: 0.8399294}
-  m_LocalPosition: {x: -184.8, y: 0, z: -27.5}
+  m_LocalRotation: {x: -0, y: 0.6316113, z: -0, w: 0.77528524}
+  m_LocalPosition: {x: -213.9, y: 0, z: 57.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1065165283}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 65.735, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 78.338005, z: 0}
 --- !u!114 &1690679110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42011,14 +42728,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730240922}
-  m_LocalRotation: {x: -0.017729422, y: 0.9744833, z: -0.04634657, w: -0.21890596}
-  m_LocalPosition: {x: 205.95, y: 136.3, z: -95.98}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 238.92853, y: 232.93216, z: 142.17319}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 491579170}
   m_Father: {fileID: 231296626}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5.629, y: 205.28099, z: -0.82100004}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1730240924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42037,7 +42754,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1421748286}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -47791,6 +48508,36 @@ Transform:
   m_Father: {fileID: 1551004015}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1811997318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1811997319}
+  m_Layer: 0
+  m_Name: WatchingPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1811997319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811997318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.6, y: 0, z: 238.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 158140652}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1813194350
 GameObject:
   m_ObjectHideFlags: 0
@@ -48507,6 +49254,69 @@ Transform:
   m_Father: {fileID: 355542014}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1840226526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840226527}
+  - component: {fileID: 1840226528}
+  m_Layer: 0
+  m_Name: WAver5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1840226527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840226526}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1840226528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840226526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: 14b46c279280c8a43b20a06d12ce80cb, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1 &1841231837
 GameObject:
   m_ObjectHideFlags: 0
@@ -48532,7 +49342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841231837}
   m_LocalRotation: {x: -0, y: 0.8784725, z: -0, w: -0.4777929}
-  m_LocalPosition: {x: 171.7, y: 0, z: 67.2}
+  m_LocalPosition: {x: 253.2, y: 0, z: 73.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 878618568}
@@ -49777,8 +50587,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 738774208}
+  - {fileID: 731853747}
+  - {fileID: 1959221295}
+  - {fileID: 1657051431}
+  - {fileID: 241988427}
+  - {fileID: 1840226527}
+  - {fileID: 888703133}
+  - {fileID: 1126934397}
+  - {fileID: 1610336965}
+  - {fileID: 62215242}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1898001966
 PrefabInstance:
@@ -55496,6 +56315,69 @@ Transform:
   m_Father: {fileID: 2038629481}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1959221294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959221295}
+  - component: {fileID: 1959221296}
+  m_Layer: 0
+  m_Name: Wave2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1959221295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959221294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.4951, y: -1.1828442, z: -448.73752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1894718344}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959221296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959221294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc9cc7c47c2460459dcc2b7d099801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSkippable: 0
+  allParts:
+  - waitTimeOnceEnded: 3
+    movePlayerBoatWhileCinematic: 0
+    dontGivePlayerControlBack: 0
+    cam: {fileID: 0}
+    messageToType: {fileID: 11400000, guid: a3c7fc9fe0450724584df94400521646, type: 2}
+    startSpawnedEnemies: 0
+    animatorsToLaunchOnPartBeginning: []
+    eventToPlayOnCinematicPartStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    eventToPlayOnCinematicPartEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  stopSpawnedEnemies: 0
 --- !u!1001 &1961498083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57437,7 +58319,7 @@ PrefabInstance:
     - target: {fileID: 3147391595274247334, guid: de2028900cc46194c829946cba277a09,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3147391595274247334, guid: de2028900cc46194c829946cba277a09,
         type: 3}
@@ -60274,7 +61156,7 @@ Transform:
   - {fileID: 1717929254}
   - {fileID: 95850877}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7831241661123998291
 GameObject:
@@ -60386,7 +61268,7 @@ Transform:
   - {fileID: 1839566166397640935}
   - {fileID: 9079111563527075238}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7831241661250574415
 GameObject:
