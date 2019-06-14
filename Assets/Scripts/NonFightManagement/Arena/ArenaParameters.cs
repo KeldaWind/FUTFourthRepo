@@ -35,6 +35,15 @@ public class ArenaParameters : ScriptableObject
         }
     }
 
+    [SerializeField] ArenaGameMode arenaMode;
+    public ArenaGameMode GetArenaMode
+    {
+        get
+        {
+            return arenaMode;
+        }
+    }
+
     [Header("In Arena Parameters")]
     [TextArea] [SerializeField] string arenaStartDescription;
     public string GetArenaStartDescription { get { return arenaStartDescription; } }

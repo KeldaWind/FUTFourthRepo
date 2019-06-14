@@ -28,7 +28,7 @@ public class MapArenaManager
 
         mapManager.SetPlayerNotPlayable();
 
-        arenaInterface.OpenArenaPanel(arenaSpot.GetArenaParameters.GetDisplayName, arenaSpot.GetArenaParameters.GetDisplayDescription, arenaSpot.GetStarsNumber);
+        arenaInterface.OpenArenaPanel(arenaSpot.GetArenaParameters.GetDisplayName, arenaSpot.GetArenaParameters.GetDisplayDescription, arenaSpot.GetStarsNumber, arenaSpot.GetArenaParameters.GetArenaMode);
 
         mapManager.ShipCompoManager.OpenEquipedEquipmentPanel();
     }

@@ -120,6 +120,7 @@ public class ArenaManager : MonoBehaviour
     [SerializeField] float waitTimeBeforeOutro = 1;
     float remainingTimeBeforeOutro;
     ProgressionState arenaProgress;
+    public ArenaGameMode GetArenaType { get { return goalParameters.GetArenaGameMode; } }
 
     public void StartGame()
     {

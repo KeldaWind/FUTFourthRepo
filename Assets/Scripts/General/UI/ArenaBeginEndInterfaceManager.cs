@@ -27,6 +27,13 @@ public class ArenaBeginEndInterfaceManager
     [SerializeField] Text timeLimitScoreText;
     [SerializeField] Text damageLimitScoreText;
 
+    [Header("Begin Interface : Arena Type")]
+    [SerializeField] Image arenaTypeImage;
+    [SerializeField] Sprite clearWaveArenaSprite;
+    [SerializeField] Sprite escapeArenaSprite;
+    [SerializeField] Sprite chaseArenaSprite;
+    [SerializeField] Sprite assassinationArenaSprite;
+
     public void ShowBeginPanel(bool isTutorial)
     {
         SetUp(ArenaManager.arenaManager.ScoreMng);
@@ -46,6 +53,29 @@ public class ArenaBeginEndInterfaceManager
             //timeLimitScoreText.text = "Finish level in less than " + minutes + "'" + (seconds < 10 ? ("0" + seconds.ToString()) : seconds.ToString());
             timeLimitScoreText.text = /*"Finish the level without hitting any obstacle"*/"No obstacle hit";
             damageLimitScoreText.text = /*"Take*/ "Less than " + scoreManager.GetCurrentArenaParameters.GetMaximumNumberOfDamagesToHaveStar + " damages";
+        }
+
+        if (arenaTypeImage != null)
+        {
+            ArenaGameMode gameMode = ArenaManager.arenaManager.GetArenaType;
+            switch (gameMode)
+            {
+                case (ArenaGameMode.WavesClearing):
+                    arenaTypeImage.sprite = clearWaveArenaSprite;
+                    break;
+
+                case (ArenaGameMode.Escape):
+                    arenaTypeImage.sprite = escapeArenaSprite;
+                    break;
+
+                case (ArenaGameMode.EnemyShipPursuit):
+                    arenaTypeImage.sprite = chaseArenaSprite;
+                    break;
+
+                case (ArenaGameMode.Assassination):
+                    arenaTypeImage.sprite = assassinationArenaSprite;
+                    break;
+            }
         }
     }
 
