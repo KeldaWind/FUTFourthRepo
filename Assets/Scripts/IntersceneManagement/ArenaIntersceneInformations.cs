@@ -32,6 +32,13 @@ public class ArenaIntersceneInformations
     }
 
     public bool GetNeedToPassTutorial { get { return needToPassTutorial; } }
+
+    bool justPassedTutorial;
+    public bool GetJustPassedTutorial { get { return justPassedTutorial; } }
+    public void SetJustPassedTutorial(bool passed)
+    {
+        justPassedTutorial = passed;
+    }
     #endregion
 
     #region Quitting Informations

@@ -11,6 +11,9 @@ public class MapProgressionManager
         mapManager = mpManager;
     }
 
+    [Header("Tutorial")]
+    [SerializeField] IntroControler cinematicToPlayAfterTutorial;
+
     [Header("Arenas")]
     [SerializeField] List<MapArenaSpot> allMapArenaSpots;
     public List<MapArenaSpot> GetAllMapArenaSpots { get { return allMapArenaSpots; } }
@@ -72,6 +75,14 @@ public class MapProgressionManager
             if (lastArenaParameters == null)
             {
                 arenaIntersceneInformations.SetArenaPassed(false, 0);
+
+                if (intersceneManager.ArenaInterscInformations.GetJustPassedTutorial)
+                {
+                    intersceneManager.ArenaInterscInformations.SetJustPassedTutorial(false);
+                    if (cinematicToPlayAfterTutorial != null)
+                        cinematicToPlayAfterTutorial.PlayCinematic();
+                }
+
                 return;
             }
 

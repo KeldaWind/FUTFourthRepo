@@ -243,4 +243,9 @@ public class PauseInterfaceManager
     {
         openInventoryButton.gameObject.SetActive(false);
     }
+
+    public void HidePauseButton()
+    {
+        pauseButton.gameObject.SetActive(false);
+    }
 }

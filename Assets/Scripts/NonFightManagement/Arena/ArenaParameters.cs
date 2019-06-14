@@ -35,6 +35,15 @@ public class ArenaParameters : ScriptableObject
         }
     }
 
+    [SerializeField] ArenaGameMode arenaMode;
+    public ArenaGameMode GetArenaMode
+    {
+        get
+        {
+            return arenaMode;
+        }
+    }
+
     [Header("In Arena Parameters")]
     [TextArea] [SerializeField] string arenaStartDescription;
     public string GetArenaStartDescription { get { return arenaStartDescription; } }
@@ -44,4 +53,8 @@ public class ArenaParameters : ScriptableObject
     public int GetMaximumNumberOfDamagesToHaveStar { get { return maximumNumberOfDamagesToHaveStar; } }
     [SerializeField] float maximumArenaTimeToHaveStar;
     public float GetMaximumArenaTimeToHaveStar { get { return maximumArenaTimeToHaveStar; } }
+
+    [Header("Special Scene")]
+    [SerializeField] string specialSceneToLoadAfterSuccesName;
+    public string GetSpecialSceneToLoadAfterSuccesName { get { return specialSceneToLoadAfterSuccesName; } }
 }

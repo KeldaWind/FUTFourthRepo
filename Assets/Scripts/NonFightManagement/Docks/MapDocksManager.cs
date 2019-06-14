@@ -53,13 +53,15 @@ public class MapDocksManager
             mapManager.SetPlayerNotPlayable();
             docksInterface.CloseSellerInventoryPanel();
             docksInterface.CloseSellerRebuyInventoryPanel();
-            playerInventoryOnly = true;            
+            playerInventoryOnly = true;
+            mapManager.ShipCompoManager.OpenEquipedEquipmentPanel();
         }
         else
         {
             docksInterface.CloseDocksPanel();
             docksInterface.ClosePlayerInventoryPanel();
-            mapManager.SetPlayerPlayable();            
+            mapManager.SetPlayerPlayable();
+            mapManager.ShipCompoManager.CloseEquipedEquipmentPanel();
         }
     }
 

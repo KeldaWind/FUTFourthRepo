@@ -13,13 +13,20 @@ public class MapArenaInterface : MonoBehaviour
     [SerializeField] Image[] starsImages;
     [SerializeField] GameButton openInventoryButton;
 
+    [Header("Arena Type")]
+    [SerializeField] Image arenaTypeImage;
+    [SerializeField] Sprite clearWaveArenaSprite;
+    [SerializeField] Sprite escapeArenaSprite;
+    [SerializeField] Sprite chaseArenaSprite;
+    [SerializeField] Sprite assassinationArenaSprite;
+
     public void SetUp(GameButton.InteractionDeleguate playInteraction, GameButton.InteractionDeleguate closeInteraction)
     {
         playButton.Interaction = playInteraction;
         closeButton.Interaction = closeInteraction;
     }
 
-    public void OpenArenaPanel(string arenaName, string arenaDescription, int starsNumber)
+    public void OpenArenaPanel(string arenaName, string arenaDescription, int starsNumber, ArenaGameMode arenaGameMode)
     {
         arenaPanel.SetActive(true);
         openInventoryButton.gameObject.SetActive(false);
@@ -38,6 +45,28 @@ public class MapArenaInterface : MonoBehaviour
         for (int i = starsNumber; i < starsImages.Length; i++)
         {
             starsImages[i].gameObject.SetActive(false);
+        }
+
+        if (arenaTypeImage != null)
+        {            
+            switch (arenaGameMode)
+            {
+                case (ArenaGameMode.WavesClearing):
+                    arenaTypeImage.sprite = clearWaveArenaSprite;
+                    break;
+
+                case (ArenaGameMode.Escape):
+                    arenaTypeImage.sprite = escapeArenaSprite;
+                    break;
+
+                case (ArenaGameMode.EnemyShipPursuit):
+                    arenaTypeImage.sprite = chaseArenaSprite;
+                    break;
+
+                case (ArenaGameMode.Assassination):
+                    arenaTypeImage.sprite = assassinationArenaSprite;
+                    break;
+            }
         }
     }
 

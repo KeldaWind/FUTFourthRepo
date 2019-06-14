@@ -246,7 +246,7 @@ public class MainMenuManager : MonoBehaviour
         intersceneManager.ArenaInterscInformations.Reinitialize();
         intersceneManager.ArenaInterscInformations.SetNeedToPassTutorial(true);
         intersceneManager.MapInterscInformations.Reinitialize();
-        intersceneManager.MapInterscInformations.SetMapIntersceneInfos(mapSceneName, Vector3.zero);
+        intersceneManager.MapInterscInformations.SetMapIntersceneInfos(mapSceneName, Vector3.zero, null);
         passedTutorial = false;
         CheckForSaveFiles();
     }
@@ -307,7 +307,7 @@ public class MainMenuManager : MonoBehaviour
             newIntersceneManager.SetUp();
         }
 
-        IntersceneManager.intersceneManager.MapInterscInformations.SetMapIntersceneInfos(mapSceneName, Vector3.zero);
+        IntersceneManager.intersceneManager.MapInterscInformations.SetMapIntersceneInfos(mapSceneName, Vector3.zero, null);
     }
 
     public void CheckAllGameEquipmentsManager()

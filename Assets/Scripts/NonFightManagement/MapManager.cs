@@ -268,7 +268,7 @@ public class MapManager : MonoBehaviour
 
                 foreach (MapArenaSpot spot in mapProgressionManager.GetAllMapArenaSpots)
                 {
-                    if(spot.GetArenaParameters == parameters)
+                    if (spot.GetArenaParameters == parameters)
                     {
                         arenaSpot = spot;
                         arenaSpot.SetDontActivateSincePlayerOut();
@@ -277,8 +277,14 @@ public class MapManager : MonoBehaviour
                 }
 
                 ShipMovements playerShipMvt = playerShip.ShipMvt;
-                playerShip.transform.position = arenaSpot.GetPlayerTransformOnceStopped.position;
-                playerShipMvt.SetCurrentRotation(arenaSpot.GetPlayerTransformOnceStopped.rotation.eulerAngles.y);
+                if (arenaSpot != null)
+                {
+                    if (arenaSpot.GetPlayerTransformOnceStopped != null)
+                    {
+                        playerShip.transform.position = arenaSpot.GetPlayerTransformOnceStopped.position;
+                        playerShipMvt.SetCurrentRotation(arenaSpot.GetPlayerTransformOnceStopped.rotation.eulerAngles.y);
+                    }
+                }
             }
         }
     }

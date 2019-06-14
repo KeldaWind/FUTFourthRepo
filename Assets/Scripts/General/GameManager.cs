@@ -186,6 +186,7 @@ public class GameManager : MonoBehaviour
         }
 
         string menuSceneName = IntersceneManager.intersceneManager.MapInterscInformations.GetMapSceneName;
+        string specialSceneName = IntersceneManager.intersceneManager.MapInterscInformations.GetSpecialSceneToLoadName;
 
         try
         {
@@ -234,7 +235,14 @@ public class GameManager : MonoBehaviour
 
             PlayerDataSaver.SavePlayerEquipmentsDatas(equipmentsData);
 
-            SceneManager.LoadSceneAsync(menuSceneName);
+
+            if (specialSceneName != null && specialSceneName != "" && Won)
+            {
+                IntersceneManager.intersceneManager.MapInterscInformations.ResetSpecialScene();
+                SceneManager.LoadSceneAsync(specialSceneName);
+            }
+            else
+                SceneManager.LoadSceneAsync(menuSceneName);
             //backingToMap = true;
         }
         catch
