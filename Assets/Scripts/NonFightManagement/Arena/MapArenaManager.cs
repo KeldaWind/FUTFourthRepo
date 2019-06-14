@@ -75,7 +75,7 @@ public class MapArenaManager
 
         try
         {
-            IntersceneManager.intersceneManager.MapInterscInformations.SetMapIntersceneInfos(SceneManager.GetActiveScene().name, GameManager.gameManager.Player.transform.position);
+            IntersceneManager.intersceneManager.MapInterscInformations.SetMapIntersceneInfos(SceneManager.GetActiveScene().name, GameManager.gameManager.Player.transform.position, launchedArenaParameters.GetSpecialSceneToLoadAfterSuccesName);
             IntersceneManager.intersceneManager.ArenaInterscInformations.SetArenaLaunchInformations(launchedArenaParameters);
 
             //SceneManager.LoadSceneAsync(arenaBuildName);

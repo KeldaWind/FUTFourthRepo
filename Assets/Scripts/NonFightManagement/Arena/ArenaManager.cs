@@ -168,9 +168,13 @@ public class ArenaManager : MonoBehaviour
         arenaProgress = ProgressionState.Ended;
 
         int starNumber = scoreManager.CheckPlayerScore();
-        
+
         if (IntersceneManager.intersceneManager != null)
+        {
             IntersceneManager.intersceneManager.ArenaInterscInformations.SetArenaPassed(true, starNumber);
+            if (IsTutorialArena)
+                IntersceneManager.intersceneManager.ArenaInterscInformations.SetJustPassedTutorial(true);
+        }
 
         dropManager.LootAllRemainingCrates();
 

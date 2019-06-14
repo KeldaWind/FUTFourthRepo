@@ -5,10 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class MapIntersceneInformations
 {
-    public void SetMapIntersceneInfos(string mpSceneName, Vector3 playerPos)
+    public void SetMapIntersceneInfos(string mpSceneName, Vector3 playerPos, string specialName)
     {
         mapSceneName = mpSceneName;
         playerPositionOnMap = playerPos;
+        specialSceneToLoadName = specialName;
     }
 
     string mapSceneName;
@@ -33,5 +34,18 @@ public class MapIntersceneInformations
     {
         mapSceneName = "";
         playerPositionOnMap = Vector3.zero;
+        specialSceneToLoadName = "";
+    }
+
+    string specialSceneToLoadName;
+    public string GetSpecialSceneToLoadName { get { return specialSceneToLoadName; } }
+    public void SetSpecialSceneName(string name)
+    {
+        specialSceneToLoadName = name;
+    }
+
+    public void ResetSpecialScene()
+    {
+        specialSceneToLoadName = null;
     }
 }

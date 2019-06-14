@@ -53,4 +53,8 @@ public class ArenaParameters : ScriptableObject
     public int GetMaximumNumberOfDamagesToHaveStar { get { return maximumNumberOfDamagesToHaveStar; } }
     [SerializeField] float maximumArenaTimeToHaveStar;
     public float GetMaximumArenaTimeToHaveStar { get { return maximumArenaTimeToHaveStar; } }
+
+    [Header("Special Scene")]
+    [SerializeField] string specialSceneToLoadAfterSuccesName;
+    public string GetSpecialSceneToLoadAfterSuccesName { get { return specialSceneToLoadAfterSuccesName; } }
 }

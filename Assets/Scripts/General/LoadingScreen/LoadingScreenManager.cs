@@ -28,6 +28,9 @@ public class LoadingScreenManager
 
     public void StartEndLoad(OnLoadingScreenEvent actionWhenLoaded)
     {
+        if(GameManager.gameManager != null)
+            GameManager.gameManager.PauseIntrfcManager.HidePauseButton();
+
         currentLoadingScreenState = LoadingScreenState.Appearing;
 
         foreach (Image loadingImage in loadingImages)
