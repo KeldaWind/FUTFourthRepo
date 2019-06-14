@@ -40,7 +40,8 @@ public class MapProgressionManager
                 }
             }
 
-            passedTutorial = progressionDatas.GetPassedTuto;
+            if(progressionDatas != null)
+                passedTutorial = progressionDatas.GetPassedTuto;
             #endregion
 
             #region Already Unlocked

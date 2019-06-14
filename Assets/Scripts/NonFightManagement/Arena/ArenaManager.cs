@@ -398,6 +398,17 @@ public class ArenaManager : MonoBehaviour
         #region Player
         EquipmentsSet playerEquipments = gameManager.Player.EqpmntManager.EquipedEquipments;
 
+        ShipEquipment hullEquipment = playerEquipments.GetHullEquipment;
+        if (hullEquipment != null)
+        {
+            CompetenceShoot canonShoot = hullEquipment.GetPrimaryComp as CompetenceShoot;
+            if (canonShoot != null)
+            {
+                if (!allProjectilesUsed.Contains(canonShoot.GetUsedProjectilePoolTag))
+                    allProjectilesUsed.Add(canonShoot.GetUsedProjectilePoolTag);
+            }
+        }
+
         ShipEquipment canonEquipment = playerEquipments.GetMainWeaponEquipment;
         if (canonEquipment != null)
         {
