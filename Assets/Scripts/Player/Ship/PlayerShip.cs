@@ -109,6 +109,8 @@ public class PlayerShip : Ship
             #endregion
 
             GameManager.gameManager.MscManager.PlayLoseMusic();
+
+            StartDeathFeedbacks();
         }
     }
 
@@ -277,5 +279,35 @@ public class PlayerShip : Ship
     {
         if (dangerParticles != null)
             dangerParticles.Stop();
+    }
+
+    [Header("Death Feedbacks")]
+    [SerializeField] ParticleSystem[] deathParticles;
+    [SerializeField] Sound explosionSound;
+    [SerializeField] float minTimeBetweenExplosion;
+    [SerializeField] float maxTimeBetweenExplosion;
+    Queue<ParticleSystem> deathParticlesQueue;
+
+    public void StartDeathFeedbacks()
+    {
+        deathParticlesQueue = new Queue<ParticleSystem>();
+
+        foreach (ParticleSystem syst in deathParticles)
+            deathParticlesQueue.Enqueue(syst);
+
+        StartCoroutine(DeathCoroutine());
+    }
+
+    public IEnumerator DeathCoroutine()
+    {
+        ParticleSystem syst = deathParticlesQueue.Dequeue();
+        syst.Play();
+        deathParticlesQueue.Enqueue(syst);
+
+        shipFeedbacks.PlaySound(explosionSound);
+
+        yield return new WaitForSeconds(Random.Range(minTimeBetweenExplosion, maxTimeBetweenExplosion));
+
+        StartCoroutine(DeathCoroutine());
     }
 }
