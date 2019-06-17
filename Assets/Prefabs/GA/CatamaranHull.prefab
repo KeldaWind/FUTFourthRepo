@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &575933340993418970
 Transform:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4557313841298464877
 Transform:
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9122556775283860922
 Transform:
   m_ObjectHideFlags: 0
@@ -589,6 +589,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8974672764657743330}
     m_Modifications:
+    - target: {fileID: 1041580055833654528, guid: b985abd5c3ad60241890619e35453a5a,
+        type: 3}
+      propertyPath: m_Name
+      value: BarilsBoat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041580055833654528, guid: b985abd5c3ad60241890619e35453a5a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4673620564193833433, guid: b985abd5c3ad60241890619e35453a5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -659,16 +669,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.33333334
       objectReference: {fileID: 0}
-    - target: {fileID: 1041580055833654528, guid: b985abd5c3ad60241890619e35453a5a,
-        type: 3}
-      propertyPath: m_Name
-      value: BarilsBoat
-      objectReference: {fileID: 0}
-    - target: {fileID: 1041580055833654528, guid: b985abd5c3ad60241890619e35453a5a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b985abd5c3ad60241890619e35453a5a, type: 3}
 --- !u!4 &3964158837147992580 stripped
@@ -684,6 +684,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8974672764657743330}
     m_Modifications:
+    - target: {fileID: 100000, guid: c8bb2e113de622f4383b6d537434488b, type: 3}
+      propertyPath: m_Name
+      value: Coque quatamarant
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c8bb2e113de622f4383b6d537434488b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.041953843
@@ -739,10 +743,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: c8bb2e113de622f4383b6d537434488b, type: 3}
       propertyPath: m_LocalScale.y
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c8bb2e113de622f4383b6d537434488b, type: 3}
-      propertyPath: m_Name
-      value: Coque quatamarant
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: c8bb2e113de622f4383b6d537434488b, type: 3}
       propertyPath: m_Materials.Array.data[0]
