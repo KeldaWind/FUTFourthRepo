@@ -24,12 +24,10 @@ MonoBehaviour:
     - item: 230
       weight: 15
   goldLootRandomAmplitude: 30
-  hullEquipmentProbability: 20
-  weaponEquipmentProbability: 80
+  hullEquipmentProbability: 0
+  weaponEquipmentProbability: 1
   hullLootSystem:
-    allItems:
-    - item: {fileID: 0}
-      weight: 100
+    allItems: []
   weaponLootSystem:
     allItems:
     - item: {fileID: 11400000, guid: 0eaa9ec592c0b9b4f9b123aaa904bcab, type: 2}
